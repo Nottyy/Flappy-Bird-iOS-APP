@@ -16,10 +16,11 @@
 		C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54933FC1A02DDCF002A1526 /* LaunchScreen.xib */; };
 		C549340A1A02DDD0002A1526 /* Flappy_Bird_Pro_iOS_APPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C54934091A02DDD0002A1526 /* Flappy_Bird_Pro_iOS_APPTests.m */; };
 		C54934181A02FD55002A1526 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934131A02FD55002A1526 /* Background.png */; };
-		C54934191A02FD55002A1526 /* Bird Down.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934141A02FD55002A1526 /* Bird Down.png */; };
-		C549341A1A02FD55002A1526 /* Bird Up.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934151A02FD55002A1526 /* Bird Up.png */; };
+		C54934191A02FD55002A1526 /* BirdDown.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934141A02FD55002A1526 /* BirdDown.png */; };
+		C549341A1A02FD55002A1526 /* BirdUp.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934151A02FD55002A1526 /* BirdUp.png */; };
 		C549341B1A02FD55002A1526 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934161A02FD55002A1526 /* GameBackground.png */; };
 		C549341C1A02FD55002A1526 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934171A02FD55002A1526 /* Tunnel.png */; };
+		C54934201A030925002A1526 /* FlappyBirdFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdFieldController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +49,12 @@
 		C54934081A02DDD0002A1526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54934091A02DDD0002A1526 /* Flappy_Bird_Pro_iOS_APPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flappy_Bird_Pro_iOS_APPTests.m; sourceTree = "<group>"; };
 		C54934131A02FD55002A1526 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
-		C54934141A02FD55002A1526 /* Bird Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird Down.png"; sourceTree = "<group>"; };
-		C54934151A02FD55002A1526 /* Bird Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird Up.png"; sourceTree = "<group>"; };
+		C54934141A02FD55002A1526 /* BirdDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdDown.png; sourceTree = "<group>"; };
+		C54934151A02FD55002A1526 /* BirdUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdUp.png; sourceTree = "<group>"; };
 		C54934161A02FD55002A1526 /* GameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground.png; sourceTree = "<group>"; };
 		C54934171A02FD55002A1526 /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
+		C549341E1A030925002A1526 /* FlappyBirdFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlappyBirdFieldController.h; path = ViewControllers/FlappyBirdFieldController.h; sourceTree = "<group>"; };
+		C549341F1A030925002A1526 /* FlappyBirdFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlappyBirdFieldController.m; path = ViewControllers/FlappyBirdFieldController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +96,9 @@
 		C54933E91A02DDCF002A1526 /* Flappy Bird Pro iOS APP */ = {
 			isa = PBXGroup;
 			children = (
+				C549341D1A0308A9002A1526 /* Views */,
 				C54933EE1A02DDCF002A1526 /* AppDelegate.h */,
 				C54933EF1A02DDCF002A1526 /* AppDelegate.m */,
-				C54933F41A02DDCF002A1526 /* ViewController.h */,
-				C54933F51A02DDCF002A1526 /* ViewController.m */,
 				C54933F71A02DDCF002A1526 /* Main.storyboard */,
 				C54933FA1A02DDCF002A1526 /* Images.xcassets */,
 				C54933FC1A02DDCF002A1526 /* LaunchScreen.xib */,
@@ -110,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				C54934131A02FD55002A1526 /* Background.png */,
-				C54934141A02FD55002A1526 /* Bird Down.png */,
-				C54934151A02FD55002A1526 /* Bird Up.png */,
+				C54934141A02FD55002A1526 /* BirdDown.png */,
+				C54934151A02FD55002A1526 /* BirdUp.png */,
 				C54934161A02FD55002A1526 /* GameBackground.png */,
 				C54934171A02FD55002A1526 /* Tunnel.png */,
 				C54933EB1A02DDCF002A1526 /* Info.plist */,
@@ -135,6 +137,17 @@
 				C54934081A02DDD0002A1526 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C549341D1A0308A9002A1526 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C54933F41A02DDCF002A1526 /* ViewController.h */,
+				C54933F51A02DDCF002A1526 /* ViewController.m */,
+				C549341E1A030925002A1526 /* FlappyBirdFieldController.h */,
+				C549341F1A030925002A1526 /* FlappyBirdFieldController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,13 +230,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54934191A02FD55002A1526 /* Bird Down.png in Resources */,
+				C54934191A02FD55002A1526 /* BirdDown.png in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C549341B1A02FD55002A1526 /* GameBackground.png in Resources */,
 				C549341C1A02FD55002A1526 /* Tunnel.png in Resources */,
 				C54934181A02FD55002A1526 /* Background.png in Resources */,
 				C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */,
-				C549341A1A02FD55002A1526 /* Bird Up.png in Resources */,
+				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
 				C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +258,7 @@
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
+				C54934201A030925002A1526 /* FlappyBirdFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
