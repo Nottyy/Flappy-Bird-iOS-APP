@@ -10,7 +10,7 @@
 
 int birdFlight;
 
-@interface FlappyBirdFieldController : UIViewController{
+@interface FlappyBirdGameFieldController : UIViewController{
     NSTimer *birdMovement;
 }
 

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Antonio Marinov. All rights reserved.
 //
 
-#import "FlappyBirdFieldController.h"
+#import "FlappyBirdGameFieldController.h"
 
-@interface FlappyBirdFieldController ()
+@interface FlappyBirdGameFieldController ()
 
 @end
 
-@implementation FlappyBirdFieldController
+@implementation FlappyBirdGameFieldController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

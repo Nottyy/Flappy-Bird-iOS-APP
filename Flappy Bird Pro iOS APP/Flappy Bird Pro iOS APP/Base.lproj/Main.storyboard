@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-147" y="331"/>
         </scene>
-        <!--Flappy Bird Field Controller-->
+        <!--Flappy Bird Game Field Controller-->
         <scene sceneID="Vo8-VJ-D9z">
             <objects>
-                <viewController id="IEP-ba-9Iq" customClass="FlappyBirdFieldController" sceneMemberID="viewController">
+                <viewController id="IEP-ba-9Iq" customClass="FlappyBirdGameFieldController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vxY-bl-BwA"/>
                         <viewControllerLayoutGuide type="bottom" id="OaJ-Rq-H4s"/>
