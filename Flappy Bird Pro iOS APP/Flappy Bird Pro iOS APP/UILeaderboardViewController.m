@@ -18,6 +18,7 @@
     NSArray *names;
     NSArray *scores;
 }
+NSString *leaderBoardCell = @"LeaderboardTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,18 +47,18 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *identifier = @"LeaderboardTableViewCell";
-    UILeaderboardCell *cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: @"LeaderboardTableViewCell"];
+    
+    UILeaderboardCell *cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
     
     if (!cell) {
-        UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
-        [self.leaderboardTableView registerNib:nib forCellReuseIdentifier:@"LeaderboardTableViewCell"];
-        cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: @"LeaderboardTableViewCell"];
+        UINib *nib = [UINib nibWithNibName:leaderBoardCell bundle:nil];
+        [self.leaderboardTableView registerNib:nib forCellReuseIdentifier: leaderBoardCell];
+        cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
         //cell = [[UILeaderboardCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     //cell.textLabel.text = names[indexPath.row];
-    cell.playerName = names[indexPath.row];
-    cell.playerScore = scores[indexPath.row];
+    cell.playerName.text = names[indexPath.row];
+    cell.playerScore.text = scores[indexPath.row];
     
     return cell;
 }

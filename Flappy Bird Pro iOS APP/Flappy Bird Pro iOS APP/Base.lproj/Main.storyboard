@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
@@ -152,10 +153,109 @@
             </objects>
             <point key="canvasLocation" x="221" y="-4"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="2M0-gr-62O">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y4P-mR-TIc" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P8n-do-yhE"/>
+                        <viewControllerLayoutGuide type="bottom" id="i2X-ML-btG"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="XCS-ee-Bhl" colorLabel="IBBuiltInLabel-Red">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szg-I9-Zwa" customClass="TKUIButton">
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52549019610000003" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTw-2D-VfH" customClass="TKUIButton">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zu-6F-uza" customClass="TKUIButton">
+                                <color key="backgroundColor" red="0.2078431547" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-RT-QgX" customClass="TKUITextField">
+                                <rect key="frame" x="36" y="215" width="270" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPd-Fl-844">
+                                <rect key="frame" x="36" y="98" width="257" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-password.png" translatesAutoresizingMaskIntoConstraints="NO" id="fy2-sG-FmU">
+                                <rect key="frame" x="283" y="232" width="10" height="12"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-T4-DLS" customClass="TKUIButton">
+                                <color key="backgroundColor" red="0.2078431547" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avo-yQ-7XF" customClass="TKUIButton">
+                                <color key="backgroundColor" red="0.2078431547" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-Ug-XIv" customClass="TKUIButton">
+                                <color key="backgroundColor" red="0.2078431547" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rut-ix-co2" customClass="TKUITextField">
+                                <rect key="frame" x="36" y="171" width="270" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7K-Lh-1bG">
+                                <rect key="frame" x="283" y="188" width="10" height="12"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-telerik_devcloud.png" translatesAutoresizingMaskIntoConstraints="NO" id="7a1-xK-1sZ">
+                                <rect key="frame" x="41" y="25" width="240" height="54"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" © 2014 Antonio Marinov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-i1-C2C">
+                                <rect key="frame" x="0.0" y="439" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKT-ym-9Km">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKh-Yg-43o">
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14963503650000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Login" id="6BX-jT-v8F"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="adfsLoginButton" destination="Cde-T4-DLS" id="Hmi-Tn-Q9l"/>
+                        <outlet property="facebookLoginButton" destination="7zu-6F-uza" id="3wb-aS-ITt"/>
+                        <outlet property="googleLoginButton" destination="c4z-Ug-XIv" id="XlJ-uJ-Mda"/>
+                        <outlet property="liveIDLoginButton" destination="avo-yQ-7XF" id="QAE-d0-dYY"/>
+                        <outlet property="loginButton" destination="szg-I9-Zwa" id="3bW-2e-H01"/>
+                        <outlet property="passwordTextField" destination="2rO-RT-QgX" id="LoF-cH-gew"/>
+                        <outlet property="signUpButton" destination="WTw-2D-VfH" id="5pD-Lk-tJJ"/>
+                        <outlet property="usernameTextField" destination="rut-ix-co2" id="XKb-ki-J7S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waO-3y-pcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="-4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BirdUp.png" width="40" height="40"/>
         <image name="GameBackground.png" width="320" height="480"/>
         <image name="Tunnel.png" width="50" height="100"/>
+        <image name="icon-password.png" width="10" height="12"/>
+        <image name="icon-username.png" width="10" height="12"/>
+        <image name="logo-telerik_devcloud.png" width="10" height="12"/>
     </resources>
 </document>

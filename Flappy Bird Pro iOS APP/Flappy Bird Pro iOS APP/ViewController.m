@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <EverliveSDK/EverliveSDK.h>
+#import "FlappyBirdUser.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    FlappyBirdUser *newUser = [[FlappyBirdUser alloc]init];
+    
+    
+    [newUser setUsername: @"Panssadssakdasdooasdeo"];
+    [newUser setPassword: @"123456"];
+    [newUser setDisplayName: @"pansasdsadaskasdotdoo"];
+    [newUser setPoints: [NSNumber numberWithInt: 5]];
+    
+    [newUser signUp:^(EVUser *user, NSError *error) {
+        //NSLog(@"%@", error.description);
+        //NSLog(@"%@", user.displayName);
+        //NSLog(@"%@", user);
+       if (error == nil){
+           NSLog(@"Success");
+       }
+       else{
+           
+//           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+           //[alert show];
+       }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

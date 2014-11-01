@@ -21,6 +21,8 @@
 		C549341B1A02FD55002A1526 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934161A02FD55002A1526 /* GameBackground.png */; };
 		C549341C1A02FD55002A1526 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934171A02FD55002A1526 /* Tunnel.png */; };
 		C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */; };
+		C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B24B711A05711C00C984C8 /* EverliveSDK.framework */; };
+		C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */; };
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
@@ -58,6 +60,9 @@
 		C54934171A02FD55002A1526 /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
 		C549341E1A030925002A1526 /* FlappyBirdGameFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlappyBirdGameFieldController.h; path = ViewControllers/FlappyBirdGameFieldController.h; sourceTree = "<group>"; };
 		C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlappyBirdGameFieldController.m; path = ViewControllers/FlappyBirdGameFieldController.m; sourceTree = "<group>"; };
+		C5B24B711A05711C00C984C8 /* EverliveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EverliveSDK.framework; path = ../EverliveSDK.framework; sourceTree = "<group>"; };
+		C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyBirdUser.h; sourceTree = SOURCE_ROOT; };
+		C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyBirdUser.m; sourceTree = SOURCE_ROOT; };
 		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
 		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,9 @@
 		C54933E91A02DDCF002A1526 /* Flappy Bird Pro iOS APP */ = {
 			isa = PBXGroup;
 			children = (
+				C5B59AB91A05932E00A58142 /* Libraries */,
+				C5B59AB81A05927000A58142 /* Frameworks */,
+				C5B59AB71A05923B00A58142 /* Models */,
 				C5C359F31A04F3290038D6FD /* Custom Views */,
 				C549341D1A0308A9002A1526 /* Views Controllers */,
 				C54933EE1A02DDCF002A1526 /* AppDelegate.h */,
@@ -159,6 +168,33 @@
 				C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */,
 			);
 			name = "Views Controllers";
+			sourceTree = "<group>";
+		};
+		C5B59AB71A05923B00A58142 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */,
+				C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */,
+			);
+			name = Models;
+			path = ../Models;
+			sourceTree = "<group>";
+		};
+		C5B59AB81A05927000A58142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5B24B711A05711C00C984C8 /* EverliveSDK.framework */,
+			);
+			name = Frameworks;
+			path = ../Frameworks;
+			sourceTree = "<group>";
+		};
+		C5B59AB91A05932E00A58142 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			path = ../Libraries;
 			sourceTree = "<group>";
 		};
 		C5C359F31A04F3290038D6FD /* Custom Views */ = {
@@ -284,6 +320,7 @@
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
+				C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -417,7 +459,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
