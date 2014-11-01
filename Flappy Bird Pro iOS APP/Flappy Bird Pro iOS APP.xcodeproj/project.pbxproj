@@ -21,6 +21,9 @@
 		C549341B1A02FD55002A1526 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934161A02FD55002A1526 /* GameBackground.png */; };
 		C549341C1A02FD55002A1526 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934171A02FD55002A1526 /* Tunnel.png */; };
 		C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */; };
+		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
+		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
+		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		C54934171A02FD55002A1526 /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
 		C549341E1A030925002A1526 /* FlappyBirdGameFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlappyBirdGameFieldController.h; path = ViewControllers/FlappyBirdGameFieldController.h; sourceTree = "<group>"; };
 		C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlappyBirdGameFieldController.m; path = ViewControllers/FlappyBirdGameFieldController.m; sourceTree = "<group>"; };
+		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
+		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
+		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
+		C5C359FE1A04FBAA0038D6FD /* UILeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardViewController.h; sourceTree = "<group>"; };
+		C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +104,8 @@
 		C54933E91A02DDCF002A1526 /* Flappy Bird Pro iOS APP */ = {
 			isa = PBXGroup;
 			children = (
-				C549341D1A0308A9002A1526 /* Views */,
+				C5C359F31A04F3290038D6FD /* Custom Views */,
+				C549341D1A0308A9002A1526 /* Views Controllers */,
 				C54933EE1A02DDCF002A1526 /* AppDelegate.h */,
 				C54933EF1A02DDCF002A1526 /* AppDelegate.m */,
 				C54933F71A02DDCF002A1526 /* Main.storyboard */,
@@ -139,15 +148,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C549341D1A0308A9002A1526 /* Views */ = {
+		C549341D1A0308A9002A1526 /* Views Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C54933F41A02DDCF002A1526 /* ViewController.h */,
 				C54933F51A02DDCF002A1526 /* ViewController.m */,
 				C549341E1A030925002A1526 /* FlappyBirdGameFieldController.h */,
 				C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */,
+				C5C359FE1A04FBAA0038D6FD /* UILeaderboardViewController.h */,
+				C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */,
 			);
-			name = Views;
+			name = "Views Controllers";
+			sourceTree = "<group>";
+		};
+		C5C359F31A04F3290038D6FD /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */,
+				C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */,
+				C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54934191A02FD55002A1526 /* BirdDown.png in Resources */,
+				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C549341B1A02FD55002A1526 /* GameBackground.png in Resources */,
 				C549341C1A02FD55002A1526 /* Tunnel.png in Resources */,
@@ -255,9 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
+				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
 			);
@@ -452,6 +476,7 @@
 				C549340F1A02DDD0002A1526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C54934101A02DDD0002A1526 /* Build configuration list for PBXNativeTarget "Flappy Bird Pro iOS APPTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +485,7 @@
 				C54934121A02DDD0002A1526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
