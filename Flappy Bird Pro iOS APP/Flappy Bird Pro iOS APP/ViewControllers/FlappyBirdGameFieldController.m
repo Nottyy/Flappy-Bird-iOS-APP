@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tunnelTop.hidden = YES;
+    self.tunnelBottom.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,8 +36,33 @@
 */
 
 - (IBAction)startGame:(id)sender {
+    self.tunnelTop.hidden = NO;
+    self.tunnelBottom.hidden = NO;
     self.buttonStartGame.hidden = YES;
-    birdMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
+    
+    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
+    
+    [self placeTunnels];
+    
+    tunnelMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(tunnelMoving) userInfo:nil repeats:YES];
+}
+
+-(void)tunnelMoving{
+    self.tunnelTop.center = CGPointMake(self.tunnelTop.center.x - 1, self.tunnelTop.center.y);
+    self.tunnelBottom.center = CGPointMake(self.tunnelBottom.center.x - 1, self.tunnelBottom.center.y);
+    if (self.tunnelTop.center.x < -55) {
+        [self placeTunnels];
+    }
+    
+}
+
+-(void)placeTunnels{
+    randomTopTunnelPosition = arc4random() % 350;
+    randomTopTunnelPosition -= 228;
+    randomBottomTunnelPosition = randomTopTunnelPosition + 655;
+    
+    self.tunnelTop.center = CGPointMake(620, randomTopTunnelPosition);
+    self.tunnelBottom.center = CGPointMake(620, randomBottomTunnelPosition);
 }
 
 -(void)birdMoving{
