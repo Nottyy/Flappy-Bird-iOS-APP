@@ -47,12 +47,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"LeaderboardTableViewCell";
-    UILeaderboardCell *cell = [tableView dequeueReusableCellWithIdentifier: @"GOSHO"];
+    UILeaderboardCell *cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: @"LeaderboardTableViewCell"];
     
     if (!cell) {
         UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
-        [self.leaderboardTableView registerNib:nib forCellReuseIdentifier:@"GOSHO"];
-        cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: @"GOSHO"];
+        [self.leaderboardTableView registerNib:nib forCellReuseIdentifier:@"LeaderboardTableViewCell"];
+        cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: @"LeaderboardTableViewCell"];
         //cell = [[UILeaderboardCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     //cell.textLabel.text = names[indexPath.row];
