@@ -23,6 +23,10 @@
 		C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */; };
 		C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B24B711A05711C00C984C8 /* EverliveSDK.framework */; };
 		C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */; };
+		C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABE1A05A73000A58142 /* SignUpViewController.m */; };
+		C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC11A05A93800A58142 /* TKUIButton.m */; };
+		C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC31A05A93800A58142 /* TKUITextField.m */; };
+		C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC71A05A95E00A58142 /* MBProgressHUD.m */; };
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
@@ -63,6 +67,14 @@
 		C5B24B711A05711C00C984C8 /* EverliveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EverliveSDK.framework; path = ../EverliveSDK.framework; sourceTree = "<group>"; };
 		C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyBirdUser.h; sourceTree = SOURCE_ROOT; };
 		C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyBirdUser.m; sourceTree = SOURCE_ROOT; };
+		C5B59ABD1A05A73000A58142 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		C5B59ABE1A05A73000A58142 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		C5B59AC01A05A93800A58142 /* TKUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUIButton.h; sourceTree = "<group>"; };
+		C5B59AC11A05A93800A58142 /* TKUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUIButton.m; sourceTree = "<group>"; };
+		C5B59AC21A05A93800A58142 /* TKUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUITextField.h; sourceTree = "<group>"; };
+		C5B59AC31A05A93800A58142 /* TKUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUITextField.m; sourceTree = "<group>"; };
+		C5B59AC61A05A95E00A58142 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C5B59AC71A05A95E00A58142 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
 		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
@@ -166,6 +178,8 @@
 				C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */,
 				C5C359FE1A04FBAA0038D6FD /* UILeaderboardViewController.h */,
 				C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */,
+				C5B59ABD1A05A73000A58142 /* SignUpViewController.h */,
+				C5B59ABE1A05A73000A58142 /* SignUpViewController.m */,
 			);
 			name = "Views Controllers";
 			sourceTree = "<group>";
@@ -192,6 +206,12 @@
 		C5B59AB91A05932E00A58142 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C5B59AC61A05A95E00A58142 /* MBProgressHUD.h */,
+				C5B59AC71A05A95E00A58142 /* MBProgressHUD.m */,
+				C5B59AC01A05A93800A58142 /* TKUIButton.h */,
+				C5B59AC11A05A93800A58142 /* TKUIButton.m */,
+				C5B59AC21A05A93800A58142 /* TKUITextField.h */,
+				C5B59AC31A05A93800A58142 /* TKUITextField.m */,
 			);
 			name = Libraries;
 			path = ../Libraries;
@@ -317,10 +337,14 @@
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
+				C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */,
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
+				C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */,
+				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
 				C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */,
+				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

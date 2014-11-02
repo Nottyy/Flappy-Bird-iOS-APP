@@ -271,12 +271,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0U-kY-xu0" customClass="TKUIButton">
-                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52549019610000003" alpha="1" colorSpace="deviceRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-o5-3S8">
-                                <rect key="frame" x="181" y="324" width="239" height="48"/>
+                                <rect key="frame" x="176" y="385" width="239" height="48"/>
                                 <color key="backgroundColor" red="0.28627450980392155" green="0.2196078431372549" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -284,15 +285,12 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="360-t7-0Sc">
-                                <rect key="frame" x="181" y="123" width="239" height="2"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-Lk-qIF">
-                                <rect key="frame" x="181" y="168" width="239" height="2"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-gQ-Idi">
-                                <rect key="frame" x="181" y="213" width="239" height="2"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" © 2014 Antonio Marinov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-WZ-qQp">
@@ -301,20 +299,29 @@
                                 <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2O5-ju-HWc" customClass="TKUIButton">
+                                <rect key="frame" x="176" y="308" width="244" height="53"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="lNx-J4-gwd" id="Vzy-l4-fWQ"/>
+                        <outlet property="name" destination="NiG-8t-WKM" id="RAk-6m-pmG"/>
                         <outlet property="nameTextField" destination="NiG-8t-WKM" id="B6Q-oC-kXn"/>
+                        <outlet property="password" destination="IZi-WT-gYa" id="9na-XE-wxH"/>
                         <outlet property="passwordTextField" destination="IZi-WT-gYa" id="OS1-I8-98o"/>
-                        <outlet property="registerButton" destination="L0U-kY-xu0" id="dLf-4f-g70"/>
+                        <outlet property="registerButton" destination="2O5-ju-HWc" id="Tar-uM-TbI"/>
+                        <outlet property="userName" destination="jCJ-aO-EqP" id="MKg-R8-JWL"/>
                         <outlet property="usernameTextField" destination="jCJ-aO-EqP" id="vuf-B3-vuf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXn-va-cTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="688"/>
+            <point key="canvasLocation" x="930" y="741"/>
         </scene>
     </scenes>
     <resources>
