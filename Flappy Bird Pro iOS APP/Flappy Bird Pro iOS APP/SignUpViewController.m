@@ -47,7 +47,9 @@
         [newUser signUp:^(EVUser *user, NSError *error) {
             if (error == nil){
                 [self.hud hide:YES];
+                 NSLog(@"Rsegistered");
                 [EVUser loginInWithUsername:user.username password: _passwordTextField.text block:^(EVUser *user, NSError *error) {
+                    NSLog(@"Registered");
                     //[self performSegueWithIdentifier:@"" sender:self];
                 }];
             }
