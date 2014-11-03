@@ -11,6 +11,8 @@
 int birdFlight;
 int randomTopTunnelPosition;
 int randomBottomTunnelPosition;
+int scoreNumber;
+NSInteger *highScoreNumber;
 
 @interface FlappyBirdGameFieldController : UIViewController{
     NSTimer *birdMovementTimer;
@@ -24,8 +26,14 @@ int randomBottomTunnelPosition;
 @property (weak, nonatomic) IBOutlet UIImageView *borderTop;
 @property (weak, nonatomic) IBOutlet UIImageView *borderBottom;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
+
 - (IBAction)startGame:(id)sender;
 - (void)birdMoving;
 - (void)tunnelMoving;
 - (void)placeTunnels;
+- (void)setScore;
+- (void)gameOver;
 @end

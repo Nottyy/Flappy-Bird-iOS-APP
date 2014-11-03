@@ -15,9 +15,15 @@
 @implementation FlappyBirdGameFieldController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
+    self.exitButton.hidden = YES;
+    scoreNumber = 0;
+    
+    highScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey: @"HighScoreNumber"];
+    
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +60,18 @@
         [self placeTunnels];
     }
     
+    if (self.tunnelTop.center.x == 27) {
+        [self setScore];
+    }
+    
+    
+    // check if the bird has collided with the four tunnels
+    if (CGRectIntersectsRect(self.objectBird.frame, self.tunnelTop.frame) ||
+        CGRectIntersectsRect(self.objectBird.frame, self.tunnelBottom.frame) ||
+        CGRectIntersectsRect(self.objectBird.frame, self.borderBottom.frame) ||
+        CGRectIntersectsRect(self.objectBird.frame, self.borderTop.frame)) {
+        [self gameOver];
+    }
 }
 
 -(void)placeTunnels{
@@ -81,6 +99,25 @@
         self.objectBird.image = [UIImage imageNamed:@"BirdUp.png"];
     }
         
+}
+
+-(void)setScore{
+    scoreNumber = scoreNumber + 1;
+    self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
+}
+
+-(void)gameOver{
+    if (scoreNumber > highScoreNumber) {
+        [[NSUserDefaults standardUserDefaults] setInteger:scoreNumber forKey:@"HighScoreNumber"];
+    }
+    
+    [tunnelMovementTimer invalidate];
+    [birdMovementTimer invalidate];
+    
+    self.exitButton.hidden = NO;
+    self.tunnelBottom.hidden = YES;
+    self.tunnelTop.hidden = YES;
+    self.objectBird.hidden = YES;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

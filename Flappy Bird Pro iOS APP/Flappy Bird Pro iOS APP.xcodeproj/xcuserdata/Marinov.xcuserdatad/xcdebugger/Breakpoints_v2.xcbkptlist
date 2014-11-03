@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
-            timestampString = "436493215.971327"
+            timestampString = "436703164.600817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "@implementation FlappyBirdGameFieldController"
             landmarkType = "3">
          </BreakpointContent>
@@ -91,6 +91,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
+            timestampString = "436702997.538452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
+            timestampString = "436702999.866351"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

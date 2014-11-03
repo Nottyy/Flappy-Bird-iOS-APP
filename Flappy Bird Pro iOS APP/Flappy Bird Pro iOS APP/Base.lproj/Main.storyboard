@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -106,14 +107,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-wF-t9G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-wF-t9G">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vT-tTD">
                                 <rect key="frame" x="68" y="280" width="40" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-UB-ALd">
-                                <rect key="frame" x="196" y="180" width="209" height="86"/>
+                                <rect key="frame" x="196" y="181" width="209" height="86"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="GO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,35 +124,66 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="0kJ-xa-oQB">
-                                <rect key="frame" x="378" y="253" width="53" height="500"/>
+                                <rect key="frame" x="378" y="317" width="53" height="500"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-AD-c72">
                                 <rect key="frame" x="378" y="-373" width="53" height="500"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="BJE-rh-Q6X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-2a-icZ">
+                                <rect key="frame" x="27" y="43" width="325" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-id-5fA">
+                                <rect key="frame" x="201" y="290" width="204" height="77"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-j5-WdE">
                                 <rect key="frame" x="0.0" y="578" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Fjh-un-foR"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="3UG-jx-c8V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-M6-Oki">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="TOe-9h-L1S"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fmg-wF-t9G" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="0Bd-rT-AbD"/>
                             <constraint firstItem="fmg-wF-t9G" firstAttribute="leading" secondItem="dfT-vT-tTD" secondAttribute="trailing" constant="-108" id="7Y3-qE-YYH"/>
+                            <constraint firstItem="Bef-M6-Oki" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="7Y8-1p-xnP"/>
+                            <constraint firstItem="Bef-M6-Oki" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="topMargin" id="A11-We-lHG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fmg-wF-t9G" secondAttribute="trailing" constant="-16" id="FTR-Ev-xUh"/>
+                            <constraint firstItem="OaJ-Rq-H4s" firstAttribute="top" secondItem="fmg-wF-t9G" secondAttribute="bottom" id="MTl-NU-3by"/>
+                            <constraint firstItem="fmg-wF-t9G" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="topMargin" id="NRf-aO-vWA"/>
+                            <constraint firstItem="pxU-j5-WdE" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="OIS-zx-hWG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bef-M6-Oki" secondAttribute="trailing" constant="-16" id="Zaq-al-WKT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pxU-j5-WdE" secondAttribute="trailing" constant="-16" id="n1g-sl-8jL"/>
+                            <constraint firstItem="OaJ-Rq-H4s" firstAttribute="top" secondItem="pxU-j5-WdE" secondAttribute="bottom" id="qW6-s2-nVQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="borderBottom" destination="BJE-rh-Q6X" id="2uT-cL-kM9"/>
-                        <outlet property="borderTop" destination="3UG-jx-c8V" id="Qw5-RM-PxT"/>
+                        <outlet property="borderBottom" destination="pxU-j5-WdE" id="LeX-FI-m1v"/>
+                        <outlet property="borderTop" destination="Bef-M6-Oki" id="vnz-3U-NA7"/>
                         <outlet property="buttonStartGame" destination="Opv-UB-ALd" id="1Ok-mq-c4G"/>
+                        <outlet property="exitButton" destination="KUx-id-5fA" id="7CO-nm-uAw"/>
                         <outlet property="objectBird" destination="dfT-vT-tTD" id="7lA-mq-fht"/>
+                        <outlet property="scoreLabel" destination="PIN-2a-icZ" id="5Za-J5-hJr"/>
                         <outlet property="tunnelBottom" destination="0kJ-xa-oQB" id="OP4-p2-nbN"/>
                         <outlet property="tunnelTop" destination="pjQ-AD-c72" id="CDS-vf-SKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxi-OQ-0RS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="-4"/>
+            <point key="canvasLocation" x="198" y="25"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2M0-gr-62O">
@@ -321,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXn-va-cTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="741"/>
+            <point key="canvasLocation" x="892" y="723"/>
         </scene>
     </scenes>
     <resources>
