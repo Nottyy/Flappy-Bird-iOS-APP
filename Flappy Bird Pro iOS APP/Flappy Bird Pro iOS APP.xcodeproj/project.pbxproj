@@ -22,6 +22,9 @@
 		C549341C1A02FD55002A1526 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934171A02FD55002A1526 /* Tunnel.png */; };
 		C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */; };
 		C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B24B711A05711C00C984C8 /* EverliveSDK.framework */; };
+		C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B283661A0797A200E144F8 /* LoginViewController.m */; };
+		C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283681A07A90C00E144F8 /* icon-password.png */; };
+		C5B2836B1A07A90C00E144F8 /* icon-username.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283691A07A90C00E144F8 /* icon-username.png */; };
 		C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */; };
 		C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABE1A05A73000A58142 /* SignUpViewController.m */; };
 		C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC11A05A93800A58142 /* TKUIButton.m */; };
@@ -65,6 +68,10 @@
 		C549341E1A030925002A1526 /* FlappyBirdGameFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlappyBirdGameFieldController.h; path = ViewControllers/FlappyBirdGameFieldController.h; sourceTree = "<group>"; };
 		C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlappyBirdGameFieldController.m; path = ViewControllers/FlappyBirdGameFieldController.m; sourceTree = "<group>"; };
 		C5B24B711A05711C00C984C8 /* EverliveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EverliveSDK.framework; path = ../EverliveSDK.framework; sourceTree = "<group>"; };
+		C5B283651A0797A200E144F8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C5B283661A0797A200E144F8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C5B283681A07A90C00E144F8 /* icon-password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-password.png"; sourceTree = "<group>"; };
+		C5B283691A07A90C00E144F8 /* icon-username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-username.png"; sourceTree = "<group>"; };
 		C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyBirdUser.h; sourceTree = SOURCE_ROOT; };
 		C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyBirdUser.m; sourceTree = SOURCE_ROOT; };
 		C5B59ABD1A05A73000A58142 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -141,6 +148,8 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5B283681A07A90C00E144F8 /* icon-password.png */,
+				C5B283691A07A90C00E144F8 /* icon-username.png */,
 				C54934131A02FD55002A1526 /* Background.png */,
 				C54934141A02FD55002A1526 /* BirdDown.png */,
 				C54934151A02FD55002A1526 /* BirdUp.png */,
@@ -180,6 +189,8 @@
 				C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */,
 				C5B59ABD1A05A73000A58142 /* SignUpViewController.h */,
 				C5B59ABE1A05A73000A58142 /* SignUpViewController.m */,
+				C5B283651A0797A200E144F8 /* LoginViewController.h */,
+				C5B283661A0797A200E144F8 /* LoginViewController.m */,
 			);
 			name = "Views Controllers";
 			sourceTree = "<group>";
@@ -307,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B2836B1A07A90C00E144F8 /* icon-username.png in Resources */,
 				C54934191A02FD55002A1526 /* BirdDown.png in Resources */,
 				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
@@ -316,6 +328,7 @@
 				C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */,
 				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
 				C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */,
+				C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +348,7 @@
 			files = (
 				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
+				C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */,
 				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
 				C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */,
