@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pDS-r7-5QI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y4P-mR-TIc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSL-YL-j1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-386" y="820"/>
+            <point key="canvasLocation" x="-509" y="682"/>
         </scene>
         <!--Flappy Bird Game Field Controller-->
         <scene sceneID="Vo8-VJ-D9z">
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxi-OQ-0RS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="25"/>
+            <point key="canvasLocation" x="150" y="-4"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2M0-gr-62O">
@@ -278,6 +278,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pDS-r7-5QI" kind="presentation" modalTransitionStyle="flipHorizontal" id="fb7-zS-uJ3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14963503650000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -326,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waO-3y-pcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="3"/>
+            <point key="canvasLocation" x="784" y="1"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Gft-8b-asm">
@@ -340,13 +343,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-o5-3S8">
-                                <rect key="frame" x="180" y="409" width="239" height="48"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" © 2014 Antonio Marinov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-WZ-qQp">
+                                <rect key="frame" x="138" y="498" width="325" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dUu-Fd-aCJ"/>
+                                    <constraint firstAttribute="width" constant="325" id="tMN-gL-gbt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-N6-6H6">
+                                <rect key="frame" x="172" y="90" width="257" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="B2f-SE-NQG"/>
+                                    <constraint firstAttribute="width" constant="257" id="ds0-ef-vkV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-v8-hkh" userLabel="flappy-bird-logo.png">
+                                <rect key="frame" x="180" y="28" width="240" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ug4-xL-k3M"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-rI-YWU" customClass="TKUITextField">
+                                <rect key="frame" x="165" y="270" width="270" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="X5G-OP-8Fl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-password.png" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-sa-zC6">
+                                <rect key="frame" x="399" y="275" width="10" height="12"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZ8-4v-hUW" customClass="TKUITextField">
+                                <rect key="frame" x="165" y="222" width="270" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-xg-8Z0">
+                                <rect key="frame" x="399" y="232" width="10" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="QcK-K1-5oH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-YS-wQ7">
+                                <rect key="frame" x="399" y="186" width="10" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="bwk-D4-bHe"/>
+                                    <constraint firstAttribute="height" constant="12" id="pt9-GS-Jas"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-MP-KjE" customClass="TKUITextField">
+                                <rect key="frame" x="165" y="174" width="270" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="GP7-fX-I2Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-o5-3S8">
+                                <rect key="frame" x="180" y="408" width="239" height="49"/>
                                 <color key="backgroundColor" red="0.28627450980392155" green="0.2196078431372549" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="jM3-3A-Syh"/>
+                                    <constraint firstAttribute="width" constant="239" id="t95-4s-4aC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -356,50 +429,36 @@
                                     <action selector="signUp:" destination="pDS-r7-5QI" eventType="touchUpInside" id="Plv-NJ-T61"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" © 2014 Antonio Marinov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-WZ-qQp">
-                                <rect key="frame" x="138" y="498" width="325" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-N6-6H6">
-                                <rect key="frame" x="172" y="90" width="257" height="45"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-telerik_devcloud.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-v8-hkh" userLabel="flappy-bird-logo.png">
-                                <rect key="frame" x="180" y="28" width="240" height="54"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-rI-YWU" customClass="TKUITextField">
-                                <rect key="frame" x="165" y="270" width="270" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-password.png" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-sa-zC6">
-                                <rect key="frame" x="399" y="275" width="10" height="12"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZ8-4v-hUW" customClass="TKUITextField">
-                                <rect key="frame" x="165" y="222" width="270" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-xg-8Z0">
-                                <rect key="frame" x="399" y="232" width="10" height="12"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-YS-wQ7">
-                                <rect key="frame" x="399" y="186" width="10" height="12"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-MP-KjE" customClass="TKUITextField">
-                                <rect key="frame" x="165" y="174" width="270" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9D9-rI-YWU" firstAttribute="top" secondItem="ptI-xg-8Z0" secondAttribute="bottom" constant="26" id="1Th-b2-y7w"/>
+                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="centerX" secondItem="xCU-gb-NKP" secondAttribute="centerX" id="1h2-B9-zvW"/>
+                            <constraint firstItem="9D9-rI-YWU" firstAttribute="leading" secondItem="kZ8-4v-hUW" secondAttribute="leading" id="7yg-pG-ecc"/>
+                            <constraint firstItem="5Gs-v8-hkh" firstAttribute="leading" secondItem="uL1-o5-3S8" secondAttribute="leading" id="APq-vf-8Cl"/>
+                            <constraint firstItem="9k6-N6-6H6" firstAttribute="top" secondItem="5Gs-v8-hkh" secondAttribute="bottom" constant="8" symbolic="YES" id="Cax-yf-u6v"/>
+                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="trailing" secondItem="9D9-rI-YWU" secondAttribute="trailing" id="GCk-zD-Tij"/>
+                            <constraint firstItem="kak-es-osK" firstAttribute="top" secondItem="pxa-WZ-qQp" secondAttribute="bottom" constant="37" id="GiH-9h-mHY"/>
+                            <constraint firstItem="pxa-WZ-qQp" firstAttribute="top" secondItem="uL1-o5-3S8" secondAttribute="bottom" constant="41" id="HS6-g0-PXZ"/>
+                            <constraint firstItem="5Gs-v8-hkh" firstAttribute="centerX" secondItem="9k6-N6-6H6" secondAttribute="centerX" id="QBD-dy-SjM"/>
+                            <constraint firstItem="9k6-N6-6H6" firstAttribute="centerX" secondItem="0FF-MP-KjE" secondAttribute="centerX" id="Qcs-bJ-j53"/>
+                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="top" secondItem="0FF-MP-KjE" secondAttribute="bottom" constant="3" id="Sbb-te-b2x"/>
+                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="top" secondItem="mJp-YS-wQ7" secondAttribute="bottom" constant="24" id="TXW-LT-Whu"/>
+                            <constraint firstItem="0FF-MP-KjE" firstAttribute="top" secondItem="9k6-N6-6H6" secondAttribute="bottom" constant="39" id="WpO-Gj-fYC"/>
+                            <constraint firstItem="PsL-sa-zC6" firstAttribute="top" secondItem="kZ8-4v-hUW" secondAttribute="bottom" constant="8" symbolic="YES" id="Wy3-hp-OmH"/>
+                            <constraint firstItem="5Gs-v8-hkh" firstAttribute="top" secondItem="BDI-us-hPF" secondAttribute="bottom" constant="8" symbolic="YES" id="aVc-rH-YZY"/>
+                            <constraint firstAttribute="trailing" secondItem="mJp-YS-wQ7" secondAttribute="trailing" constant="191" id="e4E-e5-78U"/>
+                            <constraint firstItem="mJp-YS-wQ7" firstAttribute="top" secondItem="9k6-N6-6H6" secondAttribute="bottom" constant="51" id="fPa-iv-wNa"/>
+                            <constraint firstItem="uL1-o5-3S8" firstAttribute="top" secondItem="9D9-rI-YWU" secondAttribute="bottom" constant="93" id="fzI-Cf-hq4"/>
+                            <constraint firstItem="ptI-xg-8Z0" firstAttribute="top" secondItem="0FF-MP-KjE" secondAttribute="bottom" constant="13" id="gZ3-Sg-cal"/>
+                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="leading" secondItem="0FF-MP-KjE" secondAttribute="leading" id="gay-qU-R3a"/>
+                            <constraint firstItem="pxa-WZ-qQp" firstAttribute="centerX" secondItem="9D9-rI-YWU" secondAttribute="centerX" id="gyB-5u-dBn"/>
+                            <constraint firstItem="PsL-sa-zC6" firstAttribute="leading" secondItem="ptI-xg-8Z0" secondAttribute="leading" id="haE-5v-z2D"/>
+                            <constraint firstItem="9D9-rI-YWU" firstAttribute="top" secondItem="kZ8-4v-hUW" secondAttribute="bottom" constant="3" id="j44-ZS-04Q"/>
+                            <constraint firstItem="0FF-MP-KjE" firstAttribute="trailing" secondItem="kZ8-4v-hUW" secondAttribute="trailing" id="mOx-pd-kzY"/>
+                            <constraint firstItem="mJp-YS-wQ7" firstAttribute="leading" secondItem="ptI-xg-8Z0" secondAttribute="leading" id="oM4-5r-ZO2"/>
+                            <constraint firstItem="mJp-YS-wQ7" firstAttribute="trailing" secondItem="ptI-xg-8Z0" secondAttribute="trailing" id="rbb-IG-xUM"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -412,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXn-va-cTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="723"/>
+            <point key="canvasLocation" x="150" y="682"/>
         </scene>
     </scenes>
     <resources>
