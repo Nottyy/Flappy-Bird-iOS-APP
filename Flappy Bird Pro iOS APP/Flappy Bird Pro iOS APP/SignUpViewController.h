@@ -11,14 +11,15 @@
 #import "TKUITextField.h"
 #import "MBProgressHUD.h"
 
-@interface SignUpViewController : UIViewController
-@property (weak, nonatomic) IBOutlet TKUITextField *userName;
+@interface SignUpViewController : UIViewController<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet TKUITextField *name;
 
-@property (weak, nonatomic) IBOutlet TKUITextField *password;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet TKUITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet TKUITextField *displayNameTextField;
+@property (weak, nonatomic) IBOutlet TKUITextField *usernameTextField;
 
-@property (weak, nonatomic) IBOutlet TKUIButton *registerButton;
+- (IBAction)signUp:(id)sender;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
 
