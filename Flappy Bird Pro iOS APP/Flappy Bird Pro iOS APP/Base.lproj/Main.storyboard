@@ -161,11 +161,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-wF-t9G">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-UB-ALd">
-                                <rect key="frame" x="196" y="181" width="209" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-UB-ALd">
+                                <rect key="frame" x="263" y="276" width="75" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9yA-4c-J9R"/>
+                                    <constraint firstAttribute="width" constant="75" id="DHN-B8-QpV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="GO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,20 +175,35 @@
                                     <action selector="startGame:" destination="IEP-ba-9Iq" eventType="touchUpInside" id="AWc-uB-dgi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="0kJ-xa-oQB">
-                                <rect key="frame" x="378" y="317" width="53" height="500"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="0kJ-xa-oQB">
+                                <rect key="frame" x="547" y="320" width="53" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Q7b-aA-VDm"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-AD-c72">
-                                <rect key="frame" x="378" y="-373" width="53" height="500"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-AD-c72">
+                                <rect key="frame" x="547" y="-359" width="53" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Ns9-3M-rMP"/>
+                                    <constraint firstAttribute="width" constant="53" id="P9r-Gl-WEo"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-2a-icZ">
-                                <rect key="frame" x="27" y="43" width="325" height="98"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-2a-icZ">
+                                <rect key="frame" x="21" y="41" width="110" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OXW-Hq-sGM"/>
+                                    <constraint firstAttribute="width" constant="110" id="PLJ-JE-zhh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-id-5fA">
-                                <rect key="frame" x="201" y="290" width="204" height="77"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-id-5fA">
+                                <rect key="frame" x="240" y="344" width="120" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jgi-z1-SWS"/>
+                                    <constraint firstAttribute="height" constant="60" id="lg3-NA-GnA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="EXIT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -196,32 +212,53 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-j5-WdE">
                                 <rect key="frame" x="0.0" y="578" width="600" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Fjh-un-foR"/>
+                                    <constraint firstAttribute="height" constant="22" id="TuQ-MF-vga"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-M6-Oki">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="TOe-9h-L1S"/>
+                                    <constraint firstAttribute="height" constant="22" id="sLJ-St-fyz"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vT-tTD">
-                                <rect key="frame" x="81" y="285" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vT-tTD">
+                                <rect key="frame" x="67" y="280" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="III-II-GAH"/>
+                                    <constraint firstAttribute="width" constant="40" id="MWw-gP-GIY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-qv-JDj">
+                                <rect key="frame" x="180" y="163" width="240" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8qF-Ol-wyM"/>
+                                    <constraint firstAttribute="height" constant="105" id="XDs-bn-5g3"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fmg-wF-t9G" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="0Bd-rT-AbD"/>
-                            <constraint firstItem="fmg-wF-t9G" firstAttribute="leading" secondItem="dfT-vT-tTD" secondAttribute="trailing" constant="-108" id="7Y3-qE-YYH"/>
-                            <constraint firstItem="Bef-M6-Oki" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="7Y8-1p-xnP"/>
-                            <constraint firstItem="Bef-M6-Oki" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="topMargin" id="A11-We-lHG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fmg-wF-t9G" secondAttribute="trailing" constant="-16" id="FTR-Ev-xUh"/>
-                            <constraint firstItem="OaJ-Rq-H4s" firstAttribute="top" secondItem="fmg-wF-t9G" secondAttribute="bottom" id="MTl-NU-3by"/>
-                            <constraint firstItem="fmg-wF-t9G" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="topMargin" id="NRf-aO-vWA"/>
-                            <constraint firstItem="pxU-j5-WdE" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-16" id="OIS-zx-hWG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bef-M6-Oki" secondAttribute="trailing" constant="-16" id="Zaq-al-WKT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pxU-j5-WdE" secondAttribute="trailing" constant="-16" id="n1g-sl-8jL"/>
-                            <constraint firstItem="OaJ-Rq-H4s" firstAttribute="top" secondItem="pxU-j5-WdE" secondAttribute="bottom" id="qW6-s2-nVQ"/>
+                            <constraint firstItem="dfT-vT-tTD" firstAttribute="centerY" secondItem="dm4-7v-4MK" secondAttribute="centerY" id="3l9-lz-zZA"/>
+                            <constraint firstItem="KUx-id-5fA" firstAttribute="top" secondItem="Opv-UB-ALd" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ko-ej-CWW"/>
+                            <constraint firstItem="PIN-2a-icZ" firstAttribute="top" secondItem="Bef-M6-Oki" secondAttribute="bottom" constant="19" id="5Ag-g9-z8H"/>
+                            <constraint firstAttribute="trailing" secondItem="pxU-j5-WdE" secondAttribute="trailing" id="6kd-mT-zsa"/>
+                            <constraint firstItem="Bef-M6-Oki" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="top" id="JzZ-jq-HPM"/>
+                            <constraint firstItem="dfT-vT-tTD" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="51" id="Kz3-H8-K1K"/>
+                            <constraint firstItem="0kJ-xa-oQB" firstAttribute="leading" secondItem="pjQ-AD-c72" secondAttribute="leading" id="M8d-7X-1vn"/>
+                            <constraint firstItem="Opv-UB-ALd" firstAttribute="centerX" secondItem="KUx-id-5fA" secondAttribute="centerX" id="MvT-0L-AeJ"/>
+                            <constraint firstItem="PIN-2a-icZ" firstAttribute="bottom" secondItem="pjQ-AD-c72" secondAttribute="bottom" id="Y0e-j7-bWu"/>
+                            <constraint firstItem="pxU-j5-WdE" firstAttribute="trailing" secondItem="0kJ-xa-oQB" secondAttribute="trailing" id="bnu-z6-vpy"/>
+                            <constraint firstItem="YgL-qv-JDj" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="top" constant="163" id="cCq-YD-83V"/>
+                            <constraint firstItem="pjQ-AD-c72" firstAttribute="trailing" secondItem="Bef-M6-Oki" secondAttribute="trailing" id="cI8-gu-0FZ"/>
+                            <constraint firstItem="pxU-j5-WdE" firstAttribute="bottom" secondItem="OaJ-Rq-H4s" secondAttribute="top" id="fWJ-Hf-DKt"/>
+                            <constraint firstItem="pxU-j5-WdE" firstAttribute="leading" secondItem="Bef-M6-Oki" secondAttribute="leading" id="gH8-pl-UHo"/>
+                            <constraint firstItem="0kJ-xa-oQB" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="top" constant="320" id="iNt-Wp-6bk"/>
+                            <constraint firstItem="YgL-qv-JDj" firstAttribute="centerX" secondItem="Opv-UB-ALd" secondAttribute="centerX" id="kB2-CI-iiC"/>
+                            <constraint firstItem="PIN-2a-icZ" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="5" id="kd4-5E-QsN"/>
+                            <constraint firstItem="Bef-M6-Oki" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leading" id="s7U-g2-eda"/>
+                            <constraint firstItem="KUx-id-5fA" firstAttribute="centerX" secondItem="pxU-j5-WdE" secondAttribute="centerX" id="svc-LH-dWe"/>
+                            <constraint firstItem="Opv-UB-ALd" firstAttribute="top" secondItem="YgL-qv-JDj" secondAttribute="bottom" constant="8" symbolic="YES" id="vWS-1U-uMN"/>
+                            <constraint firstItem="Bef-M6-Oki" firstAttribute="trailing" secondItem="pxU-j5-WdE" secondAttribute="trailing" id="zAD-xZ-btp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -229,6 +266,7 @@
                         <outlet property="borderTop" destination="Bef-M6-Oki" id="vnz-3U-NA7"/>
                         <outlet property="buttonStartGame" destination="Opv-UB-ALd" id="1Ok-mq-c4G"/>
                         <outlet property="exitButton" destination="KUx-id-5fA" id="7CO-nm-uAw"/>
+                        <outlet property="logoGameOverAndStartGame" destination="YgL-qv-JDj" id="LWg-9s-POQ"/>
                         <outlet property="objectBird" destination="dfT-vT-tTD" id="7lA-mq-fht"/>
                         <outlet property="scoreLabel" destination="PIN-2a-icZ" id="5Za-J5-hJr"/>
                         <outlet property="tunnelBottom" destination="0kJ-xa-oQB" id="OP4-p2-nbN"/>
@@ -529,6 +567,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background.png" width="320" height="480"/>
         <image name="BirdUp.png" width="40" height="40"/>
         <image name="GameBackground.png" width="320" height="480"/>
         <image name="Tunnel.png" width="50" height="100"/>

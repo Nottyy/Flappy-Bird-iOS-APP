@@ -12,14 +12,20 @@
 
 @end
 
-@implementation FlappyBirdGameFieldController
+@implementation FlappyBirdGameFieldController{
+
+    CGFloat initialLogoXCoordinate;
+}
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
     self.exitButton.hidden = YES;
+    
     scoreNumber = 0;
+    logoMotion = -5;
     
     highScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey: @"HighScoreNumber"];
     
@@ -30,8 +36,12 @@
     audioForGameOverPath = [[NSBundle mainBundle] pathForResource:@"crash" ofType:@"wav"];
     audioPlayerForGameOver = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForGameOverPath] error:NULL];
     [audioPlayerForGameOver prepareToPlay];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    initialLogoXCoordinate = self.logoGameOverAndStartGame.center.x;
     
-    [super viewDidLoad];
+    [self setLogoTimer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,8 +58,21 @@
     // Pass the selected object to the new view controller..
 }
 */
+-(void) logoMoving{
+    self.logoGameOverAndStartGame.center = CGPointMake(self.logoGameOverAndStartGame.center.x + logoMotion, self.logoGameOverAndStartGame.center.y);
+    
+    if (self.logoGameOverAndStartGame.center.x <= initialLogoXCoordinate - 20) {
+        logoMotion = 5;
+    }
+    
+    if (self.logoGameOverAndStartGame.center.x >= initialLogoXCoordinate + 20) {
+        logoMotion = -5;
+    }
+}
 
 - (IBAction)startGame:(id)sender {
+    [logoMovement invalidate];
+    self.logoGameOverAndStartGame.hidden = YES;
     self.tunnelTop.hidden = NO;
     self.tunnelBottom.hidden = NO;
     self.buttonStartGame.hidden = YES;
@@ -126,17 +149,15 @@
     
     birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
     
+    self.logoGameOverAndStartGame.hidden = NO;
     self.exitButton.hidden = NO;
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
+    
+    [self setLogoTimer];
 }
 
 -(void) birdMovementWhenCrashed{
-    
-    CGFloat s = self.objectBird.center.x;
-    CGFloat d = self.objectBird.center.y;
-    CGFloat t = [[UIScreen mainScreen] bounds].size.height;
-    
     self.objectBird.center = CGPointMake(self.objectBird.center.x, self.objectBird.center.y + birdFlight);
     
     birdFlight = birdFlight + 5;
@@ -150,6 +171,10 @@
         self.objectBird.hidden = YES;
         
     }
+}
+
+-(void) setLogoTimer{
+    logoMovement = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(logoMoving) userInfo:nil repeats:YES];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

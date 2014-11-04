@@ -13,6 +13,7 @@ int birdFlight;
 int randomTopTunnelPosition;
 int randomBottomTunnelPosition;
 int scoreNumber;
+int logoMotion;
 NSInteger *highScoreNumber;
 NSString *audioForPointPath;
 NSString *audioForGameOverPath;
@@ -20,6 +21,7 @@ NSString *audioForGameOverPath;
 @interface FlappyBirdGameFieldController : UIViewController{
     NSTimer *birdMovementTimer;
     NSTimer *tunnelMovementTimer;
+    NSTimer *logoMovement;
     
     AVAudioPlayer *audioPlayerForPoint;
     AVAudioPlayer *audioPlayerForGameOver;
@@ -33,6 +35,7 @@ NSString *audioForGameOverPath;
 @property (weak, nonatomic) IBOutlet UIImageView *tunnelBottom;
 @property (weak, nonatomic) IBOutlet UIImageView *borderTop;
 @property (weak, nonatomic) IBOutlet UIImageView *borderBottom;
+@property (weak, nonatomic) IBOutlet UIImageView *logoGameOverAndStartGame;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
