@@ -164,9 +164,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-wF-t9G">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vT-tTD">
-                                <rect key="frame" x="68" y="280" width="40" height="40"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-UB-ALd">
                                 <rect key="frame" x="196" y="181" width="209" height="86"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
@@ -207,6 +204,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="TOe-9h-L1S"/>
                                 </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vT-tTD">
+                                <rect key="frame" x="81" y="285" width="40" height="40"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

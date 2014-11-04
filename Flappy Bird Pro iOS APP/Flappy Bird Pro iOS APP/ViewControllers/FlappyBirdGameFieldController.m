@@ -124,10 +124,32 @@
     [tunnelMovementTimer invalidate];
     [birdMovementTimer invalidate];
     
+    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
+    
     self.exitButton.hidden = NO;
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
-    self.objectBird.hidden = YES;
+}
+
+-(void) birdMovementWhenCrashed{
+    
+    CGFloat s = self.objectBird.center.x;
+    CGFloat d = self.objectBird.center.y;
+    CGFloat t = [[UIScreen mainScreen] bounds].size.height;
+    
+    self.objectBird.center = CGPointMake(self.objectBird.center.x, self.objectBird.center.y + birdFlight);
+    
+    birdFlight = birdFlight + 5;
+    
+    if (birdFlight >= 10) {
+        birdFlight = 10;
+    }
+    
+    if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
+        [birdMovementTimer invalidate];
+        self.objectBird.hidden = YES;
+        
+    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
