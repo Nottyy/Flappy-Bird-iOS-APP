@@ -147,10 +147,8 @@
     [tunnelMovementTimer invalidate];
     [birdMovementTimer invalidate];
     
+    self.objectBird.image = [UIImage imageNamed:@"gameOverBird.png"];
     birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
-    
-    self.logoGameOverAndStartGame.hidden = NO;
-    self.exitButton.hidden = NO;
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
     
@@ -169,6 +167,8 @@
     if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
         [birdMovementTimer invalidate];
         self.objectBird.hidden = YES;
+        self.logoGameOverAndStartGame.hidden = NO;
+        self.exitButton.hidden = NO;
         
     }
 }

@@ -175,13 +175,7 @@
                                     <action selector="startGame:" destination="IEP-ba-9Iq" eventType="touchUpInside" id="AWc-uB-dgi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="0kJ-xa-oQB">
-                                <rect key="frame" x="547" y="320" width="53" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="Q7b-aA-VDm"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-AD-c72">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal-tunnels.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pjQ-AD-c72">
                                 <rect key="frame" x="547" y="-359" width="53" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="Ns9-3M-rMP"/>
@@ -209,13 +203,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-j5-WdE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border-tunnels.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-j5-WdE">
                                 <rect key="frame" x="0.0" y="578" width="600" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="TuQ-MF-vga"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-M6-Oki">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border-tunnels.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-M6-Oki">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="sLJ-St-fyz"/>
@@ -233,6 +227,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8qF-Ol-wyM"/>
                                     <constraint firstAttribute="height" constant="105" id="XDs-bn-5g3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="normal-tunnels.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0kJ-xa-oQB">
+                                <rect key="frame" x="547" y="305" width="53" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Q7b-aA-VDm"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -570,9 +570,10 @@
         <image name="Background.png" width="320" height="480"/>
         <image name="BirdUp.png" width="40" height="40"/>
         <image name="GameBackground.png" width="320" height="480"/>
-        <image name="Tunnel.png" width="50" height="100"/>
+        <image name="border-tunnels.jpg" width="1024" height="768"/>
         <image name="icon-password.png" width="10" height="12"/>
         <image name="icon-username.png" width="12" height="13"/>
         <image name="logo-telerik_devcloud.png" width="10" height="12"/>
+        <image name="normal-tunnels.jpg" width="683" height="1024"/>
     </resources>
 </document>
