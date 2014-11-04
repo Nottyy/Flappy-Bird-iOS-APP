@@ -7,17 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 int birdFlight;
 int randomTopTunnelPosition;
 int randomBottomTunnelPosition;
 int scoreNumber;
 NSInteger *highScoreNumber;
+NSString *audioForPointPath;
+NSString *audioForGameOverPath;
 
 @interface FlappyBirdGameFieldController : UIViewController{
     NSTimer *birdMovementTimer;
     NSTimer *tunnelMovementTimer;
+    
+    AVAudioPlayer *audioPlayerForPoint;
+    AVAudioPlayer *audioPlayerForGameOver;
 }
+
+//@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 @property (weak, nonatomic) IBOutlet UIImageView *objectBird;
 @property (weak, nonatomic) IBOutlet UIButton *buttonStartGame;

@@ -21,6 +21,8 @@
 		C549341B1A02FD55002A1526 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934161A02FD55002A1526 /* GameBackground.png */; };
 		C549341C1A02FD55002A1526 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C54934171A02FD55002A1526 /* Tunnel.png */; };
 		C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */; };
+		C55DA7ED1A09030300AAB244 /* crash.wav in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EB1A09030300AAB244 /* crash.wav */; };
+		C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EC1A09030300AAB244 /* point.mp3 */; };
 		C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B24B711A05711C00C984C8 /* EverliveSDK.framework */; };
 		C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B283661A0797A200E144F8 /* LoginViewController.m */; };
 		C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283681A07A90C00E144F8 /* icon-password.png */; };
@@ -67,6 +69,8 @@
 		C54934171A02FD55002A1526 /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
 		C549341E1A030925002A1526 /* FlappyBirdGameFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlappyBirdGameFieldController.h; path = ViewControllers/FlappyBirdGameFieldController.h; sourceTree = "<group>"; };
 		C549341F1A030925002A1526 /* FlappyBirdGameFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlappyBirdGameFieldController.m; path = ViewControllers/FlappyBirdGameFieldController.m; sourceTree = "<group>"; };
+		C55DA7EB1A09030300AAB244 /* crash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crash.wav; sourceTree = "<group>"; };
+		C55DA7EC1A09030300AAB244 /* point.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = point.mp3; sourceTree = "<group>"; };
 		C5B24B711A05711C00C984C8 /* EverliveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EverliveSDK.framework; path = ../EverliveSDK.framework; sourceTree = "<group>"; };
 		C5B283651A0797A200E144F8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C5B283661A0797A200E144F8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C55DA7EB1A09030300AAB244 /* crash.wav */,
+				C55DA7EC1A09030300AAB244 /* point.mp3 */,
 				C5B283681A07A90C00E144F8 /* icon-password.png */,
 				C5B283691A07A90C00E144F8 /* icon-username.png */,
 				C54934131A02FD55002A1526 /* Background.png */,
@@ -324,11 +330,13 @@
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C549341B1A02FD55002A1526 /* GameBackground.png in Resources */,
 				C549341C1A02FD55002A1526 /* Tunnel.png in Resources */,
+				C55DA7ED1A09030300AAB244 /* crash.wav in Resources */,
 				C54934181A02FD55002A1526 /* Background.png in Resources */,
 				C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */,
 				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
 				C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */,
 				C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */,
+				C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,14 @@
     
     highScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey: @"HighScoreNumber"];
     
+    audioForPointPath = [[NSBundle mainBundle] pathForResource:@"point" ofType:@"mp3"];
+    audioPlayerForPoint = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:audioForPointPath] error:NULL];
+    [audioPlayerForPoint prepareToPlay];
+    
+    audioForGameOverPath = [[NSBundle mainBundle] pathForResource:@"crash" ofType:@"wav"];
+    audioPlayerForGameOver = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForGameOverPath] error:NULL];
+    [audioPlayerForGameOver prepareToPlay];
+    
     [super viewDidLoad];
 }
 
@@ -104,9 +112,11 @@
 -(void)setScore{
     scoreNumber = scoreNumber + 1;
     self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
+    [audioPlayerForPoint play];
 }
 
 -(void)gameOver{
+    [audioPlayerForGameOver play];
     if (scoreNumber > highScoreNumber) {
         [[NSUserDefaults standardUserDefaults] setInteger:scoreNumber forKey:@"HighScoreNumber"];
     }
