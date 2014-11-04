@@ -76,6 +76,10 @@
     self.tunnelTop.hidden = NO;
     self.tunnelBottom.hidden = NO;
     self.buttonStartGame.hidden = YES;
+    self.exitButton.hidden = YES;
+    
+    self.objectBird.center = CGPointMake(self.objectBird.center.x, [[UIScreen mainScreen]bounds].size.height / 2);
+    self.objectBird.image = [UIImage imageNamed: @"BirdUp.png"];
     
     birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
     
@@ -152,7 +156,6 @@
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
     
-    [self setLogoTimer];
 }
 
 -(void) birdMovementWhenCrashed{
@@ -167,9 +170,13 @@
     if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
         [birdMovementTimer invalidate];
         self.objectBird.hidden = YES;
+        self.logoGameOverAndStartGame.image = [UIImage imageNamed:@"game-over.jpg"];
         self.logoGameOverAndStartGame.hidden = NO;
         self.exitButton.hidden = NO;
+        self.buttonStartGame.hidden = NO;
+        self.buttonStartGame.titleLabel.text = @"Try Again?";
         
+        [self setLogoTimer];
     }
 }
 

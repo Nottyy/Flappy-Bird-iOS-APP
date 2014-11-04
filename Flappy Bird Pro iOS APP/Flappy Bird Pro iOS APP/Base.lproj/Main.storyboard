@@ -222,7 +222,7 @@
                                     <constraint firstAttribute="width" constant="40" id="MWw-gP-GIY"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-qv-JDj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="begin-game.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-qv-JDj">
                                 <rect key="frame" x="180" y="163" width="240" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8qF-Ol-wyM"/>
@@ -235,6 +235,9 @@
                                     <constraint firstAttribute="height" constant="500" id="Q7b-aA-VDm"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flappy-bird-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bym-m5-JGF">
+                                <rect key="frame" x="-2" y="0.0" width="605" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,6 +245,7 @@
                             <constraint firstItem="KUx-id-5fA" firstAttribute="top" secondItem="Opv-UB-ALd" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ko-ej-CWW"/>
                             <constraint firstItem="PIN-2a-icZ" firstAttribute="top" secondItem="Bef-M6-Oki" secondAttribute="bottom" constant="19" id="5Ag-g9-z8H"/>
                             <constraint firstAttribute="trailing" secondItem="pxU-j5-WdE" secondAttribute="trailing" id="6kd-mT-zsa"/>
+                            <constraint firstItem="bym-m5-JGF" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="-18" id="AM1-kQ-pxg"/>
                             <constraint firstItem="Bef-M6-Oki" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="top" id="JzZ-jq-HPM"/>
                             <constraint firstItem="dfT-vT-tTD" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="51" id="Kz3-H8-K1K"/>
                             <constraint firstItem="0kJ-xa-oQB" firstAttribute="leading" secondItem="pjQ-AD-c72" secondAttribute="leading" id="M8d-7X-1vn"/>
@@ -253,8 +257,11 @@
                             <constraint firstItem="pxU-j5-WdE" firstAttribute="bottom" secondItem="OaJ-Rq-H4s" secondAttribute="top" id="fWJ-Hf-DKt"/>
                             <constraint firstItem="pxU-j5-WdE" firstAttribute="leading" secondItem="Bef-M6-Oki" secondAttribute="leading" id="gH8-pl-UHo"/>
                             <constraint firstItem="0kJ-xa-oQB" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="top" constant="320" id="iNt-Wp-6bk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bym-m5-JGF" secondAttribute="trailing" constant="-19" id="iXm-VR-PIn"/>
+                            <constraint firstItem="bym-m5-JGF" firstAttribute="top" secondItem="dm4-7v-4MK" secondAttribute="topMargin" id="ikM-nO-Z8i"/>
                             <constraint firstItem="YgL-qv-JDj" firstAttribute="centerX" secondItem="Opv-UB-ALd" secondAttribute="centerX" id="kB2-CI-iiC"/>
                             <constraint firstItem="PIN-2a-icZ" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leadingMargin" constant="5" id="kd4-5E-QsN"/>
+                            <constraint firstItem="OaJ-Rq-H4s" firstAttribute="top" secondItem="bym-m5-JGF" secondAttribute="bottom" id="m3b-fP-cZ4"/>
                             <constraint firstItem="Bef-M6-Oki" firstAttribute="leading" secondItem="dm4-7v-4MK" secondAttribute="leading" id="s7U-g2-eda"/>
                             <constraint firstItem="KUx-id-5fA" firstAttribute="centerX" secondItem="pxU-j5-WdE" secondAttribute="centerX" id="svc-LH-dWe"/>
                             <constraint firstItem="Opv-UB-ALd" firstAttribute="top" secondItem="YgL-qv-JDj" secondAttribute="bottom" constant="8" symbolic="YES" id="vWS-1U-uMN"/>
@@ -567,10 +574,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background.png" width="320" height="480"/>
         <image name="BirdUp.png" width="40" height="40"/>
         <image name="GameBackground.png" width="320" height="480"/>
+        <image name="begin-game.jpg" width="1200" height="956"/>
         <image name="border-tunnels.jpg" width="1024" height="768"/>
+        <image name="flappy-bird-background.jpg" width="1024" height="640"/>
         <image name="icon-password.png" width="10" height="12"/>
         <image name="icon-username.png" width="12" height="13"/>
         <image name="logo-telerik_devcloud.png" width="10" height="12"/>

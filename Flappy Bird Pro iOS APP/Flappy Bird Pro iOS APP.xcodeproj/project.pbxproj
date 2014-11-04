@@ -37,6 +37,8 @@
 		C5B6C8121A098594005E3A29 /* border-tunnels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C80F1A098594005E3A29 /* border-tunnels.jpg */; };
 		C5B6C8131A098594005E3A29 /* flappy-bird-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8101A098594005E3A29 /* flappy-bird-background.jpg */; };
 		C5B6C8141A098594005E3A29 /* normal-tunnels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8111A098594005E3A29 /* normal-tunnels.jpg */; };
+		C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8171A099275005E3A29 /* begin-game.jpg */; };
+		C5B6C81A1A099275005E3A29 /* game-over.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8181A099275005E3A29 /* game-over.jpg */; };
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
@@ -96,6 +98,8 @@
 		C5B6C80F1A098594005E3A29 /* border-tunnels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "border-tunnels.jpg"; sourceTree = "<group>"; };
 		C5B6C8101A098594005E3A29 /* flappy-bird-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "flappy-bird-background.jpg"; sourceTree = "<group>"; };
 		C5B6C8111A098594005E3A29 /* normal-tunnels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "normal-tunnels.jpg"; sourceTree = "<group>"; };
+		C5B6C8171A099275005E3A29 /* begin-game.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "begin-game.jpg"; sourceTree = "<group>"; };
+		C5B6C8181A099275005E3A29 /* game-over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game-over.jpg"; sourceTree = "<group>"; };
 		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
 		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5B6C8171A099275005E3A29 /* begin-game.jpg */,
+				C5B6C8181A099275005E3A29 /* game-over.jpg */,
 				C5B6C80F1A098594005E3A29 /* border-tunnels.jpg */,
 				C5B6C8101A098594005E3A29 /* flappy-bird-background.jpg */,
 				C5B6C8111A098594005E3A29 /* normal-tunnels.jpg */,
@@ -345,10 +351,12 @@
 				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */,
+				C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */,
 				C5B6C8121A098594005E3A29 /* border-tunnels.jpg in Resources */,
 				C549341B1A02FD55002A1526 /* GameBackground.png in Resources */,
 				C549341C1A02FD55002A1526 /* Tunnel.png in Resources */,
 				C55DA7ED1A09030300AAB244 /* crash.wav in Resources */,
+				C5B6C81A1A099275005E3A29 /* game-over.jpg in Resources */,
 				C54934181A02FD55002A1526 /* Background.png in Resources */,
 				C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */,
 				C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */,
