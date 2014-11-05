@@ -49,9 +49,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)returnToThis:(UIStoryboardSegue*)segue{
-    //Method that we can use to return to this screen
-    //From other screen button ->cmd drag to "Exit"-> returnToThis
-}
-
 @end
