@@ -18,7 +18,7 @@ NSInteger *highScoreNumber;
 NSString *audioForPointPath;
 NSString *audioForGameOverPath;
 
-@interface FlappyBirdGameFieldController : UIViewController{
+@interface FlappyBirdGameFieldController : UIViewController<UIDynamicAnimatorDelegate>{
     NSTimer *birdMovementTimer;
     NSTimer *tunnelMovementTimer;
     NSTimer *logoMovement;

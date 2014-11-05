@@ -15,6 +15,7 @@
 @implementation FlappyBirdGameFieldController{
 
     CGFloat initialLogoXCoordinate;
+    UIDynamicAnimator *animator;
 }
 
 - (void)viewDidLoad {
@@ -152,33 +153,56 @@
     [birdMovementTimer invalidate];
     
     self.objectBird.image = [UIImage imageNamed:@"gameOverBird.png"];
-    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
+//    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
     
+    [self setAnimator];
 }
 
--(void) birdMovementWhenCrashed{
-    self.objectBird.center = CGPointMake(self.objectBird.center.x, self.objectBird.center.y + birdFlight);
+-(void) setAnimator{
+    animator = [[UIDynamicAnimator alloc] initWithReferenceView: self.view];
+    animator.delegate = self;
+    UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[self.objectBird]];
+    [animator addBehavior:gravity];
     
-    birdFlight = birdFlight + 5;
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.objectBird]];
+    [collision setTranslatesReferenceBoundsIntoBoundary:YES];
+    [animator addBehavior: collision];
     
-    if (birdFlight >= 10) {
-        birdFlight = 10;
-    }
+    UIDynamicItemBehavior *dynamic = [[UIDynamicItemBehavior alloc] initWithItems: @[self.objectBird]];
+    dynamic.elasticity = 0.65;
+    dynamic.density = 20.0;
+    dynamic.allowsRotation = YES;
+    [animator addBehavior: dynamic];
     
-    if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
-        [birdMovementTimer invalidate];
-        self.objectBird.hidden = YES;
-        self.logoGameOverAndStartGame.image = [UIImage imageNamed:@"game-over.jpg"];
-        self.logoGameOverAndStartGame.hidden = NO;
-        self.exitButton.hidden = NO;
-        self.buttonStartGame.hidden = NO;
-        self.buttonStartGame.titleLabel.text = @"Try Again?";
-        
-        [self setLogoTimer];
-    }
+    
+    UIPushBehavior *push = [[UIPushBehavior alloc] initWithItems:@[self.objectBird] mode:UIPushBehaviorModeInstantaneous];
+    push.pushDirection = CGVectorMake(50.0, 50.0);
+    [animator addBehavior:push];
 }
+
+//-(void) birdMovementWhenCrashed{
+//    self.objectBird.center = CGPointMake(self.objectBird.center.x, self.objectBird.center.y + birdFlight);
+//    
+//    birdFlight = birdFlight + 5;
+//    
+//    if (birdFlight >= 10) {
+//        birdFlight = 10;
+//    }
+//    
+//    if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
+//        [birdMovementTimer invalidate];
+//        self.objectBird.hidden = YES;
+//        self.logoGameOverAndStartGame.image = [UIImage imageNamed:@"game-over.jpg"];
+//        self.logoGameOverAndStartGame.hidden = NO;
+//        self.exitButton.hidden = NO;
+//        self.buttonStartGame.hidden = NO;
+//        self.buttonStartGame.titleLabel.text = @"Try Again?";
+//        
+//        [self setLogoTimer];
+//    }
+//}
 
 -(void) setLogoTimer{
     logoMovement = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(logoMoving) userInfo:nil repeats:YES];
@@ -187,4 +211,11 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     birdFlight = 30;
 }
+
+-(void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator{
+    self.logoGameOverAndStartGame.image = [UIImage imageNamed:@"game-over.jpg"];
+    self.logoGameOverAndStartGame.hidden = NO;
+    [self setLogoTimer];
+}
+
 @end
