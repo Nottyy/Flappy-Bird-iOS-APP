@@ -13,7 +13,6 @@
 @end
 
 @implementation FlappyBirdGameFieldController{
-
     CGFloat initialLogoXCoordinate;
     UIDynamicAnimator *animator;
 }
@@ -23,7 +22,6 @@
     
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
-    self.exitButton.hidden = YES;
     
     scoreNumber = 0;
     logoMotion = -5;
@@ -73,11 +71,15 @@
 
 - (IBAction)startGame:(id)sender {
     [logoMovement invalidate];
+    scoreNumber = 0;
+    self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
+    
     self.logoGameOverAndStartGame.hidden = YES;
     self.tunnelTop.hidden = NO;
     self.tunnelBottom.hidden = NO;
     self.buttonStartGame.hidden = YES;
     self.exitButton.hidden = YES;
+    
     
     self.objectBird.center = CGPointMake(self.objectBird.center.x, [[UIScreen mainScreen]bounds].size.height / 2);
     self.objectBird.image = [UIImage imageNamed: @"BirdUp.png"];
@@ -171,14 +173,15 @@
     [animator addBehavior: collision];
     
     UIDynamicItemBehavior *dynamic = [[UIDynamicItemBehavior alloc] initWithItems: @[self.objectBird]];
-    dynamic.elasticity = 0.65;
+    dynamic.elasticity = 0.75;
     dynamic.density = 20.0;
     dynamic.allowsRotation = YES;
     [animator addBehavior: dynamic];
     
     
     UIPushBehavior *push = [[UIPushBehavior alloc] initWithItems:@[self.objectBird] mode:UIPushBehaviorModeInstantaneous];
-    push.pushDirection = CGVectorMake(50.0, 50.0);
+    int pushVector = scoreNumber + 70;
+    push.pushDirection = CGVectorMake(pushVector, pushVector);
     [animator addBehavior:push];
 }
 
@@ -215,6 +218,9 @@
 -(void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator{
     self.logoGameOverAndStartGame.image = [UIImage imageNamed:@"game-over.jpg"];
     self.logoGameOverAndStartGame.hidden = NO;
+    self.exitButton.hidden = NO;
+    self.objectBird.image = [UIImage imageNamed:@"BirdUp.png"];
+    self.buttonStartGame.hidden = NO;
     [self setLogoTimer];
 }
 
