@@ -36,6 +36,12 @@
     audioForGameOverPath = [[NSBundle mainBundle] pathForResource:@"crash" ofType:@"wav"];
     audioPlayerForGameOver = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForGameOverPath] error:NULL];
     [audioPlayerForGameOver prepareToPlay];
+    
+    audioForPushingTunnelsPath = [[NSBundle mainBundle] pathForResource:@"pushTunnelsSound" ofType:@"wav"];
+    audioPlayerForPushingTunnels = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForPushingTunnelsPath] error:NULL];
+    [audioPlayerForPushingTunnels prepareToPlay];
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -65,6 +71,7 @@
     
     // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
     if (gameBegan == YES && pushTunnels > 0 && usedPush == NO) {
+        [audioPlayerForPushingTunnels play];
         pushTunnels -= 1;
         usedPush = YES;
         NSLog(@"Pinched");
