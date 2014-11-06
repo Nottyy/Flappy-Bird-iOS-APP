@@ -25,11 +25,9 @@
 		C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EC1A09030300AAB244 /* point.mp3 */; };
 		C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EF1A0944EE00AAB244 /* gameOverBird.png */; };
 		C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7F11A09597300AAB244 /* green-tunnel.png */; };
-		C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B24B711A05711C00C984C8 /* EverliveSDK.framework */; };
 		C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B283661A0797A200E144F8 /* LoginViewController.m */; };
 		C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283681A07A90C00E144F8 /* icon-password.png */; };
 		C5B2836B1A07A90C00E144F8 /* icon-username.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283691A07A90C00E144F8 /* icon-username.png */; };
-		C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */; };
 		C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59ABE1A05A73000A58142 /* SignUpViewController.m */; };
 		C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC11A05A93800A58142 /* TKUIButton.m */; };
 		C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B59AC31A05A93800A58142 /* TKUITextField.m */; };
@@ -40,6 +38,19 @@
 		C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8171A099275005E3A29 /* begin-game.jpg */; };
 		C5B6C81A1A099275005E3A29 /* game-over.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8181A099275005E3A29 /* game-over.jpg */; };
 		C5B883811A0BC14200B9ACCF /* pushTunnelsSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5B883801A0BC14200B9ACCF /* pushTunnelsSound.wav */; };
+		C5B883A21A0BDE7F00B9ACCF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */; };
+		C5B883A31A0BDE7F00B9ACCF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A01A0BDE7F00B9ACCF /* Parse.framework */; };
+		C5B883A41A0BDE7F00B9ACCF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */; };
+		C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */; };
+		C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */; };
+		C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */; };
+		C5B883B21A0BE14300B9ACCF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A81A0BE14300B9ACCF /* CoreLocation.framework */; };
+		C5B883B31A0BE14300B9ACCF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A91A0BE14300B9ACCF /* libz.dylib */; };
+		C5B883B41A0BE14300B9ACCF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AA1A0BE14300B9ACCF /* MobileCoreServices.framework */; };
+		C5B883B51A0BE14300B9ACCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AB1A0BE14300B9ACCF /* QuartzCore.framework */; };
+		C5B883B61A0BE14300B9ACCF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AC1A0BE14300B9ACCF /* Security.framework */; };
+		C5B883B71A0BE14300B9ACCF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */; };
+		C5B883B81A0BE14300B9ACCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */; };
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
@@ -81,13 +92,10 @@
 		C55DA7EC1A09030300AAB244 /* point.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = point.mp3; sourceTree = "<group>"; };
 		C55DA7EF1A0944EE00AAB244 /* gameOverBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOverBird.png; sourceTree = "<group>"; };
 		C55DA7F11A09597300AAB244 /* green-tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-tunnel.png"; sourceTree = "<group>"; };
-		C5B24B711A05711C00C984C8 /* EverliveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EverliveSDK.framework; path = ../EverliveSDK.framework; sourceTree = "<group>"; };
 		C5B283651A0797A200E144F8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C5B283661A0797A200E144F8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C5B283681A07A90C00E144F8 /* icon-password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-password.png"; sourceTree = "<group>"; };
 		C5B283691A07A90C00E144F8 /* icon-username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-username.png"; sourceTree = "<group>"; };
-		C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyBirdUser.h; sourceTree = SOURCE_ROOT; };
-		C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyBirdUser.m; sourceTree = SOURCE_ROOT; };
 		C5B59ABD1A05A73000A58142 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		C5B59ABE1A05A73000A58142 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		C5B59AC01A05A93800A58142 /* TKUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUIButton.h; sourceTree = "<group>"; };
@@ -102,6 +110,19 @@
 		C5B6C8171A099275005E3A29 /* begin-game.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "begin-game.jpg"; sourceTree = "<group>"; };
 		C5B6C8181A099275005E3A29 /* game-over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game-over.jpg"; sourceTree = "<group>"; };
 		C5B883801A0BC14200B9ACCF /* pushTunnelsSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pushTunnelsSound.wav; sourceTree = "<group>"; };
+		C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Bolts.framework"; sourceTree = "<group>"; };
+		C5B883A01A0BDE7F00B9ACCF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Parse.framework"; sourceTree = "<group>"; };
+		C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "Flappy Bird Pro iOS APP/Frameworks/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C5B883A81A0BE14300B9ACCF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C5B883A91A0BE14300B9ACCF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C5B883AA1A0BE14300B9ACCF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C5B883AB1A0BE14300B9ACCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C5B883AC1A0BE14300B9ACCF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
 		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
@@ -114,7 +135,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B24B721A05711C00C984C8 /* EverliveSDK.framework in Frameworks */,
+				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
+				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
+				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
+				C5B883B21A0BE14300B9ACCF /* CoreLocation.framework in Frameworks */,
+				C5B883B31A0BE14300B9ACCF /* libz.dylib in Frameworks */,
+				C5B883B41A0BE14300B9ACCF /* MobileCoreServices.framework in Frameworks */,
+				C5B883B51A0BE14300B9ACCF /* QuartzCore.framework in Frameworks */,
+				C5B883B61A0BE14300B9ACCF /* Security.framework in Frameworks */,
+				C5B883B71A0BE14300B9ACCF /* StoreKit.framework in Frameworks */,
+				C5B883B81A0BE14300B9ACCF /* SystemConfiguration.framework in Frameworks */,
+				C5B883A21A0BDE7F00B9ACCF /* Bolts.framework in Frameworks */,
+				C5B883A31A0BDE7F00B9ACCF /* Parse.framework in Frameworks */,
+				C5B883A41A0BDE7F00B9ACCF /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +164,7 @@
 		C54933DE1A02DDCE002A1526 = {
 			isa = PBXGroup;
 			children = (
+				C5B883B91A0BE18500B9ACCF /* Frameworks */,
 				C54933E91A02DDCF002A1526 /* Flappy Bird Pro iOS APP */,
 				C54934061A02DDD0002A1526 /* Flappy Bird Pro iOS APPTests */,
 				C54933E81A02DDCF002A1526 /* Products */,
@@ -228,8 +262,6 @@
 		C5B59AB71A05923B00A58142 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C5B59ABA1A05943400A58142 /* FlappyBirdUser.h */,
-				C5B59ABB1A05943400A58142 /* FlappyBirdUser.m */,
 			);
 			name = Models;
 			path = ../Models;
@@ -238,7 +270,6 @@
 		C5B59AB81A05927000A58142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C5B24B711A05711C00C984C8 /* EverliveSDK.framework */,
 			);
 			name = Frameworks;
 			path = ../Frameworks;
@@ -256,6 +287,26 @@
 			);
 			name = Libraries;
 			path = ../Libraries;
+			sourceTree = "<group>";
+		};
+		C5B883B91A0BE18500B9ACCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */,
+				C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */,
+				C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */,
+				C5B883A81A0BE14300B9ACCF /* CoreLocation.framework */,
+				C5B883A91A0BE14300B9ACCF /* libz.dylib */,
+				C5B883AA1A0BE14300B9ACCF /* MobileCoreServices.framework */,
+				C5B883AB1A0BE14300B9ACCF /* QuartzCore.framework */,
+				C5B883AC1A0BE14300B9ACCF /* Security.framework */,
+				C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */,
+				C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */,
+				C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */,
+				C5B883A01A0BDE7F00B9ACCF /* Parse.framework */,
+				C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C5C359F31A04F3290038D6FD /* Custom Views */ = {
@@ -397,7 +448,6 @@
 				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
-				C5B59ABC1A05943400A58142 /* FlappyBirdUser.m in Sources */,
 				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +575,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Marinov/Downloads,
+					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -540,6 +597,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Marinov/Downloads,
+					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;

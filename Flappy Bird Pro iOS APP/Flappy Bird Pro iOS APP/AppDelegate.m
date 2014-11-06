@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <EverliveSDK/EverliveSDK.h>
+#import <Parse/Parse.h>
+
 
 @interface AppDelegate ()
 
@@ -17,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"FPaH3syB3HrqAecdxFl4A5XfhqCGsn8dv1PmoqhB"
+                  clientKey:@"dBOIQIdufD0GVNpMij8slmQ2JZtEPzxw8RFEZadh"];
     return YES;
 }
 
@@ -27,8 +30,7 @@
 }
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    NSLog(@"will finish launching with options");
-    [Everlive setApplicationKey:@"JXOdFeNKStlp7CpI"];
+    
     return true;
 }
 
