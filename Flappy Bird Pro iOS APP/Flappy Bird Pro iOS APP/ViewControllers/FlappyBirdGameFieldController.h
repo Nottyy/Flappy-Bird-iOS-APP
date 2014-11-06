@@ -14,6 +14,7 @@ int randomTopTunnelPosition;
 int randomBottomTunnelPosition;
 int scoreNumber;
 int logoMotion;
+int pushTunnels;
 NSInteger *highScoreNumber;
 NSString *audioForPointPath;
 NSString *audioForGameOverPath;
@@ -40,6 +41,7 @@ NSString *audioForGameOverPath;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIButton *exitButton;
+- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender;
 
 - (IBAction)startGame:(id)sender;
 - (void)birdMoving;

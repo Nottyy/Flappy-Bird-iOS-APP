@@ -25,6 +25,7 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     names = [NSArray arrayWithObjects: @"Gosho", @"Stamen",nil];
     scores = [NSArray arrayWithObjects: @"5", @"5", nil];
     [self.leaderboardTableView setDataSource:self];
+    //self.leaderboardTableView.hidden = YES;
     // Do any additional setup after loading the view.
 }
 

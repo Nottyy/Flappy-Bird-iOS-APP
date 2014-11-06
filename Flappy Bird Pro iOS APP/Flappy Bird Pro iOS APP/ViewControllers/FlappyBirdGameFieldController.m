@@ -13,6 +13,8 @@
 @end
 
 @implementation FlappyBirdGameFieldController{
+    BOOL gameBegan;
+    BOOL usedPush;
     CGFloat initialLogoXCoordinate;
     UIDynamicAnimator *animator;
 }
@@ -23,7 +25,6 @@
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
     
-    scoreNumber = 0;
     logoMotion = -5;
     
     highScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey: @"HighScoreNumber"];
@@ -48,15 +49,6 @@
     // Dispose of any resources that can be recreated..
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller..
-}
-*/
 -(void) logoMoving{
     self.logoGameOverAndStartGame.center = CGPointMake(self.logoGameOverAndStartGame.center.x + logoMotion, self.logoGameOverAndStartGame.center.y);
     
@@ -69,8 +61,23 @@
     }
 }
 
+- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
+    
+    // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
+    if (gameBegan == YES && pushTunnels > 0 && usedPush == NO) {
+        pushTunnels -= 1;
+        usedPush = YES;
+        NSLog(@"Pinched");
+        self.tunnelTop.center = CGPointMake(self.tunnelTop.center.x, self.tunnelTop.center.y - 20);
+        self.tunnelBottom.center = CGPointMake(self.tunnelBottom.center.x, self.tunnelBottom.center.y + 20);
+    }
+}
+
 - (IBAction)startGame:(id)sender {
     [logoMovement invalidate];
+    gameBegan = YES;
+    usedPush = NO;
+    pushTunnels = 3;
     scoreNumber = 0;
     self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
     
@@ -84,7 +91,7 @@
     self.objectBird.center = CGPointMake(self.objectBird.center.x, [[UIScreen mainScreen]bounds].size.height / 2);
     self.objectBird.image = [UIImage imageNamed: @"BirdUp.png"];
     
-    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
+    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
     
     [self placeTunnels];
     
@@ -94,7 +101,12 @@
 -(void)tunnelMoving{
     self.tunnelTop.center = CGPointMake(self.tunnelTop.center.x - 1, self.tunnelTop.center.y);
     self.tunnelBottom.center = CGPointMake(self.tunnelBottom.center.x - 1, self.tunnelBottom.center.y);
-    if (self.tunnelTop.center.x < -55) {
+    if (self.tunnelTop.center.x <= -55) {
+        
+        // see if the user has pushTunnels options left and nullify the BOOL 'usedPush'
+        if (pushTunnels > 0) {
+            usedPush = NO;
+        }
         [self placeTunnels];
     }
     
@@ -115,7 +127,7 @@
 -(void)placeTunnels{
     randomTopTunnelPosition = arc4random() % 350;
     randomTopTunnelPosition -= 228;
-    randomBottomTunnelPosition = randomTopTunnelPosition + 655;
+    randomBottomTunnelPosition = randomTopTunnelPosition + 855;
     
     self.tunnelTop.center = CGPointMake(620, randomTopTunnelPosition);
     self.tunnelBottom.center = CGPointMake(620, randomBottomTunnelPosition);
@@ -141,11 +153,13 @@
 
 -(void)setScore{
     scoreNumber = scoreNumber + 1;
-    self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
+    //self.scoreLabel.text = [NSString stringWithFormat:@"%d", scoreNumber];
+
     [audioPlayerForPoint play];
 }
 
 -(void)gameOver{
+    gameBegan = NO;
     [audioPlayerForGameOver play];
     if (scoreNumber > highScoreNumber) {
         [[NSUserDefaults standardUserDefaults] setInteger:scoreNumber forKey:@"HighScoreNumber"];
