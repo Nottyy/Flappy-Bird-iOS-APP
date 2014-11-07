@@ -9,6 +9,7 @@
 #import "UILeaderboardViewController.h"
 #import "UILeaderboardCell.h"
 #import <Parse/Parse.h>
+#import "FlappyAngryUser.h"
 
 @interface UILeaderboardViewController ()
 
@@ -17,9 +18,6 @@
 
 @implementation UILeaderboardViewController
 {
-    NSMutableArray *people;
-    NSArray *names;
-    NSArray *scores;
 }
 
 NSString *leaderBoardCell = @"LeaderboardTableViewCell";
@@ -55,13 +53,26 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     [super viewDidLoad];
     [self.leaderboardTableView setDataSource:self];
     
-    
-//    names = [NSArray arrayWithObjects: @"Gosho", @"Stamen",nil];
-//    scores = [NSArray arrayWithObjects: @"5", @"5", nil];
-    
-    
-    
     //self.leaderboardTableView.hidden = YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Loading Leaderboard...";
+    
+    PFQuery *query = [FlappyAngryUser query];
+    NSArray *users = [query findObjects];
+    self.people = [NSMutableArray arrayWithArray:users];
+    
+    [self.hud hide:YES];
+    
+    FlappyAngryUser *currentUser = [FlappyAngryUser currentUser];
+    if (currentUser) {
+        self.userName.text = [NSString stringWithFormat:@"Username -> %@", currentUser.username];
+        NSNumber *points = currentUser.Points;
+        NSString *pointsAsStr = [NSString stringWithFormat:@"%@", points];
+        self.userHighScore.text = [NSString stringWithFormat:@"Highscore -> %@", pointsAsStr];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,17 +80,8 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return names.count;
+    return _people.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -90,17 +92,14 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
         UINib *nib = [UINib nibWithNibName:leaderBoardCell bundle:nil];
         [self.leaderboardTableView registerNib:nib forCellReuseIdentifier: leaderBoardCell];
         cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
-        //cell = [[UILeaderboardCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    //cell.textLabel.text = names[indexPath.row];
-    cell.playerName.text = names[indexPath.row];
-    cell.playerScore.text = scores[indexPath.row];
+    
+    cell.playerName.text = [_people[indexPath.row] username];
+    NSNumber *points = [_people[indexPath.row] Points];
+    NSString *pointsAsStr = [NSString stringWithFormat:@"%@", points];
+    cell.playerScore.text = pointsAsStr;
     
     return cell;
-}
-
--(IBAction)returnToThis: (UIStoryboardSegue*)segue{
-    
 }
 
 @end

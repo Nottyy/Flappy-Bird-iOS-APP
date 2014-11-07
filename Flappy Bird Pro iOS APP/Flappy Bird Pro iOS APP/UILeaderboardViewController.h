@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @interface UILeaderboardViewController : UIViewController<UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *leaderboardTableView;
-@property (weak, nonatomic) IBOutlet UILabel *leaderboardLabel;
+@property (nonatomic, strong) MBProgressHUD *hud;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userHighScore;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end

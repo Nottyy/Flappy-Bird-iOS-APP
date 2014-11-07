@@ -143,30 +143,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5wb-Kn-hu0">
-                                <rect key="frame" x="16" y="111" width="568" height="423"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5wb-Kn-hu0">
+                                <rect key="frame" x="0.0" y="163" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egc-Bp-MCA">
-                                <rect key="frame" x="60" y="42" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-DZ-OHo">
+                                <rect key="frame" x="435" y="13" width="165" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="Eqa-A3-1pm"/>
+                                    <constraint firstAttribute="height" constant="49" id="bob-2D-O7N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighScore - 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-gp-RSN">
+                                <rect key="frame" x="435" y="70" width="165" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fVW-Aa-ylH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egc-Bp-MCA">
+                                <rect key="frame" x="0.0" y="20" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NvL-fO-ZZU"/>
+                                    <constraint firstAttribute="width" constant="62" id="caH-fj-Kta"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rLn-Ph-v9f" kind="unwind" unwindAction="returnToThis:" id="eXY-wL-r4l"/>
+                                    <segue destination="rLn-Ph-v9f" kind="unwind" unwindAction="returnToMain:" id="zDi-yc-XHm"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aRc-gp-RSN" secondAttribute="trailing" id="1am-Uq-i8M"/>
+                            <constraint firstItem="aRc-gp-RSN" firstAttribute="trailing" secondItem="5wb-Kn-hu0" secondAttribute="trailing" id="A8a-pF-DrQ"/>
+                            <constraint firstItem="aRc-gp-RSN" firstAttribute="leading" secondItem="eHx-DZ-OHo" secondAttribute="leading" id="FaG-4x-VYN"/>
+                            <constraint firstItem="eHx-DZ-OHo" firstAttribute="top" secondItem="uBx-EE-Zuy" secondAttribute="topMargin" constant="13" id="G9Y-zw-vVZ"/>
+                            <constraint firstItem="5wb-Kn-hu0" firstAttribute="top" secondItem="aRc-gp-RSN" secondAttribute="bottom" constant="58" id="Npw-u0-vPA"/>
+                            <constraint firstItem="aRc-gp-RSN" firstAttribute="top" secondItem="eHx-DZ-OHo" secondAttribute="bottom" constant="8" symbolic="YES" id="UHK-oq-bTM"/>
+                            <constraint firstItem="aRc-gp-RSN" firstAttribute="trailing" secondItem="eHx-DZ-OHo" secondAttribute="trailing" id="XnE-bv-alg"/>
+                            <constraint firstItem="Egc-Bp-MCA" firstAttribute="leading" secondItem="uBx-EE-Zuy" secondAttribute="leadingMargin" constant="-16" id="dtg-LP-NHX"/>
+                            <constraint firstItem="Egc-Bp-MCA" firstAttribute="top" secondItem="ygB-50-hbV" secondAttribute="bottom" id="hCv-zY-OAh"/>
+                            <constraint firstItem="5wb-Kn-hu0" firstAttribute="bottom" secondItem="xoD-Mt-QiB" secondAttribute="top" id="nwz-m2-Bpp"/>
+                            <constraint firstItem="5wb-Kn-hu0" firstAttribute="leading" secondItem="uBx-EE-Zuy" secondAttribute="leading" id="pJy-9u-UHv"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Egc-Bp-MCA" id="TNZ-sx-kNE"/>
                         <outlet property="leaderboardTableView" destination="5wb-Kn-hu0" id="0uk-vN-N5b"/>
+                        <outlet property="userHighScore" destination="aRc-gp-RSN" id="O7F-Ne-CkH"/>
+                        <outlet property="userName" destination="eHx-DZ-OHo" id="xGE-UL-JjY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSL-YL-j1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rLn-Ph-v9f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-509" y="696"/>
+            <point key="canvasLocation" x="-509" y="705"/>
         </scene>
         <!--Flappy Bird Game Field Controller-->
         <scene sceneID="Vo8-VJ-D9z">
