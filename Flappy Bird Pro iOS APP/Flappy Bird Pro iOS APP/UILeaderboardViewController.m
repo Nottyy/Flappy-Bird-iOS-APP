@@ -14,10 +14,10 @@
 @interface UILeaderboardViewController ()
 
 @property (nonatomic, strong) NSMutableArray *people;
+
 @end
 
-@implementation UILeaderboardViewController
-{
+@implementation UILeaderboardViewController{
 }
 
 NSString *leaderBoardCell = @"LeaderboardTableViewCell";
@@ -52,6 +52,8 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.leaderboardTableView setDataSource:self];
+    UINib *nib = [UINib nibWithNibName:leaderBoardCell bundle:nil];
+    [self.leaderboardTableView registerNib:nib forCellReuseIdentifier: leaderBoardCell];
     
     //self.leaderboardTableView.hidden = YES;
 }
@@ -88,12 +90,6 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UILeaderboardCell *cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
-    
-    if (!cell) {
-        UINib *nib = [UINib nibWithNibName:leaderBoardCell bundle:nil];
-        [self.leaderboardTableView registerNib:nib forCellReuseIdentifier: leaderBoardCell];
-        cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
-    }
     
     // set player name and score labels
     cell.playerName.text = [_people[indexPath.row] username];
