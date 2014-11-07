@@ -69,12 +69,32 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     
     [self.hud hide:YES];
     
+    //populating current user labels and avatar
     FlappyAngryUser *currentUser = [FlappyAngryUser currentUser];
     if (currentUser) {
-        self.userName.text = [NSString stringWithFormat:@"Username -> %@", currentUser.username];
+        self.userName.text = [NSString stringWithFormat:@"User -> %@", currentUser.username];
         NSNumber *points = currentUser.Points;
         NSString *pointsAsStr = [NSString stringWithFormat:@"%@", points];
         self.userHighScore.text = [NSString stringWithFormat:@"Highscore -> %@", pointsAsStr];
+        
+        PFImageView *userAvatar = [PFImageView new];
+        userAvatar.file = currentUser.Avatar;
+        
+        [userAvatar loadInBackground: ^(UIImage* image, NSError *error)
+         {
+             if (image != nil) {
+                 self.userAvatar.image = image;
+             }
+             else{
+                 self.userAvatar.image = [UIImage imageNamed:@"emptyAvatar.jpeg"];
+             }
+             
+         }];
+    }
+    else{
+        self.userName.text = @"Not logged";
+        self.userHighScore.text = @"-";
+        self.userAvatar.image = [UIImage imageNamed:@"emptyAvatar.jpeg"];
     }
 }
 
@@ -103,9 +123,27 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     
     [userAvatar loadInBackground: ^(UIImage* image, NSError *error)
     {
-        cell.playerAvatar.image = image;
+        if (image != nil) {
+            cell.playerAvatar.image = image;
+        }
+        else{
+            cell.playerAvatar.image = [UIImage imageNamed:@"emptyAvatar.jpeg"];
+        }
     }];
     return cell;
+}
+
+-(UIImage*)retrieveAvatar: (PFFile*) pfAvatar{
+    PFImageView *userAvatar = [PFImageView new];
+    userAvatar.file = pfAvatar;
+    UIImageView *result = [UIImageView new];
+    
+    [userAvatar loadInBackground: ^(UIImage* image, NSError *error)
+     {
+         result.image = image;
+     }];
+    
+    return result.image;
 }
 
 @end

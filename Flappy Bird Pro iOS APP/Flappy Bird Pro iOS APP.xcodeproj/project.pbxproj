@@ -10,6 +10,7 @@
 		C5260F271A0D651E00DC69FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
 		C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
 		C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
+		C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
 		C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leaderboard-background.jpg"; sourceTree = "<group>"; };
 		C54933E71A02DDCF002A1526 /* Flappy Bird Pro iOS APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird Pro iOS APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54933EB1A02DDCF002A1526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54933EC1A02DDCF002A1526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */,
 				C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */,
 				C585D4211A0D537100386CD2 /* login-background.jpg */,
 				C585D4221A0D537100386CD2 /* signup-background.jpg */,
@@ -443,6 +446,7 @@
 				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
 				C5B6C8141A098594005E3A29 /* normal-tunnels.jpg in Resources */,
 				C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */,
+				C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */,
 				C585D4231A0D537100386CD2 /* login-background.jpg in Resources */,
 				C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */,
 				C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */,
