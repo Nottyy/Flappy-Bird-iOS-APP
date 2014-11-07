@@ -38,9 +38,6 @@
 		C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8171A099275005E3A29 /* begin-game.jpg */; };
 		C5B6C81A1A099275005E3A29 /* game-over.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5B6C8181A099275005E3A29 /* game-over.jpg */; };
 		C5B883811A0BC14200B9ACCF /* pushTunnelsSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5B883801A0BC14200B9ACCF /* pushTunnelsSound.wav */; };
-		C5B883A21A0BDE7F00B9ACCF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */; };
-		C5B883A31A0BDE7F00B9ACCF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A01A0BDE7F00B9ACCF /* Parse.framework */; };
-		C5B883A41A0BDE7F00B9ACCF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */; };
 		C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */; };
 		C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */; };
 		C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */; };
@@ -51,6 +48,10 @@
 		C5B883B61A0BE14300B9ACCF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AC1A0BE14300B9ACCF /* Security.framework */; };
 		C5B883B71A0BE14300B9ACCF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */; };
 		C5B883B81A0BE14300B9ACCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */; };
+		C5B883E31A0C420500B9ACCF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883E01A0C420500B9ACCF /* Bolts.framework */; };
+		C5B883E41A0C420500B9ACCF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883E11A0C420500B9ACCF /* Parse.framework */; };
+		C5B883E51A0C420500B9ACCF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883E21A0C420500B9ACCF /* ParseFacebookUtils.framework */; };
+		C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B883E71A0C44C200B9ACCF /* FlappyAngryUser.m */; };
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
@@ -110,9 +111,6 @@
 		C5B6C8171A099275005E3A29 /* begin-game.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "begin-game.jpg"; sourceTree = "<group>"; };
 		C5B6C8181A099275005E3A29 /* game-over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game-over.jpg"; sourceTree = "<group>"; };
 		C5B883801A0BC14200B9ACCF /* pushTunnelsSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pushTunnelsSound.wav; sourceTree = "<group>"; };
-		C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Bolts.framework"; sourceTree = "<group>"; };
-		C5B883A01A0BDE7F00B9ACCF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Parse.framework"; sourceTree = "<group>"; };
-		C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "Flappy Bird Pro iOS APP/Frameworks/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +121,11 @@
 		C5B883AC1A0BE14300B9ACCF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C5B883E01A0C420500B9ACCF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Bolts.framework"; sourceTree = "<group>"; };
+		C5B883E11A0C420500B9ACCF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Flappy Bird Pro iOS APP/Frameworks/Parse.framework"; sourceTree = "<group>"; };
+		C5B883E21A0C420500B9ACCF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "Flappy Bird Pro iOS APP/Frameworks/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		C5B883E61A0C44C200B9ACCF /* FlappyAngryUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyAngryUser.h; sourceTree = SOURCE_ROOT; };
+		C5B883E71A0C44C200B9ACCF /* FlappyAngryUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyAngryUser.m; sourceTree = SOURCE_ROOT; };
 		C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardTableViewCell.xib; sourceTree = "<group>"; };
 		C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardCell.h; sourceTree = "<group>"; };
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
@@ -135,6 +138,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B883E31A0C420500B9ACCF /* Bolts.framework in Frameworks */,
+				C5B883E41A0C420500B9ACCF /* Parse.framework in Frameworks */,
+				C5B883E51A0C420500B9ACCF /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -145,9 +151,6 @@
 				C5B883B61A0BE14300B9ACCF /* Security.framework in Frameworks */,
 				C5B883B71A0BE14300B9ACCF /* StoreKit.framework in Frameworks */,
 				C5B883B81A0BE14300B9ACCF /* SystemConfiguration.framework in Frameworks */,
-				C5B883A21A0BDE7F00B9ACCF /* Bolts.framework in Frameworks */,
-				C5B883A31A0BDE7F00B9ACCF /* Parse.framework in Frameworks */,
-				C5B883A41A0BDE7F00B9ACCF /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +265,8 @@
 		C5B59AB71A05923B00A58142 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5B883E61A0C44C200B9ACCF /* FlappyAngryUser.h */,
+				C5B883E71A0C44C200B9ACCF /* FlappyAngryUser.m */,
 			);
 			name = Models;
 			path = ../Models;
@@ -292,6 +297,9 @@
 		C5B883B91A0BE18500B9ACCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5B883E01A0C420500B9ACCF /* Bolts.framework */,
+				C5B883E11A0C420500B9ACCF /* Parse.framework */,
+				C5B883E21A0C420500B9ACCF /* ParseFacebookUtils.framework */,
 				C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */,
 				C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */,
 				C5B883A71A0BE14300B9ACCF /* CoreGraphics.framework */,
@@ -302,9 +310,6 @@
 				C5B883AC1A0BE14300B9ACCF /* Security.framework */,
 				C5B883AD1A0BE14300B9ACCF /* StoreKit.framework */,
 				C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */,
-				C5B8839F1A0BDE7F00B9ACCF /* Bolts.framework */,
-				C5B883A01A0BDE7F00B9ACCF /* Parse.framework */,
-				C5B883A11A0BDE7F00B9ACCF /* ParseFacebookUtils.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */,
+				C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */,
 				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
 				C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */,
@@ -582,6 +588,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -599,6 +610,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,

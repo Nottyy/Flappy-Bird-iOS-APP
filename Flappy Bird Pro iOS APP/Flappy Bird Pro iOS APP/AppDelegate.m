@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "FlappyAngryUser.h"
 
 
 @interface AppDelegate ()
@@ -19,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [FlappyAngryUser registerSubclass];
     [Parse setApplicationId:@"FPaH3syB3HrqAecdxFl4A5XfhqCGsn8dv1PmoqhB"
                   clientKey:@"dBOIQIdufD0GVNpMij8slmQ2JZtEPzxw8RFEZadh"];
     return YES;

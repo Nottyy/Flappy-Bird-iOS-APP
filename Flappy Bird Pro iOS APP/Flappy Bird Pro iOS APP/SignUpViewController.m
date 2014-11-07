@@ -7,6 +7,8 @@
 //
 
 #import "SignUpViewController.h"
+#import <Parse/Parse.h>
+#import "FlappyAngryUser.h"
 
 @interface SignUpViewController ()
 
@@ -34,30 +36,31 @@
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         self.hud.labelText = @"Please wait";
         
-//        FlappyBirdUser *newUser = [[FlappyBirdUser alloc]init];
-//        
-//        [newUser setUsername: _usernameTextField.text];
-//        [newUser setPassword: _passwordTextField.text];
-//        [newUser setDisplayName: _displayNameTextField.text];
-//        [newUser setPoints: [NSNumber numberWithInt: 0]];
-//        //picture logic
-//        
-//        
-//        [newUser signUp:^(EVUser *user, NSError *error) {
-//            if (error == nil){
-//                [self.hud hide:YES];
-//                 NSLog(@"Rsegistered");
-//                [EVUser loginInWithUsername:user.username password: _passwordTextField.text block:^(EVUser *user, NSError *error) {
-//                    NSLog(@"Registered");
-//                    //[self performSegueWithIdentifier:@"" sender:self];
-//                }];
-//            }
-//            else{
-//                [self.hud hide:YES];
-//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-//                [alert show];
-//            }
-//        }];
+        FlappyAngryUser *user = [FlappyAngryUser new];
+        user.username = _usernameTextField.text;
+        user.password = _passwordTextField.text;
+        user.Points = [NSNumber numberWithInt:0];
+        
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                if (error == nil){
+                    [self.hud hide:YES];
+                    NSLog(@"Rsegistered");
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully registered!" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
+                    //[self performSegueWithIdentifier:@"" sender:self];
+                    
+                }
+                else{
+                    [self.hud hide:YES];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
+                }
+            }
+            else{
+                NSLog(@"%@", error);
+            }
+        }];
     }
 }
 @end
