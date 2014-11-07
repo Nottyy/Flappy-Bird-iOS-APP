@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
+#import "FlappyAngryUser.h"
 
 @interface LoginViewController ()
 
@@ -34,9 +36,19 @@
             self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             self.hud.labelText = @"Please wait";
             
-//            [EVUser loginInWithUsername:_usernameTextField.text password:_passwordTextField.text block:^(EVUser *user, NSError *error) {
-//                [self loginUser:user error:error];
-//            }];
+            [PFUser logInWithUsernameInBackground:_usernameTextField.text
+                                         password:_passwordTextField.text
+                                            block:^(PFUser *user, NSError *error){
+                                                [self.hud hide:YES];
+                                                if (user) {
+                                                    NSLog(@"%@", user.username);
+                                                   
+                                                }
+                                                else{
+                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Credentials" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                                                    [alert show];
+                                                }
+                                            }];
         }
     }
 }
@@ -44,7 +56,7 @@
 //- (void)loginUser:(EVUser*)user error:(NSError*)error
 //{
 //    [self.hud hide:YES];
-//    
+//
 //    if (error == nil && [user isAuthenticated]){
 ////        [self.navigationItem setTitle:@"Log out"];
 ////        [self performSegueWithIdentifier:@"ShowActivities" sender:self];
