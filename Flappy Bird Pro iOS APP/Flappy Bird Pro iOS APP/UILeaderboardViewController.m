@@ -8,25 +8,60 @@
 
 #import "UILeaderboardViewController.h"
 #import "UILeaderboardCell.h"
+#import <Parse/Parse.h>
 
 @interface UILeaderboardViewController ()
 
+@property (nonatomic, strong) NSMutableArray *people;
 @end
 
 @implementation UILeaderboardViewController
 {
+    NSMutableArray *people;
     NSArray *names;
     NSArray *scores;
 }
+
 NSString *leaderBoardCell = @"LeaderboardTableViewCell";
+
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        self.people = [NSMutableArray array];
+    }
+    
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.people = [NSMutableArray array];
+    }
+    
+    return self;
+}
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.people = [NSMutableArray array];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    names = [NSArray arrayWithObjects: @"Gosho", @"Stamen",nil];
-    scores = [NSArray arrayWithObjects: @"5", @"5", nil];
     [self.leaderboardTableView setDataSource:self];
+    
+    
+//    names = [NSArray arrayWithObjects: @"Gosho", @"Stamen",nil];
+//    scores = [NSArray arrayWithObjects: @"5", @"5", nil];
+    
+    
+    
     //self.leaderboardTableView.hidden = YES;
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

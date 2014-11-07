@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,8 +42,8 @@
                                             block:^(PFUser *user, NSError *error){
                                                 [self.hud hide:YES];
                                                 if (user) {
-                                                    NSLog(@"%@", user.username);
-                                                   
+                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: [NSString stringWithFormat:@"Successfully logged as '%@'!", user.username] message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                                                    [alert show];
                                                 }
                                                 else{
                                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Credentials" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
@@ -51,6 +52,11 @@
                                             }];
         }
     }
+}
+
+-(IBAction)returnToLogin:(UIStoryboardSegue*)segue{
+    NSLog(@"Login");
+    //We can use this method for "Back" button functionality on the other screens
 }
 
 //- (void)loginUser:(EVUser*)user error:(NSError*)error

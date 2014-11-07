@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet TKUITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (nonatomic, strong) MBProgressHUD *hud;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)login:(id)sender;
 

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet TKUITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet TKUITextField *displayNameTextField;
 @property (weak, nonatomic) IBOutlet TKUITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)signUp:(id)sender;
 

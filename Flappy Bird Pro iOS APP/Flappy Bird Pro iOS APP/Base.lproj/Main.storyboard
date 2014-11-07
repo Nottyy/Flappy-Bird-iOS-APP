@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-bU-hLV">
                                 <rect key="frame" x="135" y="253" width="330" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="ZSy-1X-vX1"/>
+                                    <constraint firstAttribute="height" constant="51" id="NLd-fw-415"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="Leaderboard">
@@ -34,8 +34,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khX-nV-CZL">
                                 <rect key="frame" x="135" y="194" width="330" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="330" id="Fvm-I4-6QX"/>
-                                    <constraint firstAttribute="height" constant="51" id="u1c-eC-nL0"/>
+                                    <constraint firstAttribute="width" constant="330" id="Hx0-e3-RrC"/>
+                                    <constraint firstAttribute="height" constant="51" id="i1C-I7-Pfp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="Start Game">
@@ -43,19 +43,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="IEP-ba-9Iq" kind="show" id="h4I-rV-FSz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yro-IY-Ajd">
-                                <rect key="frame" x="476" y="0.0" width="124" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="5ZI-Wc-ppg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
-                                <state key="normal" title="Login?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="y4P-mR-TIc" kind="presentation" modalTransitionStyle="flipHorizontal" id="BBa-u9-MYx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-eF-KKO">
@@ -68,7 +55,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" © 2014 Antonio &amp; Tsvetan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ko-xQ-RXW">
                                 <rect key="frame" x="135" y="492" width="330" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="mqd-Ek-FtY"/>
+                                    <constraint firstAttribute="height" constant="34" id="dpB-at-DjS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,37 +64,68 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dav-ml-2kn">
                                 <rect key="frame" x="135" y="312" width="330" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="Byg-xV-dI7"/>
+                                    <constraint firstAttribute="height" constant="51" id="9CN-GO-h5a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
                                 <state key="normal" title="Instructions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDp-CC-E8N">
+                                <rect key="frame" x="476" y="58" width="124" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <state key="normal" title="Logout?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqP-Nz-HPN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yro-IY-Ajd">
+                                <rect key="frame" x="476" y="0.0" width="124" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="J44-Cp-XK5"/>
+                                    <constraint firstAttribute="height" constant="50" id="P2A-zU-iZ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <state key="normal" title="Login?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y4P-mR-TIc" kind="presentation" modalTransitionStyle="flipHorizontal" id="BBa-u9-MYx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="dav-ml-2kn" firstAttribute="top" secondItem="2hW-bU-hLV" secondAttribute="bottom" constant="8" symbolic="YES" id="10O-QG-omT"/>
-                            <constraint firstItem="ajF-eF-KKO" firstAttribute="top" secondItem="dav-ml-2kn" secondAttribute="bottom" constant="8" symbolic="YES" id="6XT-eb-VRl"/>
-                            <constraint firstItem="khX-nV-CZL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="174" id="C7c-II-Qso"/>
-                            <constraint firstItem="2hW-bU-hLV" firstAttribute="trailing" secondItem="dav-ml-2kn" secondAttribute="trailing" id="Elt-bH-7Fy"/>
-                            <constraint firstItem="2hW-bU-hLV" firstAttribute="top" secondItem="khX-nV-CZL" secondAttribute="bottom" constant="8" symbolic="YES" id="LG8-yG-tXU"/>
-                            <constraint firstItem="dav-ml-2kn" firstAttribute="leading" secondItem="2hW-bU-hLV" secondAttribute="leading" id="SXN-V6-QUk"/>
-                            <constraint firstItem="dav-ml-2kn" firstAttribute="trailing" secondItem="ajF-eF-KKO" secondAttribute="trailing" id="YNG-VJ-eIH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yro-IY-Ajd" secondAttribute="bottom" constant="550" id="Yt5-eZ-sWy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ko-xQ-RXW" secondAttribute="bottom" constant="74" id="aR8-G9-Gqt"/>
-                            <constraint firstAttribute="trailing" secondItem="yro-IY-Ajd" secondAttribute="trailing" id="awM-V3-WWu"/>
-                            <constraint firstItem="yro-IY-Ajd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hxr-EF-uHp"/>
-                            <constraint firstItem="0Ko-xQ-RXW" firstAttribute="top" secondItem="ajF-eF-KKO" secondAttribute="bottom" constant="70" id="iXG-WE-1VN"/>
-                            <constraint firstItem="ajF-eF-KKO" firstAttribute="leading" secondItem="dav-ml-2kn" secondAttribute="leading" id="l7Z-Iu-SlJ"/>
-                            <constraint firstItem="2hW-bU-hLV" firstAttribute="leading" secondItem="khX-nV-CZL" secondAttribute="leading" id="nqA-kz-Vub"/>
-                            <constraint firstItem="ajF-eF-KKO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oDU-Y7-rp0"/>
-                            <constraint firstItem="khX-nV-CZL" firstAttribute="trailing" secondItem="2hW-bU-hLV" secondAttribute="trailing" id="oQY-jj-Rh7"/>
-                            <constraint firstItem="ajF-eF-KKO" firstAttribute="leading" secondItem="0Ko-xQ-RXW" secondAttribute="leading" id="otO-iv-Ygn"/>
-                            <constraint firstItem="ajF-eF-KKO" firstAttribute="trailing" secondItem="0Ko-xQ-RXW" secondAttribute="trailing" id="u9O-ue-xb7"/>
+                            <constraint firstItem="KDp-CC-E8N" firstAttribute="trailing" secondItem="yro-IY-Ajd" secondAttribute="trailing" id="29h-Aw-yvl"/>
+                            <constraint firstItem="0Ko-xQ-RXW" firstAttribute="leading" secondItem="ajF-eF-KKO" secondAttribute="leading" id="2ai-kC-XN8"/>
+                            <constraint firstItem="ajF-eF-KKO" firstAttribute="trailing" secondItem="dav-ml-2kn" secondAttribute="trailing" id="2v9-Yz-87P"/>
+                            <constraint firstItem="khX-nV-CZL" firstAttribute="trailing" secondItem="2hW-bU-hLV" secondAttribute="trailing" id="4Qx-Gw-y6o"/>
+                            <constraint firstAttribute="trailing" secondItem="KDp-CC-E8N" secondAttribute="trailing" id="7Kv-B1-ek7"/>
+                            <constraint firstItem="dav-ml-2kn" firstAttribute="leading" secondItem="2hW-bU-hLV" secondAttribute="leading" id="EDI-cd-VY1"/>
+                            <constraint firstItem="dav-ml-2kn" firstAttribute="trailing" secondItem="2hW-bU-hLV" secondAttribute="trailing" id="FO4-Mb-JsW"/>
+                            <constraint firstItem="dav-ml-2kn" firstAttribute="top" secondItem="2hW-bU-hLV" secondAttribute="bottom" constant="8" symbolic="YES" id="G3O-Cg-x45"/>
+                            <constraint firstItem="2hW-bU-hLV" firstAttribute="top" secondItem="khX-nV-CZL" secondAttribute="bottom" constant="8" symbolic="YES" id="J1V-sm-kgS"/>
+                            <constraint firstItem="ajF-eF-KKO" firstAttribute="top" secondItem="dav-ml-2kn" secondAttribute="bottom" constant="8" symbolic="YES" id="Mma-hr-G6r"/>
+                            <constraint firstItem="yro-IY-Ajd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Or0-Ea-Ft7"/>
+                            <constraint firstItem="0Ko-xQ-RXW" firstAttribute="top" secondItem="ajF-eF-KKO" secondAttribute="bottom" constant="70" id="Rlc-vD-EhQ"/>
+                            <constraint firstItem="2hW-bU-hLV" firstAttribute="leading" secondItem="khX-nV-CZL" secondAttribute="leading" id="ZUc-8Z-SKN"/>
+                            <constraint firstItem="KDp-CC-E8N" firstAttribute="top" secondItem="yro-IY-Ajd" secondAttribute="bottom" constant="8" symbolic="YES" id="cLr-M0-4TG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KDp-CC-E8N" secondAttribute="bottom" constant="492" id="dbg-qo-AhX"/>
+                            <constraint firstItem="dav-ml-2kn" firstAttribute="leading" secondItem="ajF-eF-KKO" secondAttribute="leading" id="lBl-Bj-qqL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ko-xQ-RXW" secondAttribute="bottom" constant="74" id="m7J-d4-io0"/>
+                            <constraint firstItem="dav-ml-2kn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhe-Az-apo"/>
+                            <constraint firstItem="KDp-CC-E8N" firstAttribute="leading" secondItem="yro-IY-Ajd" secondAttribute="leading" id="soY-ag-W1u"/>
+                            <constraint firstItem="khX-nV-CZL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="174" id="u9x-HI-Ibe"/>
+                            <constraint firstItem="0Ko-xQ-RXW" firstAttribute="trailing" secondItem="ajF-eF-KKO" secondAttribute="trailing" id="vmW-Ev-0TQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="yro-IY-Ajd" id="GSP-v3-clf"/>
+                        <outlet property="logoutButton" destination="KDp-CC-E8N" id="Rm2-SP-lv4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,6 +410,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgp-0l-Nhs">
+                                <rect key="frame" x="0.0" y="0.0" width="69" height="41"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qgz-8J-XPf" kind="unwind" unwindAction="returnToMain:" id="HSb-qU-iWu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14963503650000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -432,12 +460,14 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="tgp-0l-Nhs" id="eJ0-du-ENU"/>
                         <outlet property="loginButton" destination="NHX-MK-MSA" id="92S-0N-xwd"/>
                         <outlet property="passwordTextField" destination="2rO-RT-QgX" id="fmR-SF-ujb"/>
                         <outlet property="usernameTextField" destination="rut-ix-co2" id="pPN-Vi-HsN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waO-3y-pcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qgz-8J-XPf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="784" y="1"/>
         </scene>
@@ -539,6 +569,19 @@
                                 <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09c-rJ-39e">
+                                <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="EB1-EW-0Hy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bgs-T8-JiX" kind="unwind" unwindAction="returnToLogin:" id="MFB-9O-YFB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.79000000000000004" magenta="0.54000000000000004" yellow="0.29999999999999999" black="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
@@ -550,6 +593,7 @@
                             <constraint firstItem="kZ8-4v-hUW" firstAttribute="trailing" secondItem="9D9-rI-YWU" secondAttribute="trailing" id="GCk-zD-Tij"/>
                             <constraint firstItem="kak-es-osK" firstAttribute="top" secondItem="pxa-WZ-qQp" secondAttribute="bottom" constant="37" id="GiH-9h-mHY"/>
                             <constraint firstItem="pxa-WZ-qQp" firstAttribute="top" secondItem="uL1-o5-3S8" secondAttribute="bottom" constant="41" id="HS6-g0-PXZ"/>
+                            <constraint firstItem="09c-rJ-39e" firstAttribute="top" secondItem="xCU-gb-NKP" secondAttribute="top" id="Mxl-f7-Sfn"/>
                             <constraint firstItem="5Gs-v8-hkh" firstAttribute="centerX" secondItem="9k6-N6-6H6" secondAttribute="centerX" id="QBD-dy-SjM"/>
                             <constraint firstItem="9k6-N6-6H6" firstAttribute="centerX" secondItem="0FF-MP-KjE" secondAttribute="centerX" id="Qcs-bJ-j53"/>
                             <constraint firstItem="kZ8-4v-hUW" firstAttribute="top" secondItem="0FF-MP-KjE" secondAttribute="bottom" constant="3" id="Sbb-te-b2x"/>
@@ -564,8 +608,10 @@
                             <constraint firstItem="kZ8-4v-hUW" firstAttribute="leading" secondItem="0FF-MP-KjE" secondAttribute="leading" id="gay-qU-R3a"/>
                             <constraint firstItem="pxa-WZ-qQp" firstAttribute="centerX" secondItem="9D9-rI-YWU" secondAttribute="centerX" id="gyB-5u-dBn"/>
                             <constraint firstItem="PsL-sa-zC6" firstAttribute="leading" secondItem="ptI-xg-8Z0" secondAttribute="leading" id="haE-5v-z2D"/>
+                            <constraint firstItem="09c-rJ-39e" firstAttribute="leading" secondItem="xCU-gb-NKP" secondAttribute="leading" id="iSD-MK-YdX"/>
                             <constraint firstItem="9D9-rI-YWU" firstAttribute="top" secondItem="kZ8-4v-hUW" secondAttribute="bottom" constant="3" id="j44-ZS-04Q"/>
                             <constraint firstItem="0FF-MP-KjE" firstAttribute="trailing" secondItem="kZ8-4v-hUW" secondAttribute="trailing" id="mOx-pd-kzY"/>
+                            <constraint firstItem="kak-es-osK" firstAttribute="top" secondItem="09c-rJ-39e" secondAttribute="bottom" constant="526" id="nea-1e-GSX"/>
                             <constraint firstItem="mJp-YS-wQ7" firstAttribute="leading" secondItem="ptI-xg-8Z0" secondAttribute="leading" id="oM4-5r-ZO2"/>
                             <constraint firstItem="mJp-YS-wQ7" firstAttribute="trailing" secondItem="ptI-xg-8Z0" secondAttribute="trailing" id="rbb-IG-xUM"/>
                         </constraints>
@@ -573,6 +619,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="09c-rJ-39e" id="5II-e6-HYq"/>
                         <outlet property="displayNameTextField" destination="kZ8-4v-hUW" id="3fB-MW-VTi"/>
                         <outlet property="passwordTextField" destination="9D9-rI-YWU" id="YH7-nF-Xx4"/>
                         <outlet property="signUpButton" destination="uL1-o5-3S8" id="lZL-08-Tkb"/>
@@ -580,6 +627,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXn-va-cTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Bgs-T8-JiX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="150" y="682"/>
         </scene>
