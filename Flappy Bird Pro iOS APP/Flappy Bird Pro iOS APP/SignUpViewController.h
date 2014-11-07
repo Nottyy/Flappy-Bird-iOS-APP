@@ -11,7 +11,7 @@
 #import "TKUITextField.h"
 #import "MBProgressHUD.h"
 
-@interface SignUpViewController : UIViewController<UITextFieldDelegate>
+@interface SignUpViewController : UIViewController<UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)signUp:(id)sender;
+- (IBAction)photoFromGallery:(UIButton *)sender;
+- (IBAction)photoFromCamera:(UIButton *)sender;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
 

@@ -11,6 +11,7 @@
 #import "FlappyAngryUser.h"
 
 @interface SignUpViewController ()
+@property (nonatomic, strong) UIImage *imageTaken;
 
 @end
 
@@ -41,11 +42,18 @@
         user.password = _passwordTextField.text;
         user.Points = [NSNumber numberWithInt:0];
         
+        //if the user uploads a photo
+        if (self.imageTaken) {
+            NSData *imageData = UIImageJPEGRepresentation(self.imageTaken, 0.05f);
+            PFFile *userAvatar = [PFFile fileWithName:[NSString stringWithFormat:@"%@ avatar", _usernameTextField.text] data: imageData];
+            user.Avatar = userAvatar;
+        }
+        
+        
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 if (error == nil){
                     [self.hud hide:YES];
-                    NSLog(@"Rsegistered");
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully registered!" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                     [alert show];
                     //[self performSegueWithIdentifier:@"" sender:self];
@@ -62,5 +70,52 @@
             }
         }];
     }
+}
+
+- (IBAction)photoFromGallery:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (IBAction)photoFromCamera:(UIButton *)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+        
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The device has no camera" message:@"Skip it or upload an avatar from your gallery" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+}
+
+//from here we get the image
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    UIImage *imgAfterUpload = info[UIImagePickerControllerEditedImage];
+    
+    //resizing the image to 200x200
+    UIGraphicsBeginImageContext(CGSizeMake(200, 200));
+    [imgAfterUpload drawInRect:CGRectMake(0, 0, 200, 200)];
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.imageTaken = smallImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+//if the user press the cancel button while taking a picture
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
