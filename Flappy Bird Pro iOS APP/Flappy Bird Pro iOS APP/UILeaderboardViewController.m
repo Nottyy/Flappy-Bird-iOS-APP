@@ -61,7 +61,7 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     self.hud.labelText = @"Loading Leaderboard...";
     
     PFQuery *query = [FlappyAngryUser query];
-    
+    [query orderByDescending:@"Points"];
     NSArray *users = [query findObjects];
     self.people = [NSMutableArray arrayWithArray:users];
     
@@ -95,11 +95,20 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
         cell = [self.leaderboardTableView dequeueReusableCellWithIdentifier: leaderBoardCell];
     }
     
+    // set player name and score labels
     cell.playerName.text = [_people[indexPath.row] username];
     NSNumber *points = [_people[indexPath.row] Points];
     NSString *pointsAsStr = [NSString stringWithFormat:@"%@", points];
     cell.playerScore.text = pointsAsStr;
     
+    // retrieve user avatar and set it to the image view
+    PFImageView *userAvatar = [PFImageView new];
+    userAvatar.file = [_people[indexPath.row] Avatar];
+    
+    [userAvatar loadInBackground: ^(UIImage* image, NSError *error)
+    {
+        cell.playerAvatar.image = image;
+    }];
     return cell;
 }
 
