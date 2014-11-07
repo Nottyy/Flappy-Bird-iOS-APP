@@ -8,46 +8,67 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="YgT-TZ-Old" customClass="UILeaderboardCell">
-            <rect key="frame" x="0.0" y="0.0" width="443" height="145"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="YgT-TZ-Old" customClass="UILeaderboardCell">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="110"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YgT-TZ-Old" id="5Ew-Uu-iCy">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifK-33-UPi">
-                        <rect key="frame" x="10" y="8" width="234" height="57"/>
+                    <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HO3-ca-2eJ">
+                        <rect key="frame" x="0.0" y="0.0" width="443" height="111"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFx-Eh-6ac">
+                        <rect key="frame" x="209" y="8" width="226" height="37"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="234" id="2MW-tk-Kvl"/>
+                            <constraint firstAttribute="height" constant="37" id="xhA-q2-aAD"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgY-de-3sG">
-                        <rect key="frame" x="15" y="81" width="119" height="36"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyAvatar.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-vh-x0H">
+                        <rect key="frame" x="8" y="9" width="141" height="93"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="119" id="3s5-5d-rnA"/>
-                            <constraint firstAttribute="height" constant="36" id="C0o-oO-J55"/>
+                            <constraint firstAttribute="height" constant="93" id="OMr-83-h0p"/>
+                            <constraint firstAttribute="width" constant="141" id="nvW-qv-3rq"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZb-lr-6da">
+                        <rect key="frame" x="209" y="53" width="226" height="59"/>
+                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ifK-33-UPi" firstAttribute="leading" secondItem="5Ew-Uu-iCy" secondAttribute="leadingMargin" constant="2" id="4Rg-dC-n7x"/>
-                    <constraint firstItem="IgY-de-3sG" firstAttribute="leading" secondItem="5Ew-Uu-iCy" secondAttribute="leadingMargin" constant="7" id="5qO-tO-uYF"/>
-                    <constraint firstItem="ifK-33-UPi" firstAttribute="top" secondItem="5Ew-Uu-iCy" secondAttribute="topMargin" id="MjZ-Oq-QDt"/>
-                    <constraint firstItem="IgY-de-3sG" firstAttribute="top" secondItem="ifK-33-UPi" secondAttribute="bottom" constant="16" id="NSF-KD-RLd"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="IgY-de-3sG" secondAttribute="bottom" constant="19" id="YUM-Cv-qaI"/>
+                    <constraint firstItem="HO3-ca-2eJ" firstAttribute="leading" secondItem="5Ew-Uu-iCy" secondAttribute="leading" id="499-iT-MbB"/>
+                    <constraint firstItem="HO3-ca-2eJ" firstAttribute="top" secondItem="5Ew-Uu-iCy" secondAttribute="top" id="KAF-Jg-IYI"/>
+                    <constraint firstItem="9Hs-vh-x0H" firstAttribute="top" secondItem="5Ew-Uu-iCy" secondAttribute="topMargin" constant="1" id="Lf0-xn-hTD"/>
+                    <constraint firstItem="jZb-lr-6da" firstAttribute="leading" secondItem="iFx-Eh-6ac" secondAttribute="leading" id="Rpm-ud-Vcd"/>
+                    <constraint firstItem="9Hs-vh-x0H" firstAttribute="leading" secondItem="5Ew-Uu-iCy" secondAttribute="leadingMargin" id="Yze-v5-CBj"/>
+                    <constraint firstItem="9Hs-vh-x0H" firstAttribute="centerY" secondItem="HO3-ca-2eJ" secondAttribute="centerY" id="ZnM-az-aKb"/>
+                    <constraint firstAttribute="trailing" secondItem="HO3-ca-2eJ" secondAttribute="trailing" id="c0P-ls-Xkg"/>
+                    <constraint firstItem="iFx-Eh-6ac" firstAttribute="trailing" secondItem="jZb-lr-6da" secondAttribute="trailing" id="e1Y-qP-iu8"/>
+                    <constraint firstItem="iFx-Eh-6ac" firstAttribute="trailing" secondItem="5Ew-Uu-iCy" secondAttribute="trailingMargin" id="hrn-bl-hMX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9Hs-vh-x0H" secondAttribute="bottom" constant="-1" id="iMa-k1-nSz"/>
+                    <constraint firstItem="iFx-Eh-6ac" firstAttribute="top" secondItem="5Ew-Uu-iCy" secondAttribute="topMargin" id="qhM-og-D5f"/>
+                    <constraint firstItem="iFx-Eh-6ac" firstAttribute="leading" secondItem="9Hs-vh-x0H" secondAttribute="trailing" constant="60" id="tSg-VV-uCp"/>
+                    <constraint firstItem="jZb-lr-6da" firstAttribute="top" secondItem="iFx-Eh-6ac" secondAttribute="bottom" constant="8" symbolic="YES" id="vkH-rV-RB1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jZb-lr-6da" secondAttribute="bottom" constant="-11" id="x8v-ps-ds5"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.64849612629999998" green="1" blue="0.89774996929999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="playerName" destination="ifK-33-UPi" id="80f-UL-p3Q"/>
-                <outlet property="playerScore" destination="IgY-de-3sG" id="2u2-X8-GCs"/>
+                <outlet property="cellBackground" destination="HO3-ca-2eJ" id="9pG-xM-UhT"/>
+                <outlet property="playerAvatar" destination="9Hs-vh-x0H" id="sdG-gQ-bZO"/>
+                <outlet property="playerName" destination="iFx-Eh-6ac" id="qZC-QV-Y9a"/>
+                <outlet property="playerScore" destination="jZb-lr-6da" id="mC9-UF-DKB"/>
             </connections>
-            <point key="canvasLocation" x="443.5" y="428.5"/>
+            <point key="canvasLocation" x="443.5" y="397"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="emptyAvatar.jpeg" width="204" height="204"/>
+        <image name="signup-background.jpg" width="2400" height="1800"/>
+    </resources>
 </document>

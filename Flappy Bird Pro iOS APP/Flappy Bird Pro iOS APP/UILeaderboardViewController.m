@@ -61,6 +61,7 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     self.hud.labelText = @"Loading Leaderboard...";
     
     PFQuery *query = [FlappyAngryUser query];
+    
     NSArray *users = [query findObjects];
     self.people = [NSMutableArray arrayWithArray:users];
     

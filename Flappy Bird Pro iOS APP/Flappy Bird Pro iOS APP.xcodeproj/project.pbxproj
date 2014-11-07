@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5260F271A0D651E00DC69FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
+		C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
+		C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
 		C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */; };
@@ -25,11 +28,9 @@
 		C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EC1A09030300AAB244 /* point.mp3 */; };
 		C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EF1A0944EE00AAB244 /* gameOverBird.png */; };
 		C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7F11A09597300AAB244 /* green-tunnel.png */; };
-		C585D41E1A0D505100386CD2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
-		C585D41F1A0D505100386CD2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
-		C585D4201A0D505100386CD2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C585D4231A0D537100386CD2 /* login-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4211A0D537100386CD2 /* login-background.jpg */; };
 		C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4221A0D537100386CD2 /* signup-background.jpg */; };
+		C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */; };
 		C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B283661A0797A200E144F8 /* LoginViewController.m */; };
 		C5B2836A1A07A90C00E144F8 /* icon-password.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283681A07A90C00E144F8 /* icon-password.png */; };
 		C5B2836B1A07A90C00E144F8 /* icon-username.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B283691A07A90C00E144F8 /* icon-username.png */; };
@@ -100,6 +101,7 @@
 		C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		C585D4211A0D537100386CD2 /* login-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-background.jpg"; sourceTree = "<group>"; };
 		C585D4221A0D537100386CD2 /* signup-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "signup-background.jpg"; sourceTree = "<group>"; };
+		C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyAvatar.jpeg; sourceTree = "<group>"; };
 		C5B283651A0797A200E144F8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C5B283661A0797A200E144F8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C5B283681A07A90C00E144F8 /* icon-password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-password.png"; sourceTree = "<group>"; };
@@ -142,9 +144,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C585D41E1A0D505100386CD2 /* Bolts.framework in Frameworks */,
-				C585D41F1A0D505100386CD2 /* Parse.framework in Frameworks */,
-				C585D4201A0D505100386CD2 /* ParseFacebookUtils.framework in Frameworks */,
+				C5260F271A0D651E00DC69FB /* Bolts.framework in Frameworks */,
+				C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */,
+				C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -209,6 +211,7 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */,
 				C585D4211A0D537100386CD2 /* login-background.jpg */,
 				C585D4221A0D537100386CD2 /* signup-background.jpg */,
 				C5B883801A0BC14200B9ACCF /* pushTunnelsSound.wav */,
@@ -424,6 +427,7 @@
 				C54934191A02FD55002A1526 /* BirdDown.png in Resources */,
 				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
+				C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */,
 				C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */,
 				C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */,
 				C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */,
@@ -620,6 +624,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -637,6 +646,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,

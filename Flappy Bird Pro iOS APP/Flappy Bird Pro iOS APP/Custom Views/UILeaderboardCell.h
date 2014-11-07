@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UILeaderboardCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *playerName;
 @property (weak, nonatomic) IBOutlet UILabel *playerScore;
+@property (weak, nonatomic) IBOutlet UILabel *playerName;
+@property (weak, nonatomic) IBOutlet UIImageView *playerAvatar;
+@property (weak, nonatomic) IBOutlet UIImageView *cellBackground;
 
 @end
