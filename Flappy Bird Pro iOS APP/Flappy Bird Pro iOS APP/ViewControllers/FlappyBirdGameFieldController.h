@@ -15,7 +15,7 @@ int randomBottomTunnelPosition;
 int scoreNumber;
 int logoMotion;
 int pushTunnels;
-NSInteger *highScoreNumber;
+int highScoreNumber;
 NSString *audioForPointPath;
 NSString *audioForGameOverPath;
 NSString *audioForPushingTunnelsPath;

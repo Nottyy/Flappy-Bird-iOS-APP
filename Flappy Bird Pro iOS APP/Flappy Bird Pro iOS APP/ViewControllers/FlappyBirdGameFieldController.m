@@ -9,9 +9,13 @@
 #import "FlappyBirdGameFieldController.h"
 #import "AppDelegate.h"
 #import "CorePlayer.h"
+#import "FlappyAngryUser.h"
+#import "CurrentPlayer.h"
 
 @interface FlappyBirdGameFieldController ()
 
+@property (strong,nonatomic) FlappyAngryUser* curUser;
+@property (strong,nonatomic) AppDelegate* appDelegate;
 @end
 
 @implementation FlappyBirdGameFieldController{
@@ -27,9 +31,11 @@
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
     
-    logoMotion = -5;
+    highScoreNumber = [self getCurrentPersonHighScore];
+    _curUser = [FlappyAngryUser currentUser];
+    _appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    highScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey: @"HighScoreNumber"];
+    logoMotion = -5;
     
     audioForPointPath = [[NSBundle mainBundle] pathForResource:@"point" ofType:@"mp3"];
     audioPlayerForPoint = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:audioForPointPath] error:NULL];
@@ -171,7 +177,7 @@
     gameBegan = NO;
     [audioPlayerForGameOver play];
     if (scoreNumber > highScoreNumber) {
-        [[NSUserDefaults standardUserDefaults] setInteger:scoreNumber forKey:@"HighScoreNumber"];
+        [self setCurrentPersonHighScore];
     }
     
     [tunnelMovementTimer invalidate];
@@ -262,23 +268,50 @@
 }
 
 - (int)getCurrentPersonHighScore{
-    
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"highscore" ascending:YES];
-    [req setSortDescriptors: [NSArray arrayWithObject:sort]];
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", curUser.username];
-    [req setPredicate:pred];
-    
-    NSArray *fetchedObjects = [appDelegate.managedObjectContext executeFetchRequest:req error:nil];
-    
-    for (CorePlayer *player in fetchedObjects) {
-        NSLog(@"%@m %@, %@", player.name, player.id, player.highscore);
+    if (self.curUser) {
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+        [req setPredicate:pred];
         
-        //            for (SubscribedPlayer *sub in player.subscribedPlayers) {
-        //                NSLog(@"SUB %@ %@", sub.name, sub.highscore);
-        //            }
+        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        int score = [currentCorePlayer.highscore intValue];
+        return score;
+    }
+    else{
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CurrentPlayer"];
+        
+        CurrentPlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        int score = [currentCorePlayer.highscore intValue];
+        return score;
+    }
+}
+
+- (void)setCurrentPersonHighScore{
+    if (self.curUser) {
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+        [req setPredicate:pred];
+        
+        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        currentCorePlayer.highscore = [NSNumber numberWithInt:highScoreNumber];
+    }
+    else{
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CurrentPlayer"];
+        
+        CurrentPlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        currentCorePlayer.highscore = [NSNumber numberWithInt:highScoreNumber];
+    }
+    
+    NSError *err;
+    [self.appDelegate.managedObjectContext save:&err];
+    if (err) {
+        NSLog(@"%@", err.description);
     }
 }
 
 @end
+

@@ -118,22 +118,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
-            timestampString = "436974165.995693"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
             timestampString = "436978302.674542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
