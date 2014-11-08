@@ -252,7 +252,7 @@
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    //End game(Suicide yourself) when device is shaked
+    //End game when device is shaked
     if (motion == UIEventSubtypeMotionShake)
     {
         [self gameOver];
