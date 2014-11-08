@@ -33,6 +33,7 @@
 		C57988A21A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */; };
 		C57988A51A0EAA3600970109 /* SubscribedPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A41A0EAA3600970109 /* SubscribedPlayer.m */; };
 		C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A71A0EAA3800970109 /* CorePlayer.m */; };
+		C57988AB1A0EB2FF00970109 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988AA1A0EB2FF00970109 /* CurrentPlayer.m */; };
 		C585D4231A0D537100386CD2 /* login-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4211A0D537100386CD2 /* login-background.jpg */; };
 		C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4221A0D537100386CD2 /* signup-background.jpg */; };
 		C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */; };
@@ -112,6 +113,8 @@
 		C57988A41A0EAA3600970109 /* SubscribedPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribedPlayer.m; sourceTree = "<group>"; };
 		C57988A61A0EAA3800970109 /* CorePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlayer.h; sourceTree = "<group>"; };
 		C57988A71A0EAA3800970109 /* CorePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlayer.m; sourceTree = "<group>"; };
+		C57988A91A0EB2FF00970109 /* CurrentPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayer.h; sourceTree = "<group>"; };
+		C57988AA1A0EB2FF00970109 /* CurrentPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayer.m; sourceTree = "<group>"; };
 		C585D4211A0D537100386CD2 /* login-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-background.jpg"; sourceTree = "<group>"; };
 		C585D4221A0D537100386CD2 /* signup-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "signup-background.jpg"; sourceTree = "<group>"; };
 		C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyAvatar.jpeg; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */,
+				C57988A91A0EB2FF00970109 /* CurrentPlayer.h */,
+				C57988AA1A0EB2FF00970109 /* CurrentPlayer.m */,
 				C57988A61A0EAA3800970109 /* CorePlayer.h */,
 				C57988A71A0EAA3800970109 /* CorePlayer.m */,
 				C57988A31A0EAA3600970109 /* SubscribedPlayer.h */,
@@ -509,6 +514,7 @@
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
+				C57988AB1A0EB2FF00970109 /* CurrentPlayer.m in Sources */,
 				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

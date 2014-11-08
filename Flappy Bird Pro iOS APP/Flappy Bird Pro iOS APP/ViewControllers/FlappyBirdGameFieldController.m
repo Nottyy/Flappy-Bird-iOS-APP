@@ -7,6 +7,8 @@
 //
 
 #import "FlappyBirdGameFieldController.h"
+#import "AppDelegate.h"
+#import "CorePlayer.h"
 
 @interface FlappyBirdGameFieldController ()
 
@@ -155,13 +157,13 @@
     else{
         self.objectBird.image = [UIImage imageNamed:@"BirdUp.png"];
     }
-        
+    
 }
 
 -(void)setScore{
     scoreNumber = scoreNumber + 1;
     //self.scoreLabel.text = [NSString stringWithFormat:@"%d", scoreNumber];
-
+    
     [audioPlayerForPoint play];
 }
 
@@ -176,7 +178,7 @@
     [birdMovementTimer invalidate];
     
     self.objectBird.image = [UIImage imageNamed:@"gameOverBird.png"];
-//    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
+    //    birdMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(birdMovementWhenCrashed) userInfo:nil repeats:YES];
     self.tunnelBottom.hidden = YES;
     self.tunnelTop.hidden = YES;
     
@@ -208,13 +210,13 @@
 
 //-(void) birdMovementWhenCrashed{
 //    self.objectBird.center = CGPointMake(self.objectBird.center.x, self.objectBird.center.y + birdFlight);
-//    
+//
 //    birdFlight = birdFlight + 5;
-//    
+//
 //    if (birdFlight >= 10) {
 //        birdFlight = 10;
 //    }
-//    
+//
 //    if (self.objectBird.center.y >= [[UIScreen mainScreen] bounds].size.height - 40) {
 //        [birdMovementTimer invalidate];
 //        self.objectBird.hidden = YES;
@@ -223,7 +225,7 @@
 //        self.exitButton.hidden = NO;
 //        self.buttonStartGame.hidden = NO;
 //        self.buttonStartGame.titleLabel.text = @"Try Again?";
-//        
+//
 //        [self setLogoTimer];
 //    }
 //}
@@ -256,7 +258,27 @@
     if (motion == UIEventSubtypeMotionShake)
     {
         [self gameOver];
-    } 
+    }
+}
+
+- (int)getCurrentPersonHighScore{
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"highscore" ascending:YES];
+    [req setSortDescriptors: [NSArray arrayWithObject:sort]];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", curUser.username];
+    [req setPredicate:pred];
+    
+    NSArray *fetchedObjects = [appDelegate.managedObjectContext executeFetchRequest:req error:nil];
+    
+    for (CorePlayer *player in fetchedObjects) {
+        NSLog(@"%@m %@, %@", player.name, player.id, player.highscore);
+        
+        //            for (SubscribedPlayer *sub in player.subscribedPlayers) {
+        //                NSLog(@"SUB %@ %@", sub.name, sub.highscore);
+        //            }
+    }
 }
 
 @end

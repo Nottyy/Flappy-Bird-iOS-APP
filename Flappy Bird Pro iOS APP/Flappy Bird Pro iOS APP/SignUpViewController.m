@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 #import "FlappyAngryUser.h"
 #import "Reachability.h"
+#import "AppDelegate.h"
+#import "CorePlayer.h"
 
 @interface SignUpViewController ()
 @property (nonatomic, strong) UIImage *imageTaken;
@@ -66,8 +68,23 @@
                         [self.hud hide:YES];
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully registered!" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                         [alert show];
-                        //[self performSegueWithIdentifier:@"" sender:self];
                         
+                        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                        
+                        CorePlayer *player = [NSEntityDescription insertNewObjectForEntityForName:@"CorePlayer" inManagedObjectContext:appDelegate.managedObjectContext];
+                        player.highscore = [NSNumber numberWithInt:0];
+                        player.name = _usernameTextField.text;
+                        
+                        [appDelegate.managedObjectContext insertObject:player];
+                        
+                        NSError *err;
+                        [appDelegate.managedObjectContext save:&err];
+                        if (err) {
+                            
+                        }
+                        else{
+                            NSLog(@"Saved to core Data");
+                        }
                     }
                     else{
                         [self.hud hide:YES];
