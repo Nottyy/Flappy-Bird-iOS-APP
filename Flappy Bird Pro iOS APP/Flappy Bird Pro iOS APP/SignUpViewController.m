@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import <Parse/Parse.h>
 #import "FlappyAngryUser.h"
+#import "Reachability.h"
 
 @interface SignUpViewController ()
 @property (nonatomic, strong) UIImage *imageTaken;
@@ -34,41 +35,51 @@
 
 - (IBAction)signUp:(id)sender {
     if ([sender isEqual:self.signUpButton]){
-        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        self.hud.labelText = @"Please wait";
         
-        FlappyAngryUser *user = [FlappyAngryUser new];
-        user.username = _usernameTextField.text;
-        user.password = _passwordTextField.text;
-        user.Points = [NSNumber numberWithInt:0];
+        Reachability *reachability = [Reachability reachabilityForInternetConnection];
+        NetworkStatus netStatus = [reachability currentReachabilityStatus];
         
-        //if the user uploads a photo
-        if (self.imageTaken) {
-            NSData *imageData = UIImageJPEGRepresentation(self.imageTaken, 0.05f);
-            PFFile *userAvatar = [PFFile fileWithName:[NSString stringWithFormat:@"%@ avatar", _usernameTextField.text] data: imageData];
-            user.Avatar = userAvatar;
+        if (netStatus == NotReachable) {
+            [self.hud hide:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No internet access" message:@"Signing up cancelled" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alert show];
         }
-        
-        
-        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-                if (error == nil){
-                    [self.hud hide:YES];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully registered!" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                    [alert show];
-                    //[self performSegueWithIdentifier:@"" sender:self];
-                    
+        else{
+            self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            self.hud.labelText = @"Please wait";
+            
+            FlappyAngryUser *user = [FlappyAngryUser new];
+            user.username = _usernameTextField.text;
+            user.password = _passwordTextField.text;
+            user.Points = [NSNumber numberWithInt:0];
+            
+            //if the user uploads a photo
+            if (self.imageTaken) {
+                NSData *imageData = UIImageJPEGRepresentation(self.imageTaken, 0.05f);
+                PFFile *userAvatar = [PFFile fileWithName:[NSString stringWithFormat:@"%@ avatar", _usernameTextField.text] data: imageData];
+                user.Avatar = userAvatar;
+            }
+            
+            [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    if (error == nil){
+                        [self.hud hide:YES];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully registered!" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                        [alert show];
+                        //[self performSegueWithIdentifier:@"" sender:self];
+                        
+                    }
+                    else{
+                        [self.hud hide:YES];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                        [alert show];
+                    }
                 }
                 else{
-                    [self.hud hide:YES];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.domain delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                    [alert show];
+                    NSLog(@"%@", error);
                 }
-            }
-            else{
-                NSLog(@"%@", error);
-            }
-        }];
+            }];
+        }
     }
 }
 

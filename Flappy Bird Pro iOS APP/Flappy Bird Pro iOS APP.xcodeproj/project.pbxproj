@@ -11,6 +11,7 @@
 		C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
 		C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */; };
+		C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C5260F2D1A0D8EB500DC69FB /* Reachability.m */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
 		C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */; };
@@ -73,6 +74,8 @@
 
 /* Begin PBXFileReference section */
 		C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leaderboard-background.jpg"; sourceTree = "<group>"; };
+		C5260F2C1A0D8EB500DC69FB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C5260F2D1A0D8EB500DC69FB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C54933E71A02DDCF002A1526 /* Flappy Bird Pro iOS APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird Pro iOS APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54933EB1A02DDCF002A1526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54933EC1A02DDCF002A1526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 		C5B59AB91A05932E00A58142 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C5260F2C1A0D8EB500DC69FB /* Reachability.h */,
+				C5260F2D1A0D8EB500DC69FB /* Reachability.m */,
 				C5B59AC61A05A95E00A58142 /* MBProgressHUD.h */,
 				C5B59AC71A05A95E00A58142 /* MBProgressHUD.m */,
 				C5B59AC01A05A93800A58142 /* TKUIButton.h */,
@@ -477,6 +482,7 @@
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */,
 				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
+				C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
 				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,

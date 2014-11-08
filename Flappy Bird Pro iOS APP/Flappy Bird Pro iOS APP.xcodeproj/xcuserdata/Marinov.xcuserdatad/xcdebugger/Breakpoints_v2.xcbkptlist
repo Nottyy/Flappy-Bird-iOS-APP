@@ -70,7 +70,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
-            timestampString = "437061908.381889"
+            timestampString = "437098669.46793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -86,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
-            timestampString = "437061908.381889"
+            timestampString = "437098669.46793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-login:"
             landmarkType = "5">
          </BreakpointContent>
@@ -102,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
-            timestampString = "437061908.381889"
+            timestampString = "437098669.46793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-login:"
             landmarkType = "5">
          </BreakpointContent>
@@ -197,44 +197,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
-            timestampString = "437061908.381889"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-login:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
-            timestampString = "437061908.381889"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-login:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/SignUpViewController.m"
-            timestampString = "437079403.235463"
+            timestampString = "437097147.724829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-photoFromGallery:"
             landmarkType = "5">
          </BreakpointContent>
@@ -246,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/UILeaderboardViewController.m"
-            timestampString = "437092869.349688"
+            timestampString = "437098355.062526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -262,12 +230,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/UILeaderboardViewController.m"
-            timestampString = "437092643.74731"
+            timestampString = "437098355.062526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird Pro iOS APP/UILeaderboardViewController.m"
+            timestampString = "437098355.062526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird Pro iOS APP/LoginViewController.m"
+            timestampString = "437098776.95269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-login:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
