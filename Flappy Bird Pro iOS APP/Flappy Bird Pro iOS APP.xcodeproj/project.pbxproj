@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90979CBA1A0E436700F8B3C7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
-		90979CBB1A0E436700F8B3C7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
-		90979CBC1A0E436700F8B3C7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */; };
 		C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C5260F2D1A0D8EB500DC69FB /* Reachability.m */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
-		C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */; };
 		C54933F61A02DDCF002A1526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933F51A02DDCF002A1526 /* ViewController.m */; };
 		C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54933F71A02DDCF002A1526 /* Main.storyboard */; };
 		C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54933FA1A02DDCF002A1526 /* Images.xcassets */; };
@@ -30,6 +26,13 @@
 		C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EC1A09030300AAB244 /* point.mp3 */; };
 		C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EF1A0944EE00AAB244 /* gameOverBird.png */; };
 		C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7F11A09597300AAB244 /* green-tunnel.png */; };
+		C57988911A0EA3A600970109 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
+		C57988921A0EA3A600970109 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
+		C57988931A0EA3A600970109 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
+		C57988951A0EA50A00970109 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57988941A0EA50A00970109 /* CoreData.framework */; };
+		C57988A21A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */; };
+		C57988A51A0EAA3600970109 /* SubscribedPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A41A0EAA3600970109 /* SubscribedPlayer.m */; };
+		C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A71A0EAA3800970109 /* CorePlayer.m */; };
 		C585D4231A0D537100386CD2 /* login-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4211A0D537100386CD2 /* login-background.jpg */; };
 		C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4221A0D537100386CD2 /* signup-background.jpg */; };
 		C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */; };
@@ -81,7 +84,6 @@
 		C54933EC1A02DDCF002A1526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54933EE1A02DDCF002A1526 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C54933EF1A02DDCF002A1526 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C54933F21A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flappy_Bird_Pro_iOS_APP.xcdatamodel; sourceTree = "<group>"; };
 		C54933F41A02DDCF002A1526 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C54933F51A02DDCF002A1526 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C54933F81A02DDCF002A1526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,12 @@
 		C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		C57988941A0EA50A00970109 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPlayers.xcdatamodel; sourceTree = "<group>"; };
+		C57988A31A0EAA3600970109 /* SubscribedPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribedPlayer.h; sourceTree = "<group>"; };
+		C57988A41A0EAA3600970109 /* SubscribedPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribedPlayer.m; sourceTree = "<group>"; };
+		C57988A61A0EAA3800970109 /* CorePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlayer.h; sourceTree = "<group>"; };
+		C57988A71A0EAA3800970109 /* CorePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlayer.m; sourceTree = "<group>"; };
 		C585D4211A0D537100386CD2 /* login-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-background.jpg"; sourceTree = "<group>"; };
 		C585D4221A0D537100386CD2 /* signup-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "signup-background.jpg"; sourceTree = "<group>"; };
 		C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyAvatar.jpeg; sourceTree = "<group>"; };
@@ -149,9 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90979CBA1A0E436700F8B3C7 /* Bolts.framework in Frameworks */,
-				90979CBB1A0E436700F8B3C7 /* Parse.framework in Frameworks */,
-				90979CBC1A0E436700F8B3C7 /* ParseFacebookUtils.framework in Frameworks */,
+				C57988951A0EA50A00970109 /* CoreData.framework in Frameworks */,
+				C57988911A0EA3A600970109 /* Bolts.framework in Frameworks */,
+				C57988921A0EA3A600970109 /* Parse.framework in Frameworks */,
+				C57988931A0EA3A600970109 /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -178,6 +187,7 @@
 		C54933DE1A02DDCE002A1526 = {
 			isa = PBXGroup;
 			children = (
+				C57988961A0EA51200970109 /* CoreDataModels */,
 				C5B883B91A0BE18500B9ACCF /* Frameworks */,
 				C54933E91A02DDCF002A1526 /* Flappy Bird Pro iOS APP */,
 				C54934061A02DDD0002A1526 /* Flappy Bird Pro iOS APPTests */,
@@ -207,7 +217,6 @@
 				C54933F71A02DDCF002A1526 /* Main.storyboard */,
 				C54933FA1A02DDCF002A1526 /* Images.xcassets */,
 				C54933FC1A02DDCF002A1526 /* LaunchScreen.xib */,
-				C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */,
 				C54933EA1A02DDCF002A1526 /* Supporting Files */,
 			);
 			path = "Flappy Bird Pro iOS APP";
@@ -288,6 +297,18 @@
 			path = "Flappy Bird Pro iOS APP/Frameworks";
 			sourceTree = "<group>";
 		};
+		C57988961A0EA51200970109 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */,
+				C57988A61A0EAA3800970109 /* CorePlayer.h */,
+				C57988A71A0EAA3800970109 /* CorePlayer.m */,
+				C57988A31A0EAA3600970109 /* SubscribedPlayer.h */,
+				C57988A41A0EAA3600970109 /* SubscribedPlayer.m */,
+			);
+			name = CoreDataModels;
+			sourceTree = "<group>";
+		};
 		C5B59AB71A05923B00A58142 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +346,7 @@
 		C5B883B91A0BE18500B9ACCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C57988941A0EA50A00970109 /* CoreData.framework */,
 				C55DBEEC1A0CFB9B009DB4B2 /* Parse */,
 				C5B883A51A0BE14300B9ACCF /* AudioToolbox.framework */,
 				C5B883A61A0BE14300B9ACCF /* CFNetwork.framework */,
@@ -473,17 +495,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
+				C57988A21A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */,
 				C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */,
-				C54933F31A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld in Sources */,
 				C54933F61A02DDCF002A1526 /* ViewController.m in Sources */,
 				C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */,
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */,
+				C57988A51A0EAA3600970109 /* SubscribedPlayer.m in Sources */,
 				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
 				C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
+				C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
 				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,
 			);
@@ -644,6 +668,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -661,6 +690,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,
@@ -766,13 +800,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C54933F11A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodeld */ = {
+		C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C54933F21A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodel */,
+				C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */,
 			);
-			currentVersion = C54933F21A02DDCF002A1526 /* Flappy_Bird_Pro_iOS_APP.xcdatamodel */;
-			path = Flappy_Bird_Pro_iOS_APP.xcdatamodeld;
+			currentVersion = C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */;
+			path = CoreDataPlayers.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
