@@ -245,4 +245,18 @@
     [self setLogoTimer];
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    //End game(Suicide yourself) when device is shaked
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self gameOver];
+    } 
+}
+
 @end

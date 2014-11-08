@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5260F271A0D651E00DC69FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
-		C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
-		C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
+		90979CBA1A0E436700F8B3C7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
+		90979CBB1A0E436700F8B3C7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
+		90979CBC1A0E436700F8B3C7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */; };
 		C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C5260F2D1A0D8EB500DC69FB /* Reachability.m */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
@@ -149,9 +149,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5260F271A0D651E00DC69FB /* Bolts.framework in Frameworks */,
-				C5260F281A0D651E00DC69FB /* Parse.framework in Frameworks */,
-				C5260F291A0D651E00DC69FB /* ParseFacebookUtils.framework in Frameworks */,
+				90979CBA1A0E436700F8B3C7 /* Bolts.framework in Frameworks */,
+				90979CBB1A0E436700F8B3C7 /* Parse.framework in Frameworks */,
+				90979CBC1A0E436700F8B3C7 /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -639,6 +639,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -656,6 +661,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,
