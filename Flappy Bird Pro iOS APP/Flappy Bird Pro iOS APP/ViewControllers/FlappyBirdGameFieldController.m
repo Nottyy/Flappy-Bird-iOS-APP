@@ -31,7 +31,6 @@
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
     
-    highScoreNumber = [self getCurrentPersonHighScore];
     _curUser = [FlappyAngryUser currentUser];
     _appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
@@ -56,6 +55,10 @@
     initialLogoXCoordinate = self.logoGameOverAndStartGame.center.x;
     
     [self setLogoTimer];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [logoMovement invalidate];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,6 +98,8 @@
     pushTunnels = 3;
     scoreNumber = 0;
     self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
+    
+    highScoreNumber = [self getCurrentPersonHighScore];
     
     self.logoGameOverAndStartGame.hidden = YES;
     self.tunnelTop.hidden = NO;
@@ -289,28 +294,37 @@
 }
 
 - (void)setCurrentPersonHighScore{
+    NSLog(@"Previous highscore -> %d", highScoreNumber);
+    NSLog(@"New highscore -> %d", scoreNumber);
     if (self.curUser) {
+        self.curUser.Points = [NSNumber numberWithInt:scoreNumber];
+        NSError *err;
+        
+        [self.curUser save:&err];
+        if (err) {
+            NSLog(@"%@", err.description);
+        }
+        
         NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
         [req setPredicate:pred];
         
         CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
         
-        currentCorePlayer.highscore = [NSNumber numberWithInt:highScoreNumber];
-    }
-    else{
-        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CurrentPlayer"];
+        currentCorePlayer.highscore = [NSNumber numberWithInt:scoreNumber];
         
-        CurrentPlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        [self.appDelegate.managedObjectContext save:&err];
         
-        currentCorePlayer.highscore = [NSNumber numberWithInt:highScoreNumber];
+        if (err) {
+            NSLog(@"%@", err.description);
+        }
     }
     
-    NSError *err;
-    [self.appDelegate.managedObjectContext save:&err];
-    if (err) {
-        NSLog(@"%@", err.description);
-    }
+//    NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CurrentPlayer"];
+//    
+//    CurrentPlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+//    
+//    currentCorePlayer.highscore = [NSNumber numberWithInt:scoreNumber];
 }
 
 @end

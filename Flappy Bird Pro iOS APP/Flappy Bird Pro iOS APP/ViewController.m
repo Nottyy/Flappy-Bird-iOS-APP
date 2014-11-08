@@ -68,7 +68,7 @@
 //        for (SubscribedPlayer *sub in player.subscribedPlayers) {
 //            NSLog(@"SUB %@ %@", sub.name, sub.highscore);
 //        }
-    //}
+//    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -77,6 +77,7 @@
     if (curUser) {
         self.loginButton.hidden = YES;
         self.logoutButton.hidden = NO;
+        NSLog(@"%@ Current highscore from PARSE", curUser.Points);
     }
     else {
         self.logoutButton.hidden = YES;

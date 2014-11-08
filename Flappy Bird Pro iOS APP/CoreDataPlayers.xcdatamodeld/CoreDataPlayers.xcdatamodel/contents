@@ -3,7 +3,7 @@
     <entity name="CorePlayer" representedClassName="CorePlayer" syncable="YES">
         <attribute name="highscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" minValueString="3" maxValueString="10" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="subscribedPlayers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubscribedPlayer" inverseName="corePlayer" inverseEntity="SubscribedPlayer" syncable="YES"/>
     </entity>
     <entity name="CurrentPlayer" representedClassName="CurrentPlayer" syncable="YES">
@@ -14,12 +14,12 @@
         <attribute name="checked" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="highscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" minValueString="3" maxValueString="10" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="corePlayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CorePlayer" inverseName="subscribedPlayers" inverseEntity="CorePlayer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CorePlayer" positionX="-45" positionY="0" width="128" height="103"/>
-        <element name="SubscribedPlayer" positionX="-18" positionY="54" width="128" height="118"/>
-        <element name="CurrentPlayer" positionX="-27" positionY="72" width="128" height="73"/>
+        <element name="CorePlayer" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="SubscribedPlayer" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="CurrentPlayer" positionX="-18" positionY="72" width="128" height="75"/>
     </elements>
 </model>

@@ -12,7 +12,7 @@
 
 @interface CurrentPlayer : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * highscore;
+@property (nonatomic, retain) NSString * name;
 
 @end

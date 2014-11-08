@@ -12,7 +12,10 @@
 		C5434F081A0EB6CB007FD429 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
 		C5434F091A0EB6CB007FD429 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
 		C5434F0A1A0EB6CB007FD429 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
-		C5434F0D1A0EBA8B007FD429 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F0C1A0EBA8B007FD429 /* CurrentPlayer.m */; };
+		C5434F101A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5434F0E1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld */; };
+		C5434F131A0EC8DA007FD429 /* SubscribedPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F121A0EC8DA007FD429 /* SubscribedPlayer.m */; };
+		C5434F161A0EC8DB007FD429 /* CorePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F151A0EC8DB007FD429 /* CorePlayer.m */; };
+		C5434F191A0EC8DB007FD429 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F181A0EC8DB007FD429 /* CurrentPlayer.m */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
 		C54933F61A02DDCF002A1526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933F51A02DDCF002A1526 /* ViewController.m */; };
@@ -30,9 +33,6 @@
 		C55DA7EE1A09030300AAB244 /* point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EC1A09030300AAB244 /* point.mp3 */; };
 		C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7EF1A0944EE00AAB244 /* gameOverBird.png */; };
 		C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = C55DA7F11A09597300AAB244 /* green-tunnel.png */; };
-		C57988A21A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */; };
-		C57988A51A0EAA3600970109 /* SubscribedPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A41A0EAA3600970109 /* SubscribedPlayer.m */; };
-		C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57988A71A0EAA3800970109 /* CorePlayer.m */; };
 		C585D4231A0D537100386CD2 /* login-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4211A0D537100386CD2 /* login-background.jpg */; };
 		C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4221A0D537100386CD2 /* signup-background.jpg */; };
 		C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */; };
@@ -79,8 +79,13 @@
 		C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leaderboard-background.jpg"; sourceTree = "<group>"; };
 		C5260F2C1A0D8EB500DC69FB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C5260F2D1A0D8EB500DC69FB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		C5434F0B1A0EBA8B007FD429 /* CurrentPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayer.h; sourceTree = "<group>"; };
-		C5434F0C1A0EBA8B007FD429 /* CurrentPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayer.m; sourceTree = "<group>"; };
+		C5434F0F1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPlayers.xcdatamodel; sourceTree = "<group>"; };
+		C5434F111A0EC8DA007FD429 /* SubscribedPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribedPlayer.h; sourceTree = "<group>"; };
+		C5434F121A0EC8DA007FD429 /* SubscribedPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribedPlayer.m; sourceTree = "<group>"; };
+		C5434F141A0EC8DB007FD429 /* CorePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlayer.h; sourceTree = "<group>"; };
+		C5434F151A0EC8DB007FD429 /* CorePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlayer.m; sourceTree = "<group>"; };
+		C5434F171A0EC8DB007FD429 /* CurrentPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayer.h; sourceTree = "<group>"; };
+		C5434F181A0EC8DB007FD429 /* CurrentPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayer.m; sourceTree = "<group>"; };
 		C54933E71A02DDCF002A1526 /* Flappy Bird Pro iOS APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird Pro iOS APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54933EB1A02DDCF002A1526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54933EC1A02DDCF002A1526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,11 +114,6 @@
 		C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		C57988941A0EA50A00970109 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPlayers.xcdatamodel; sourceTree = "<group>"; };
-		C57988A31A0EAA3600970109 /* SubscribedPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribedPlayer.h; sourceTree = "<group>"; };
-		C57988A41A0EAA3600970109 /* SubscribedPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribedPlayer.m; sourceTree = "<group>"; };
-		C57988A61A0EAA3800970109 /* CorePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlayer.h; sourceTree = "<group>"; };
-		C57988A71A0EAA3800970109 /* CorePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlayer.m; sourceTree = "<group>"; };
 		C585D4211A0D537100386CD2 /* login-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-background.jpg"; sourceTree = "<group>"; };
 		C585D4221A0D537100386CD2 /* signup-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "signup-background.jpg"; sourceTree = "<group>"; };
 		C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyAvatar.jpeg; sourceTree = "<group>"; };
@@ -301,13 +301,13 @@
 		C57988961A0EA51200970109 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */,
-				C5434F0B1A0EBA8B007FD429 /* CurrentPlayer.h */,
-				C5434F0C1A0EBA8B007FD429 /* CurrentPlayer.m */,
-				C57988A61A0EAA3800970109 /* CorePlayer.h */,
-				C57988A71A0EAA3800970109 /* CorePlayer.m */,
-				C57988A31A0EAA3600970109 /* SubscribedPlayer.h */,
-				C57988A41A0EAA3600970109 /* SubscribedPlayer.m */,
+				C5434F0E1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld */,
+				C5434F171A0EC8DB007FD429 /* CurrentPlayer.h */,
+				C5434F181A0EC8DB007FD429 /* CurrentPlayer.m */,
+				C5434F141A0EC8DB007FD429 /* CorePlayer.h */,
+				C5434F151A0EC8DB007FD429 /* CorePlayer.m */,
+				C5434F111A0EC8DA007FD429 /* SubscribedPlayer.h */,
+				C5434F121A0EC8DA007FD429 /* SubscribedPlayer.m */,
 			);
 			name = CoreDataModels;
 			sourceTree = "<group>";
@@ -498,7 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
-				C57988A21A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld in Sources */,
+				C5434F101A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */,
 				C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */,
@@ -506,13 +506,13 @@
 				C5B59AC41A05A93800A58142 /* TKUIButton.m in Sources */,
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */,
-				C57988A51A0EAA3600970109 /* SubscribedPlayer.m in Sources */,
+				C5434F131A0EC8DA007FD429 /* SubscribedPlayer.m in Sources */,
 				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
 				C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,
-				C57988A81A0EAA3800970109 /* CorePlayer.m in Sources */,
+				C5434F161A0EC8DB007FD429 /* CorePlayer.m in Sources */,
 				C54933ED1A02DDCF002A1526 /* main.m in Sources */,
-				C5434F0D1A0EBA8B007FD429 /* CurrentPlayer.m in Sources */,
+				C5434F191A0EC8DB007FD429 /* CurrentPlayer.m in Sources */,
 				C5B59ABF1A05A73000A58142 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,12 +814,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C57988A01A0EA96E00970109 /* CoreDataPlayers.xcdatamodeld */ = {
+		C5434F0E1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */,
+				C5434F0F1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodel */,
 			);
-			currentVersion = C57988A11A0EA96E00970109 /* CoreDataPlayers.xcdatamodel */;
+			currentVersion = C5434F0F1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodel */;
 			path = CoreDataPlayers.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

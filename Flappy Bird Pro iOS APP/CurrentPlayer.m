@@ -11,7 +11,7 @@
 
 @implementation CurrentPlayer
 
-@dynamic name;
 @dynamic highscore;
+@dynamic name;
 
 @end

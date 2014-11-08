@@ -80,7 +80,7 @@
                         NSError *err;
                         [appDelegate.managedObjectContext save:&err];
                         if (err) {
-                            
+                            NSLog(@"%@", err.description);
                         }
                         else{
                             NSLog(@"Saved to core Data");
