@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "FlappyAngryUser.h"
+#import "CorePlayer.h"
+#import "SubscribedPlayer.h"
 
 
 @interface AppDelegate ()
@@ -16,6 +18,8 @@
 @end
 
 @implementation AppDelegate
+
+@synthesize backgroundTask;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -26,6 +30,60 @@
     return YES;
 }
 
+-(void)applicationDidEnterBackground:(UIApplication *)application{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App entered background" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    [alert show];
+    
+    [self.managedObjectContext save:nil];
+    backgroundTask = [application beginBackgroundTaskWithExpirationHandler:^{
+        [application endBackgroundTask:backgroundTask];
+        
+        backgroundTask = UIBackgroundTaskInvalid;
+    }];
+    
+    checkingSubscribedPlayersScores = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(chekingSubscribedPlayersHighScores) userInfo:nil repeats:YES];
+}
+
+-(void)chekingSubscribedPlayersHighScores{
+    FlappyAngryUser *currentPlayer = [FlappyAngryUser currentUser];
+    if (currentPlayer) {
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", currentPlayer.username];
+        [req setPredicate:pred];
+        
+        CorePlayer *currentCorePlayer = [[self.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        if (currentCorePlayer.subscribedPlayers.count > 0) {
+            int currentPlayerScore = [currentCorePlayer.highscore intValue];
+            
+            for (SubscribedPlayer *subcribedPlayer in currentCorePlayer.subscribedPlayers) {
+                int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
+                
+                if (currentSubscribedPlayerHighScore > currentPlayerScore && subcribedPlayer.checked == NO) {
+                    subcribedPlayer.checked = [NSNumber numberWithBool:YES];
+                    
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
+                    
+                    [self.managedObjectContext save:nil];
+                }
+            }
+            
+            [self.managedObjectContext save:nil];
+        }
+    }
+    
+}
+
+-(void)applicationWillEnterForeground:(UIApplication *)application{
+    [checkingSubscribedPlayersScores invalidate];
+    
+    [application endBackgroundTask:backgroundTask];
+    
+    backgroundTask = UIBackgroundTaskInvalid;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -34,15 +92,6 @@
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     
     return true;
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

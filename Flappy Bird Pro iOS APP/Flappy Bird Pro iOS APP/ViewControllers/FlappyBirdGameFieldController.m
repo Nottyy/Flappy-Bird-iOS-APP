@@ -10,7 +10,9 @@
 #import "AppDelegate.h"
 #import "CorePlayer.h"
 #import "FlappyAngryUser.h"
+#import "SubscribedPlayer.h"
 #import "CurrentPlayer.h"
+#import <Parse/Parse.h>
 
 @interface FlappyBirdGameFieldController ()
 
@@ -216,6 +218,7 @@
     [audioPlayerForGameOver play];
     if (scoreNumber > highScoreNumber) {
         [self setCurrentPersonHighScore];
+        [self updateHighScoreForSubscribedUsers];
     }
     
     [tunnelMovementTimer invalidate];
@@ -227,6 +230,33 @@
     self.tunnelTop.hidden = YES;
     
     [self setAnimator];
+}
+
+-(void) updateHighScoreForSubscribedUsers{
+    if (self.curUser) {
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+        [req setPredicate:pred];
+        
+        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        if (currentCorePlayer.subscribedPlayers.count > 0) {
+            int currentPlayerScore = [currentCorePlayer.highscore intValue];
+            
+            for (SubscribedPlayer *subcribedPlayer in currentCorePlayer.subscribedPlayers) {
+                int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
+                
+                if (currentSubscribedPlayerHighScore < currentPlayerScore) {
+                    
+                    subcribedPlayer.checked = [NSNumber numberWithBool:NO];
+                    NSLog(@"IN CHECKED");
+                }
+            }
+            
+            [self.appDelegate.managedObjectContext save:nil];
+            NSLog(@"OUT CHECKED");
+        }
+    }
 }
 
 -(void) setAnimator{
