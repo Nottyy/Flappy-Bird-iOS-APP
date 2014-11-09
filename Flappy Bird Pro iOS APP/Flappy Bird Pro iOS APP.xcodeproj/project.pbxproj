@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B1DBA31A0F9D9F0051B791 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
+		90B1DBA41A0F9D9F0051B791 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
+		90B1DBA51A0F9D9F0051B791 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */; };
 		C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C5260F2D1A0D8EB500DC69FB /* Reachability.m */; };
 		C5434F101A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5434F0E1A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld */; };
@@ -62,9 +65,6 @@
 		C5B883B81A0BE14300B9ACCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B883AE1A0BE14300B9ACCF /* SystemConfiguration.framework */; };
 		C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B883E71A0C44C200B9ACCF /* FlappyAngryUser.m */; };
 		C5BBD2081A0F78F7005826F6 /* table-cell-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5BBD2071A0F78F7005826F6 /* table-cell-background.jpg */; };
-		C5BBD2091A0F7A5A005826F6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
-		C5BBD20A1A0F7A5A005826F6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
-		C5BBD20B1A0F7A5A005826F6 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 		C5BBD20D1A0F7FAD005826F6 /* subsPlayers-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5BBD20C1A0F7FAD005826F6 /* subsPlayers-background.jpg */; };
 		C5BBD2101A0FAFB8005826F6 /* new-highscore.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5BBD20E1A0FAFB8005826F6 /* new-highscore.wav */; };
 		C5BBD2111A0FAFB8005826F6 /* shrink.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5BBD20F1A0FAFB8005826F6 /* shrink.wav */; };
@@ -177,9 +177,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BBD2091A0F7A5A005826F6 /* Bolts.framework in Frameworks */,
-				C5BBD20A1A0F7A5A005826F6 /* Parse.framework in Frameworks */,
-				C5BBD20B1A0F7A5A005826F6 /* ParseFacebookUtils.framework in Frameworks */,
+				90B1DBA31A0F9D9F0051B791 /* Bolts.framework in Frameworks */,
+				90B1DBA41A0F9D9F0051B791 /* Parse.framework in Frameworks */,
+				90B1DBA51A0F9D9F0051B791 /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -719,6 +719,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -736,6 +741,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,
