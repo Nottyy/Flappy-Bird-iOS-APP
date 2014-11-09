@@ -249,31 +249,48 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JY-il-vU5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7em-5J-2LC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscribed Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB7-OF-3zj">
+                                <rect key="frame" x="200" y="78" width="200" height="50"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7em-5J-2LC">
                                 <rect key="frame" x="16" y="140" width="568" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antonioooo' Subscribed Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-wD-Eyj">
-                                <rect key="frame" x="112" y="36" width="376" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antonioooo' " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-wD-Eyj">
+                                <rect key="frame" x="200" y="20" width="200" height="50"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-uM-Yid">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="bottom" constant="44" id="AZZ-SY-er1"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="bottom" constant="70" id="AZZ-SY-er1"/>
                             <constraint firstItem="7em-5J-2LC" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" id="NYS-Nn-QAW"/>
                             <constraint firstItem="7em-5J-2LC" firstAttribute="centerX" secondItem="1JY-il-vU5" secondAttribute="centerX" id="Ncd-3t-QOn"/>
                             <constraint firstAttribute="bottom" secondItem="7em-5J-2LC" secondAttribute="bottom" constant="20" symbolic="YES" id="XWl-aZ-2gV"/>
                             <constraint firstItem="UC5-wD-Eyj" firstAttribute="centerX" secondItem="7em-5J-2LC" secondAttribute="centerX" id="XqK-ED-65c"/>
-                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" constant="96" id="YVJ-CK-OMG"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" constant="184" id="YVJ-CK-OMG"/>
                             <constraint firstItem="1JY-il-vU5" firstAttribute="top" secondItem="lxA-Kg-qgH" secondAttribute="top" id="aNX-qS-OT3"/>
                             <constraint firstItem="1JY-il-vU5" firstAttribute="bottom" secondItem="e1L-Px-Qxw" secondAttribute="top" id="aXr-pf-DeV"/>
                             <constraint firstAttribute="trailing" secondItem="1JY-il-vU5" secondAttribute="trailing" id="fVT-XL-iir"/>
                             <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" constant="120" id="lP0-zd-Rzd"/>
-                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" constant="16" id="vXg-5q-I3z"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" id="vXg-5q-I3z"/>
                             <constraint firstItem="1JY-il-vU5" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leading" id="xRk-9R-g56"/>
                         </constraints>
                     </view>
