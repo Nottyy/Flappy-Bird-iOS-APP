@@ -67,6 +67,8 @@
                     subcribedPlayer.highscore = [objects[0] Points];
                     
                     int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
+                    NSLog(@"%@ score %d -- %@ score %@", subcribedPlayer.name, currentSubscribedPlayerHighScore, currentCorePlayer.name,currentCorePlayer.highscore);
+                    NSLog(@"CHECKED ->%@", subcribedPlayer.checked);
                     
                     if (currentSubscribedPlayerHighScore > currentPlayerScore && [subcribedPlayer.checked isEqualToNumber: @0]) {
                         subcribedPlayer.checked = [NSNumber numberWithBool:YES];
