@@ -66,14 +66,12 @@
                 if (objects.count == 1) {
                     subcribedPlayer.highscore = [objects[0] Points];
                     
-                    NSLog(@"Parse highscore %@", [[objects objectAtIndex:0] Points]);
                     int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
-                    NSLog(@"Subscr highscore %d", currentSubscribedPlayerHighScore);
                     
-                    if (currentSubscribedPlayerHighScore > currentPlayerScore && subcribedPlayer.checked == NO) {
+                    if (currentSubscribedPlayerHighScore > currentPlayerScore && [subcribedPlayer.checked isEqualToNumber: @0]) {
                         subcribedPlayer.checked = [NSNumber numberWithBool:YES];
                         
-                        NSLog(@"SUCCESS");
+                        NSLog(@"SUCCESSSSSSSSSS");
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                         [alert show];
                         
