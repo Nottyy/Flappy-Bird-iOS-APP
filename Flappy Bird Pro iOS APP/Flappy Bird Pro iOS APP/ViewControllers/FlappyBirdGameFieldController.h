@@ -20,6 +20,8 @@ int highScoreNumber;
 NSString *audioForPointPath;
 NSString *audioForGameOverPath;
 NSString *audioForPushingTunnelsPath;
+NSString *audioForShrinkng;
+NSString *audioForNewHighScore;
 
 @interface FlappyBirdGameFieldController : UIViewController<UIDynamicAnimatorDelegate>{
     NSTimer *birdMovementTimer;
@@ -29,6 +31,8 @@ NSString *audioForPushingTunnelsPath;
     AVAudioPlayer *audioPlayerForPoint;
     AVAudioPlayer *audioPlayerForGameOver;
     AVAudioPlayer *audioPlayerForPushingTunnels;
+    AVAudioPlayer *audioPlayerForNewHighScore;
+    AVAudioPlayer *audioPlayerForShrinkig;
 }
 
 //@property (nonatomic, retain) AVAudioPlayer *audioPlayer;

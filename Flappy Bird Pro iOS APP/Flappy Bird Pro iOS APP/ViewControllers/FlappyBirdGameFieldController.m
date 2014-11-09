@@ -22,6 +22,7 @@
     BOOL gameBegan;
     BOOL usedCutBird;
     BOOL usedPush;
+    BOOL madeNewHighScore;
     CGFloat initialLogoXCoordinate;
     UIDynamicAnimator *animator;
 }
@@ -49,7 +50,13 @@
     audioPlayerForPushingTunnels = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForPushingTunnelsPath] error:NULL];
     [audioPlayerForPushingTunnels prepareToPlay];
     
+    audioForShrinkng = [[NSBundle mainBundle] pathForResource:@"shrink" ofType:@"wav"];
+    audioPlayerForShrinkig = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForShrinkng] error:NULL];
+    [audioPlayerForShrinkig prepareToPlay];
     
+    audioForNewHighScore = [[NSBundle mainBundle] pathForResource:@"new-highscore" ofType:@"wav"];
+    audioPlayerForNewHighScore = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:audioForNewHighScore] error:NULL];
+    [audioPlayerForNewHighScore prepareToPlay];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -81,7 +88,7 @@
 
 - (IBAction)swipeGasture:(UISwipeGestureRecognizer *)sender {
     if (gameBegan == YES && cutBird > 0 && usedCutBird == NO) {
-        //[audioPlayerForPushingTunnels play];
+        [audioPlayerForShrinkig play];
         cutBird -= 1;
         usedCutBird = YES;
         NSLog(@"Swiped");
@@ -106,6 +113,7 @@
     gameBegan = YES;
     usedCutBird = NO;
     usedPush = NO;
+    madeNewHighScore = NO;
     pushTunnels = 3;
     cutBird = 3;
     scoreNumber = 0;
@@ -194,7 +202,13 @@
     scoreNumber = scoreNumber + 1;
     //self.scoreLabel.text = [NSString stringWithFormat:@"%d", scoreNumber];
     
-    [audioPlayerForPoint play];
+    if (highScoreNumber >= scoreNumber || madeNewHighScore == YES) {
+        [audioPlayerForPoint play];
+    }
+    else{
+        madeNewHighScore = YES;
+        [audioPlayerForNewHighScore play];
+    }
 }
 
 -(void)gameOver{
