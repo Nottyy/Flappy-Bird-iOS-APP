@@ -73,7 +73,7 @@
                     if (currentSubscribedPlayerHighScore > currentPlayerScore && [subcribedPlayer.checked isEqualToNumber: @0]) {
                         subcribedPlayer.checked = [NSNumber numberWithBool:YES];
                         
-                        NSLog(@"SUCCESSSSSSSSSS");
+                        NSLog(@"SUCCESSSSSSSSSSSSS");
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                         [alert show];
                         
