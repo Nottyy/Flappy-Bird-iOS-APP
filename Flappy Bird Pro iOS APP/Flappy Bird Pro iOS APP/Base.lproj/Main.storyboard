@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -71,6 +71,9 @@
                                 <state key="normal" title="Subscribed Players">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eus-Pn-BFT" kind="presentation" modalTransitionStyle="flipHorizontal" id="Pk0-lV-OD6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dav-ml-2kn">
                                 <rect key="frame" x="135" y="312" width="330" height="51"/>
@@ -193,6 +196,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="itL-p7-j8b">
                                 <rect key="frame" x="0.0" y="163" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <color key="separatorColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
@@ -229,6 +233,58 @@
                 <exit id="rLn-Ph-v9f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-509" y="705"/>
+        </scene>
+        <!--Subscribed Players View Controller-->
+        <scene sceneID="BNc-a5-Jfh">
+            <objects>
+                <viewController id="eus-Pn-BFT" customClass="UISubscribedPlayersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mD8-6W-4hm"/>
+                        <viewControllerLayoutGuide type="bottom" id="e1L-Px-Qxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lxA-Kg-qgH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JY-il-vU5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7em-5J-2LC">
+                                <rect key="frame" x="16" y="140" width="568" height="440"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antonioooo' Subscribed Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-wD-Eyj">
+                                <rect key="frame" x="112" y="36" width="376" height="60"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="bottom" constant="44" id="AZZ-SY-er1"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" id="NYS-Nn-QAW"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="centerX" secondItem="1JY-il-vU5" secondAttribute="centerX" id="Ncd-3t-QOn"/>
+                            <constraint firstAttribute="bottom" secondItem="7em-5J-2LC" secondAttribute="bottom" constant="20" symbolic="YES" id="XWl-aZ-2gV"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="centerX" secondItem="7em-5J-2LC" secondAttribute="centerX" id="XqK-ED-65c"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" constant="96" id="YVJ-CK-OMG"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="top" secondItem="lxA-Kg-qgH" secondAttribute="top" id="aNX-qS-OT3"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="bottom" secondItem="e1L-Px-Qxw" secondAttribute="top" id="aXr-pf-DeV"/>
+                            <constraint firstAttribute="trailing" secondItem="1JY-il-vU5" secondAttribute="trailing" id="fVT-XL-iir"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" constant="120" id="lP0-zd-Rzd"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" constant="16" id="vXg-5q-I3z"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leading" id="xRk-9R-g56"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subscribedPlayersLabel" destination="UC5-wD-Eyj" id="hnO-ut-Hhp"/>
+                        <outlet property="subscribedPlayersTableView" destination="7em-5J-2LC" id="gjH-AJ-ELq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-Ov-88G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="708"/>
         </scene>
         <!--Flappy Bird Game Field Controller-->
         <scene sceneID="Vo8-VJ-D9z">

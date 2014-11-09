@@ -57,10 +57,11 @@
 //    //Do any additional setup after loading the view, typically from a nib.
 //    
 //    NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
-//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"highscore" ascending:YES];
-//    [req setSortDescriptors: [NSArray arrayWithObject:sort]];
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+//    [req setPredicate:pred];
 //    
-//    NSArray *fetchedObjects = [appDelegate.managedObjectContext executeFetchRequest:req error:nil];
+//    CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+//    
 //    
 //    for (CorePlayer *player in fetchedObjects) {
 //        NSLog(@"%@m %@, %@", player.name, player.id, player.highscore);
@@ -75,9 +76,20 @@
     curUser = [FlappyAngryUser currentUser];
     
     if (curUser) {
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         self.loginButton.hidden = YES;
         self.logoutButton.hidden = NO;
         NSLog(@"%@ Current highscore from PARSE", curUser.Points);
+        
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", curUser.username];
+        [req setPredicate:pred];
+        
+        CorePlayer *currentCorePlayer = [[appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+                
+        for (SubscribedPlayer *player in currentCorePlayer.subscribedPlayers) {
+            NSLog(@"%@m %@, %@", player.name, player.id, player.highscore);
+        }
     }
     else {
         self.logoutButton.hidden = YES;

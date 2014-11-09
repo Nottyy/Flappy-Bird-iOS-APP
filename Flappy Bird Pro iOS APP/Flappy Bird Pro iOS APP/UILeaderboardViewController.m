@@ -11,10 +11,15 @@
 #import <Parse/Parse.h>
 #import "FlappyAngryUser.h"
 #import "Reachability.h"
+#import "AppDelegate.h"
+#import "CorePlayer.h"
+#import "SubscribedPlayer.h"
 
 @interface UILeaderboardViewController ()
 
 @property (nonatomic, strong) NSMutableArray *people;
+@property (nonatomic, strong) AppDelegate *appDelegate;
+@property (strong,nonatomic) FlappyAngryUser* curUser;
 
 @end
 
@@ -55,6 +60,42 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     [self.leaderboardTableView setDataSource:self];
     UINib *nib = [UINib nibWithNibName:leaderBoardCell bundle:nil];
     [self.leaderboardTableView registerNib:nib forCellReuseIdentifier: leaderBoardCell];
+    
+    UILongPressGestureRecognizer *lgpr = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
+    lgpr.minimumPressDuration = 1.0;
+    
+    [self.leaderboardTableView addGestureRecognizer:lgpr];
+    
+    self.appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.curUser = [FlappyAngryUser currentUser];
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer*) sender{
+    CGPoint pointClicked = [sender locationInView:self.leaderboardTableView];
+    NSIndexPath *indexPath = [self.leaderboardTableView indexPathForRowAtPoint:pointClicked];
+    
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+        [req setPredicate:pred];
+        
+        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        
+        SubscribedPlayer *currentClickedPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"SubscribedPlayer" inManagedObjectContext:self.appDelegate.managedObjectContext];
+        
+            currentClickedPlayer.highscore = [self.people[indexPath.row] Points];
+            currentClickedPlayer.name = [self.people[indexPath.row] username];
+        
+        [currentCorePlayer addSubscribedPlayersObject:currentClickedPlayer];
+        
+        NSError *err;
+        [self.appDelegate.managedObjectContext save:&err];
+        
+        if (err) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:err.description message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alert show];
+        }
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -135,15 +176,23 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     userAvatar.file = [_people[indexPath.row] Avatar];
     
     [userAvatar loadInBackground: ^(UIImage* image, NSError *error)
-    {
-        if (image != nil) {
-            cell.playerAvatar.image = image;
-        }
-        else{
-            cell.playerAvatar.image = [UIImage imageNamed:@"emptyAvatar.jpeg"];
-        }
-    }];
+     {
+         if (image != nil) {
+             cell.playerAvatar.image = image;
+         }
+         else{
+             cell.playerAvatar.image = [UIImage imageNamed:@"emptyAvatar.jpeg"];
+         }
+     }];
     return cell;
 }
 
+//- (IBAction)longPress:(UILongPressGestureRecognizer *)sender {
+//    CGPoint p = [sender locationInView:self.leaderboardTableView];
+//    NSIndexPath *n = [self.leaderboardTableView indexPathForRowAtPoint:p];
+//
+//    if (sender.state == UIGestureRecognizerStateBegan) {
+//        NSLog(@"%@", [self.people[n.row] username]);
+//    }
+//}
 @end

@@ -16,6 +16,10 @@
 		C5434F131A0EC8DA007FD429 /* SubscribedPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F121A0EC8DA007FD429 /* SubscribedPlayer.m */; };
 		C5434F161A0EC8DB007FD429 /* CorePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F151A0EC8DB007FD429 /* CorePlayer.m */; };
 		C5434F191A0EC8DB007FD429 /* CurrentPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F181A0EC8DB007FD429 /* CurrentPlayer.m */; };
+		C5434F1B1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5434F1A1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib */; };
+		C5434F1D1A0EECC4007FD429 /* music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5434F1C1A0EECC4007FD429 /* music.jpg */; };
+		C5434F201A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F1F1A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.m */; };
+		C5434F261A0EF1DA007FD429 /* UISubscribedPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5434F251A0EF1DA007FD429 /* UISubscribedPlayersViewController.m */; };
 		C54933ED1A02DDCF002A1526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EC1A02DDCF002A1526 /* main.m */; };
 		C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933EF1A02DDCF002A1526 /* AppDelegate.m */; };
 		C54933F61A02DDCF002A1526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54933F51A02DDCF002A1526 /* ViewController.m */; };
@@ -86,6 +90,12 @@
 		C5434F151A0EC8DB007FD429 /* CorePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlayer.m; sourceTree = "<group>"; };
 		C5434F171A0EC8DB007FD429 /* CurrentPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPlayer.h; sourceTree = "<group>"; };
 		C5434F181A0EC8DB007FD429 /* CurrentPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPlayer.m; sourceTree = "<group>"; };
+		C5434F1A1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscribedPlayersTableViewCell.xib; sourceTree = "<group>"; };
+		C5434F1C1A0EECC4007FD429 /* music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music.jpg; sourceTree = "<group>"; };
+		C5434F1E1A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISubscribedPlayersCellTableViewCell.h; sourceTree = "<group>"; };
+		C5434F1F1A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISubscribedPlayersCellTableViewCell.m; sourceTree = "<group>"; };
+		C5434F241A0EF1DA007FD429 /* UISubscribedPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISubscribedPlayersViewController.h; sourceTree = "<group>"; };
+		C5434F251A0EF1DA007FD429 /* UISubscribedPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISubscribedPlayersViewController.m; sourceTree = "<group>"; };
 		C54933E71A02DDCF002A1526 /* Flappy Bird Pro iOS APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird Pro iOS APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54933EB1A02DDCF002A1526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54933EC1A02DDCF002A1526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5434F1C1A0EECC4007FD429 /* music.jpg */,
 				C5260F2A1A0D837E00DC69FB /* leaderboard-background.jpg */,
 				C585D4251A0D597A00386CD2 /* emptyAvatar.jpeg */,
 				C585D4211A0D537100386CD2 /* login-background.jpg */,
@@ -283,6 +294,8 @@
 				C5B59ABE1A05A73000A58142 /* SignUpViewController.m */,
 				C5B283651A0797A200E144F8 /* LoginViewController.h */,
 				C5B283661A0797A200E144F8 /* LoginViewController.m */,
+				C5434F241A0EF1DA007FD429 /* UISubscribedPlayersViewController.h */,
+				C5434F251A0EF1DA007FD429 /* UISubscribedPlayersViewController.m */,
 			);
 			name = "Views Controllers";
 			sourceTree = "<group>";
@@ -371,6 +384,9 @@
 				C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */,
 				C5C359F81A04F6620038D6FD /* UILeaderboardCell.h */,
 				C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */,
+				C5434F1A1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib */,
+				C5434F1E1A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.h */,
+				C5434F1F1A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -461,6 +477,7 @@
 				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */,
+				C5434F1B1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib in Resources */,
 				C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */,
 				C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */,
 				C5B6C8191A099275005E3A29 /* begin-game.jpg in Resources */,
@@ -471,6 +488,7 @@
 				C55DA7ED1A09030300AAB244 /* crash.wav in Resources */,
 				C5B6C81A1A099275005E3A29 /* game-over.jpg in Resources */,
 				C54934181A02FD55002A1526 /* Background.png in Resources */,
+				C5434F1D1A0EECC4007FD429 /* music.jpg in Resources */,
 				C54933FE1A02DDCF002A1526 /* LaunchScreen.xib in Resources */,
 				C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */,
 				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
@@ -499,6 +517,7 @@
 			files = (
 				C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */,
 				C5434F101A0EC7FC007FD429 /* CoreDataPlayers.xcdatamodeld in Sources */,
+				C5434F201A0EF005007FD429 /* UISubscribedPlayersCellTableViewCell.m in Sources */,
 				C54933F01A02DDCF002A1526 /* AppDelegate.m in Sources */,
 				C5B283671A0797A200E144F8 /* LoginViewController.m in Sources */,
 				C5B883E81A0C44C200B9ACCF /* FlappyAngryUser.m in Sources */,
@@ -507,6 +526,7 @@
 				C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */,
 				C5B59AC51A05A93800A58142 /* TKUITextField.m in Sources */,
 				C5434F131A0EC8DA007FD429 /* SubscribedPlayer.m in Sources */,
+				C5434F261A0EF1DA007FD429 /* UISubscribedPlayersViewController.m in Sources */,
 				C5B59AC81A05A95E00A58142 /* MBProgressHUD.m in Sources */,
 				C5260F2E1A0D8EB500DC69FB /* Reachability.m in Sources */,
 				C54934201A030925002A1526 /* FlappyBirdGameFieldController.m in Sources */,

@@ -31,8 +31,8 @@
     self.tunnelTop.hidden = YES;
     self.tunnelBottom.hidden = YES;
     
-    _curUser = [FlappyAngryUser currentUser];
-    _appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.curUser = [FlappyAngryUser currentUser];
+    self.appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     logoMotion = -5;
     
