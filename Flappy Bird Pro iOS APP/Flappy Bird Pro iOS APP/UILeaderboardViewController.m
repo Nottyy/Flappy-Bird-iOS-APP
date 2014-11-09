@@ -80,6 +80,7 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
         
         self.currentClickedPlayer.highscore = [self.people[indexPath.row] Points];
         self.currentClickedPlayer.name = [self.people[indexPath.row] username];
+        self.currentClickedPlayer.checked = [NSNumber numberWithBool:NO];
         
         NSString *subscribedPlayerName = self.currentClickedPlayer.name;
         

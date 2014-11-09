@@ -32,8 +32,7 @@
 
 -(void)applicationDidEnterBackground:(UIApplication *)application{
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App entered background" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-    [alert show];
+    NSLog(@"GONE IN BACKGROUND");
     
     [self.managedObjectContext save:nil];
     backgroundTask = [application beginBackgroundTaskWithExpirationHandler:^{
@@ -58,15 +57,31 @@
             int currentPlayerScore = [currentCorePlayer.highscore intValue];
             
             for (SubscribedPlayer *subcribedPlayer in currentCorePlayer.subscribedPlayers) {
-                int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
                 
-                if (currentSubscribedPlayerHighScore > currentPlayerScore && subcribedPlayer.checked == NO) {
-                    subcribedPlayer.checked = [NSNumber numberWithBool:YES];
+                NSString *subscribedPlayerName = subcribedPlayer.name;
+                PFQuery *quer = [PFUser query];
+                [quer whereKey:@"username" equalTo:subscribedPlayerName];
+                NSArray *objects = [quer findObjects];
+                
+                if (objects.count == 1) {
+                    subcribedPlayer.highscore = [objects[0] Points];
                     
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                    [alert show];
+                    NSLog(@"Parse highscore %@", [[objects objectAtIndex:0] Points]);
+                    int currentSubscribedPlayerHighScore = [subcribedPlayer.highscore intValue];
+                    NSLog(@"Subscr highscore %d", currentSubscribedPlayerHighScore);
                     
-                    [self.managedObjectContext save:nil];
+                    if (currentSubscribedPlayerHighScore > currentPlayerScore && subcribedPlayer.checked == NO) {
+                        subcribedPlayer.checked = [NSNumber numberWithBool:YES];
+                        
+                        NSLog(@"SUCCESS");
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                        [alert show];
+                        
+                        [self.managedObjectContext save:nil];
+                    }
+                }
+                else{
+                    NSLog(@"ERROORR");
                 }
             }
             
