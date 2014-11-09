@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 
-@interface UILeaderboardViewController : UIViewController<UITableViewDataSource>
+@interface UILeaderboardViewController : UIViewController<UITableViewDataSource, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *leaderboardTableView;
 @property (nonatomic, strong) MBProgressHUD *hud;
 @property (weak, nonatomic) IBOutlet UILabel *userName;

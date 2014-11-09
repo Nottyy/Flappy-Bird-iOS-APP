@@ -19,7 +19,8 @@
 
 @property (nonatomic, strong) NSMutableArray *people;
 @property (nonatomic, strong) AppDelegate *appDelegate;
-@property (strong,nonatomic) FlappyAngryUser* curUser;
+@property (strong, nonatomic) FlappyAngryUser* curUser;
+@property (strong, nonatomic) SubscribedPlayer* currentClickedPlayer;
 
 @end
 
@@ -75,26 +76,17 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     NSIndexPath *indexPath = [self.leaderboardTableView indexPathForRowAtPoint:pointClicked];
     
     if (sender.state == UIGestureRecognizerStateBegan) {
-        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
-        [req setPredicate:pred];
+        self.currentClickedPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"SubscribedPlayer" inManagedObjectContext:self.appDelegate.managedObjectContext];
         
-        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+        self.currentClickedPlayer.highscore = [self.people[indexPath.row] Points];
+        self.currentClickedPlayer.name = [self.people[indexPath.row] username];
         
-        SubscribedPlayer *currentClickedPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"SubscribedPlayer" inManagedObjectContext:self.appDelegate.managedObjectContext];
+        NSString *subscribedPlayerName = self.currentClickedPlayer.name;
         
-            currentClickedPlayer.highscore = [self.people[indexPath.row] Points];
-            currentClickedPlayer.name = [self.people[indexPath.row] username];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Are you sure you want to subscribe to %@?", subscribedPlayerName] message:nil delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Ok", nil];
+        alert.tag = 10;
+        [alert show];
         
-        [currentCorePlayer addSubscribedPlayersObject:currentClickedPlayer];
-        
-        NSError *err;
-        [self.appDelegate.managedObjectContext save:&err];
-        
-        if (err) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:err.description message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-            [alert show];
-        }
     }
 }
 
@@ -152,6 +144,55 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     }
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 10) {
+        if (buttonIndex == 1) {
+            
+            NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+            [req setPredicate:pred];
+            
+            CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+            
+            
+            NSString *curPlayerName = currentCorePlayer.name;
+            
+            BOOL contained = NO;
+            for (SubscribedPlayer* pl in currentCorePlayer.subscribedPlayers) {
+                if ([pl.name isEqualToString:self.currentClickedPlayer.name]) {
+                    contained = YES;
+                }
+            }
+            
+            if ([self.currentClickedPlayer.name isEqualToString:curPlayerName]) {
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You cannnot subscribe to yourself" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                [alert show];
+            }
+            else if(contained){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"You have already subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                [alert show];
+            }
+                
+            else{
+                [currentCorePlayer addSubscribedPlayersObject:self.currentClickedPlayer];
+                
+                NSError *err;
+                [self.appDelegate.managedObjectContext save:&err];
+                
+                if (err) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:err.description message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
+                }
+                else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Successfully subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
+                }
+            }
+        }
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -187,12 +228,4 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     return cell;
 }
 
-//- (IBAction)longPress:(UILongPressGestureRecognizer *)sender {
-//    CGPoint p = [sender locationInView:self.leaderboardTableView];
-//    NSIndexPath *n = [self.leaderboardTableView indexPathForRowAtPoint:p];
-//
-//    if (sender.state == UIGestureRecognizerStateBegan) {
-//        NSLog(@"%@", [self.people[n.row] username]);
-//    }
-//}
 @end
