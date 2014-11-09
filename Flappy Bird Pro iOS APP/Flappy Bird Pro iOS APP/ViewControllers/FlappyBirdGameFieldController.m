@@ -20,6 +20,7 @@
 
 @implementation FlappyBirdGameFieldController{
     BOOL gameBegan;
+    BOOL usedCutBird;
     BOOL usedPush;
     CGFloat initialLogoXCoordinate;
     UIDynamicAnimator *animator;
@@ -78,6 +79,16 @@
     }
 }
 
+- (IBAction)swipeGesture:(UISwipeGestureRecognizer *)sender {
+    if (gameBegan == YES && cutBird > 0 && usedCutBird == NO) {
+        //[audioPlayerForPushingTunnels play];
+        cutBird -= 1;
+        usedCutBird = YES;
+        NSLog(@"Swiped");
+        self.objectBird.center = CGPointMake(self.objectBird.center.x - 10, self.objectBird.center.y - 10);
+    }
+}
+
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
     
     // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
@@ -85,7 +96,6 @@
         [audioPlayerForPushingTunnels play];
         pushTunnels -= 1;
         usedPush = YES;
-        NSLog(@"Pinched");
         self.tunnelTop.center = CGPointMake(self.tunnelTop.center.x, self.tunnelTop.center.y - 20);
         self.tunnelBottom.center = CGPointMake(self.tunnelBottom.center.x, self.tunnelBottom.center.y + 20);
     }
@@ -96,6 +106,7 @@
     gameBegan = YES;
     usedPush = NO;
     pushTunnels = 3;
+    cutBird = 3;
     scoreNumber = 0;
     self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreNumber];
     
@@ -106,7 +117,6 @@
     self.tunnelBottom.hidden = NO;
     self.buttonStartGame.hidden = YES;
     self.exitButton.hidden = YES;
-    
     
     self.objectBird.center = CGPointMake(self.objectBird.center.x, [[UIScreen mainScreen]bounds].size.height / 2);
     self.objectBird.image = [UIImage imageNamed: @"BirdUp.png"];
@@ -124,8 +134,12 @@
     if (self.tunnelTop.center.x <= -55) {
         
         // see if the user has pushTunnels options left and nullify the BOOL 'usedPush'
+        // see if the user has cutBird options left and nullify the BOOL 'usedCutBird'
         if (pushTunnels > 0) {
             usedPush = NO;
+        }
+        if (cutBird > 0) {
+            usedCutBird = NO;
         }
         [self placeTunnels];
     }
@@ -133,7 +147,6 @@
     if (self.tunnelTop.center.x == 27) {
         [self setScore];
     }
-    
     
     // check if the bird has collided with the four tunnels
     if (CGRectIntersectsRect(self.objectBird.frame, self.tunnelTop.frame) ||

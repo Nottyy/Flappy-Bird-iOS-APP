@@ -407,6 +407,9 @@
                             <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flappy-bird-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bym-m5-JGF">
                                 <rect key="frame" x="-2" y="0.0" width="605" height="600"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LLk-I2-MEZ" appends="YES" id="zRT-eO-nNZ"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -461,6 +464,11 @@
                         <action selector="pinchGesture:" destination="IEP-ba-9Iq" id="9Qc-N6-7q0"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="LLk-I2-MEZ">
+                    <connections>
+                        <action selector="swipeGesture:" destination="IEP-ba-9Iq" id="GAQ-z3-qtq"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="150" y="-4"/>
         </scene>
