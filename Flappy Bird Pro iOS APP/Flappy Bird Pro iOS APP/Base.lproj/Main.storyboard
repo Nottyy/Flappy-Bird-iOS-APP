@@ -246,52 +246,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JY-il-vU5">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscribed Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB7-OF-3zj">
-                                <rect key="frame" x="200" y="78" width="200" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subscribed Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB7-OF-3zj">
+                                <rect key="frame" x="59" y="78" width="200" height="50"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7em-5J-2LC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7em-5J-2LC">
                                 <rect key="frame" x="16" y="140" width="568" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-uM-Yid">
+                                <rect key="frame" x="0.0" y="20" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zgQ-KY-KV8" kind="unwind" unwindAction="returnToMain:" id="SQh-VO-oSq"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antonioooo' " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-wD-Eyj">
-                                <rect key="frame" x="200" y="20" width="200" height="50"/>
+                                <rect key="frame" x="59" y="20" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GlO-OW-0fQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="yWc-Cm-Ycv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-uM-Yid">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subsPlayers-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1JY-il-vU5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="bottom" constant="70" id="AZZ-SY-er1"/>
-                            <constraint firstItem="7em-5J-2LC" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" id="NYS-Nn-QAW"/>
-                            <constraint firstItem="7em-5J-2LC" firstAttribute="centerX" secondItem="1JY-il-vU5" secondAttribute="centerX" id="Ncd-3t-QOn"/>
-                            <constraint firstAttribute="bottom" secondItem="7em-5J-2LC" secondAttribute="bottom" constant="20" symbolic="YES" id="XWl-aZ-2gV"/>
-                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="centerX" secondItem="7em-5J-2LC" secondAttribute="centerX" id="XqK-ED-65c"/>
-                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" constant="184" id="YVJ-CK-OMG"/>
-                            <constraint firstItem="1JY-il-vU5" firstAttribute="top" secondItem="lxA-Kg-qgH" secondAttribute="top" id="aNX-qS-OT3"/>
-                            <constraint firstItem="1JY-il-vU5" firstAttribute="bottom" secondItem="e1L-Px-Qxw" secondAttribute="top" id="aXr-pf-DeV"/>
-                            <constraint firstAttribute="trailing" secondItem="1JY-il-vU5" secondAttribute="trailing" id="fVT-XL-iir"/>
-                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" constant="120" id="lP0-zd-Rzd"/>
-                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" id="vXg-5q-I3z"/>
-                            <constraint firstItem="1JY-il-vU5" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leading" id="xRk-9R-g56"/>
+                            <constraint firstItem="sXh-uM-Yid" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="top" id="5ze-oB-pCk"/>
+                            <constraint firstItem="oB7-OF-3zj" firstAttribute="top" secondItem="UC5-wD-Eyj" secondAttribute="bottom" constant="8" symbolic="YES" id="6wA-ME-smz"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leading" id="8bU-FY-mIf"/>
+                            <constraint firstItem="oB7-OF-3zj" firstAttribute="leading" secondItem="UC5-wD-Eyj" secondAttribute="leading" id="Cao-A5-YDU"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="top" secondItem="mD8-6W-4hm" secondAttribute="bottom" id="DFd-GP-Ivd"/>
+                            <constraint firstItem="UC5-wD-Eyj" firstAttribute="leading" secondItem="sXh-uM-Yid" secondAttribute="trailing" constant="13" id="GuX-HB-usz"/>
+                            <constraint firstItem="oB7-OF-3zj" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" constant="43" id="JHy-6d-gRQ"/>
+                            <constraint firstAttribute="trailing" secondItem="1JY-il-vU5" secondAttribute="trailing" id="LIE-6l-dzf"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="top" secondItem="oB7-OF-3zj" secondAttribute="bottom" constant="12" id="LdF-gv-P2R"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="centerX" secondItem="7em-5J-2LC" secondAttribute="centerX" id="LxW-iz-gt8"/>
+                            <constraint firstItem="7em-5J-2LC" firstAttribute="leading" secondItem="lxA-Kg-qgH" secondAttribute="leadingMargin" id="TxV-W9-WyR"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="bottom" secondItem="e1L-Px-Qxw" secondAttribute="top" id="Woo-s1-qPk"/>
+                            <constraint firstItem="sXh-uM-Yid" firstAttribute="leading" secondItem="1JY-il-vU5" secondAttribute="leading" id="ZbF-Dk-rpM"/>
+                            <constraint firstItem="1JY-il-vU5" firstAttribute="top" secondItem="lxA-Kg-qgH" secondAttribute="top" id="bDK-ye-WQ2"/>
+                            <constraint firstItem="oB7-OF-3zj" firstAttribute="trailing" secondItem="UC5-wD-Eyj" secondAttribute="trailing" id="qcR-6r-Xin"/>
+                            <constraint firstAttribute="bottom" secondItem="7em-5J-2LC" secondAttribute="bottom" constant="20" symbolic="YES" id="s3c-Dp-xQ5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -300,6 +311,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-Ov-88G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zgQ-KY-KV8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="124" y="708"/>
         </scene>
@@ -822,5 +834,6 @@
         <image name="icon-username.png" width="12" height="13"/>
         <image name="login-background.jpg" width="5000" height="3750"/>
         <image name="normal-tunnels.jpg" width="683" height="1024"/>
+        <image name="subsPlayers-background.jpg" width="1920" height="1040"/>
     </resources>
 </document>

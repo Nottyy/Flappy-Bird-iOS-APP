@@ -77,7 +77,7 @@ NSString *subscribedPlayersCell = @"SubscribedPlayersTableViewCell";
         NSArray *convertedPlayers = [currentCorePlayer.subscribedPlayers allObjects];
         self.subscribedUsers = [NSMutableArray arrayWithArray: convertedPlayers];
         
-        self.subscribedPlayersLabel.text = [NSString stringWithFormat:@"%@'s Subscribed Players", self.curUser.username];
+        self.subscribedPlayersLabel.text = [NSString stringWithFormat:@"%@'s", self.curUser.username];
     }
     
     [self.hud hide:YES];
