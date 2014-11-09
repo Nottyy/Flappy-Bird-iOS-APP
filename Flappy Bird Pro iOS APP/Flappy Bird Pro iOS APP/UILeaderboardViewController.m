@@ -144,6 +144,34 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
     }
 }
 
+- (void)subscribeConfirmation:(CorePlayer *)currentCorePlayer contained:(BOOL)contained curPlayerName:(NSString *)curPlayerName {
+    if ([self.currentClickedPlayer.name isEqualToString:curPlayerName]) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You cannnot subscribe to yourself" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else if(contained){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"You have already subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    
+    else{
+        [currentCorePlayer addSubscribedPlayersObject:self.currentClickedPlayer];
+        
+        NSError *err;
+        [self.appDelegate.managedObjectContext save:&err];
+        
+        if (err) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:err.description message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alert show];
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Successfully subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alert show];
+        }
+    }
+}
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 10) {
         if (buttonIndex == 1) {
@@ -164,31 +192,7 @@ NSString *leaderBoardCell = @"LeaderboardTableViewCell";
                 }
             }
             
-            if ([self.currentClickedPlayer.name isEqualToString:curPlayerName]) {
-                
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You cannnot subscribe to yourself" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                [alert show];
-            }
-            else if(contained){
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"You have already subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                [alert show];
-            }
-                
-            else{
-                [currentCorePlayer addSubscribedPlayersObject:self.currentClickedPlayer];
-                
-                NSError *err;
-                [self.appDelegate.managedObjectContext save:&err];
-                
-                if (err) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:err.description message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                    [alert show];
-                }
-                else{
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Successfully subscribed to %@", self.currentClickedPlayer.name] message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                    [alert show];
-                }
-            }
+            [self subscribeConfirmation:currentCorePlayer contained:contained curPlayerName:curPlayerName];
         }
     }
 }
