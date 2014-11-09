@@ -48,7 +48,7 @@
         }
         else{
             self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-            self.hud.labelText = @"Please wait";
+            self.hud.labelText = @"Signing up...";
             
             FlappyAngryUser *user = [FlappyAngryUser new];
             user.username = _usernameTextField.text;
@@ -93,7 +93,9 @@
                     }
                 }
                 else{
-                    NSLog(@"%@", error);
+                    [self.hud hide:YES];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Failed" message:error.description delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alert show];
                 }
             }];
         }

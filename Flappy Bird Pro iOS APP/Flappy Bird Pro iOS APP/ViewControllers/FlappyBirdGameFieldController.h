@@ -44,7 +44,8 @@ NSString *audioForPushingTunnelsPath;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIButton *exitButton;
-- (IBAction)swipeGesture:(UISwipeGestureRecognizer *)sender;
+
+- (IBAction)swipeGasture:(UISwipeGestureRecognizer *)sender;
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender;
 
 - (IBAction)startGame:(id)sender;

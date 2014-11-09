@@ -79,18 +79,18 @@
     }
 }
 
-- (IBAction)swipeGesture:(UISwipeGestureRecognizer *)sender {
+- (IBAction)swipeGasture:(UISwipeGestureRecognizer *)sender {
     if (gameBegan == YES && cutBird > 0 && usedCutBird == NO) {
         //[audioPlayerForPushingTunnels play];
         cutBird -= 1;
         usedCutBird = YES;
         NSLog(@"Swiped");
-        self.objectBird.center = CGPointMake(self.objectBird.center.x - 10, self.objectBird.center.y - 10);
+        self.objectBird.frame = CGRectMake(self.objectBird.center.x - 20, self.objectBird.center.y - 20, self.objectBird.frame.size.width - 20, self.objectBird.frame.size.height - 20);
     }
 }
 
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
-    
+    NSLog(@"Pinched");
     // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
     if (gameBegan == YES && pushTunnels > 0 && usedPush == NO) {
         [audioPlayerForPushingTunnels play];
@@ -104,6 +104,7 @@
 - (IBAction)startGame:(id)sender {
     [logoMovement invalidate];
     gameBegan = YES;
+    usedCutBird = NO;
     usedPush = NO;
     pushTunnels = 3;
     cutBird = 3;
@@ -138,9 +139,14 @@
         if (pushTunnels > 0) {
             usedPush = NO;
         }
-        if (cutBird > 0) {
+        if (usedCutBird == YES) {
+            self.objectBird.frame = CGRectMake(self.objectBird.center.x - 10, self.objectBird.center.y - 10, self.objectBird.frame.size.width + 20, self.objectBird.frame.size.height + 20);
+        }
+        if (cutBird >= 0) {
             usedCutBird = NO;
         }
+        
+        
         [self placeTunnels];
     }
     

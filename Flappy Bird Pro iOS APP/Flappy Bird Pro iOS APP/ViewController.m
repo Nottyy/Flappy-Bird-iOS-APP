@@ -80,16 +80,6 @@
         self.loginButton.hidden = YES;
         self.logoutButton.hidden = NO;
         NSLog(@"%@ Current highscore from PARSE", curUser.Points);
-        
-        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", curUser.username];
-        [req setPredicate:pred];
-        
-        CorePlayer *currentCorePlayer = [[appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
-                
-        for (SubscribedPlayer *player in currentCorePlayer.subscribedPlayers) {
-            NSLog(@"%@m %@, %@", player.name, player.id, player.highscore);
-        }
     }
     else {
         self.logoutButton.hidden = YES;
