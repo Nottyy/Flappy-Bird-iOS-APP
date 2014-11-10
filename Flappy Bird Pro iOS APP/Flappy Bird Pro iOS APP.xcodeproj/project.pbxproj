@@ -68,9 +68,11 @@
 		C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C359F61A04F4ED0038D6FD /* LeaderboardTableViewCell.xib */; };
 		C5C359FA1A04F6620038D6FD /* UILeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */; };
 		C5C35A001A04FBAA0038D6FD /* UILeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */; };
-		C5E48FDE1A1006CA007711CA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
-		C5E48FDF1A1006CA007711CA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
-		C5E48FE01A1006CA007711CA /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
+		C5CB86621A109A9E006D5E57 /* home-view-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5CB86601A109A9E006D5E57 /* home-view-background.jpg */; };
+		C5CB86631A109A9E006D5E57 /* angry-birds-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CB86611A109A9E006D5E57 /* angry-birds-logo.png */; };
+		C5CB86641A109C5F006D5E57 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEED1A0CFB9B009DB4B2 /* Bolts.framework */; };
+		C5CB86651A109C5F006D5E57 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEE1A0CFB9B009DB4B2 /* Parse.framework */; };
+		C5CB86661A109C5F006D5E57 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55DBEEF1A0CFB9B009DB4B2 /* ParseFacebookUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		C5C359F91A04F6620038D6FD /* UILeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardCell.m; sourceTree = "<group>"; };
 		C5C359FE1A04FBAA0038D6FD /* UILeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILeaderboardViewController.h; sourceTree = "<group>"; };
 		C5C359FF1A04FBAA0038D6FD /* UILeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILeaderboardViewController.m; sourceTree = "<group>"; };
+		C5CB86601A109A9E006D5E57 /* home-view-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "home-view-background.jpg"; sourceTree = "<group>"; };
+		C5CB86611A109A9E006D5E57 /* angry-birds-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angry-birds-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E48FDE1A1006CA007711CA /* Bolts.framework in Frameworks */,
-				C5E48FDF1A1006CA007711CA /* Parse.framework in Frameworks */,
-				C5E48FE01A1006CA007711CA /* ParseFacebookUtils.framework in Frameworks */,
+				C5CB86641A109C5F006D5E57 /* Bolts.framework in Frameworks */,
+				C5CB86651A109C5F006D5E57 /* Parse.framework in Frameworks */,
+				C5CB86661A109C5F006D5E57 /* ParseFacebookUtils.framework in Frameworks */,
 				C5B883AF1A0BE14300B9ACCF /* AudioToolbox.framework in Frameworks */,
 				C5B883B01A0BE14300B9ACCF /* CFNetwork.framework in Frameworks */,
 				C5B883B11A0BE14300B9ACCF /* CoreGraphics.framework in Frameworks */,
@@ -243,6 +247,8 @@
 		C54933EA1A02DDCF002A1526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5CB86601A109A9E006D5E57 /* home-view-background.jpg */,
+				C5CB86611A109A9E006D5E57 /* angry-birds-logo.png */,
 				C5BBD20E1A0FAFB8005826F6 /* new-highscore.wav */,
 				C5BBD20F1A0FAFB8005826F6 /* shrink.wav */,
 				C5BBD20C1A0F7FAD005826F6 /* subsPlayers-background.jpg */,
@@ -481,6 +487,7 @@
 				C5C359F71A04F4ED0038D6FD /* LeaderboardTableViewCell.xib in Resources */,
 				C54933F91A02DDCF002A1526 /* Main.storyboard in Resources */,
 				C585D4261A0D597A00386CD2 /* emptyAvatar.jpeg in Resources */,
+				C5CB86631A109A9E006D5E57 /* angry-birds-logo.png in Resources */,
 				C5434F1B1A0EEAA0007FD429 /* SubscribedPlayersTableViewCell.xib in Resources */,
 				C55DA7F01A0944EE00AAB244 /* gameOverBird.png in Resources */,
 				C585D4241A0D537100386CD2 /* signup-background.jpg in Resources */,
@@ -498,6 +505,7 @@
 				C55DA7F21A09597300AAB244 /* green-tunnel.png in Resources */,
 				C549341A1A02FD55002A1526 /* BirdUp.png in Resources */,
 				C5B6C8141A098594005E3A29 /* normal-tunnels.jpg in Resources */,
+				C5CB86621A109A9E006D5E57 /* home-view-background.jpg in Resources */,
 				C54933FB1A02DDCF002A1526 /* Images.xcassets in Resources */,
 				C5260F2B1A0D837E00DC69FB /* leaderboard-background.jpg in Resources */,
 				C5BBD2081A0F78F7005826F6 /* table-cell-background.jpg in Resources */,
@@ -744,6 +752,11 @@
 					Pro,
 					iOS,
 					APP/Frameworks,
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 				);
 				INFOPLIST_FILE = "Flappy Bird Pro iOS APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -761,6 +774,11 @@
 					"$(PROJECT_DIR)",
 					/Users/Marinov/Downloads,
 					"/Users/Marinov/Downloads/parse-library-1",
+					"$(PROJECT_DIR)/Flappy",
+					Bird,
+					Pro,
+					iOS,
+					APP/Frameworks,
 					"$(PROJECT_DIR)/Flappy",
 					Bird,
 					Pro,

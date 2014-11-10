@@ -13,6 +13,7 @@
 #import "FlappyAngryUser.h"
 #import "UISubscribedPlayersCellTableViewCell.h"
 #import "MBProgressHUD.h"
+#import "Reachability.h"
 #import <Parse/Parse.h>
 
 @interface UISubscribedPlayersViewController ()
@@ -68,20 +69,30 @@ NSString *subscribedPlayersCell = @"SubscribedPlayersTableViewCell";
     self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.hud.labelText = @"Loading Subscribed Players...";
     
-    if (self.curUser) {
-        NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
-        [req setPredicate:pred];
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    
+    if (netStatus == NotReachable) {
+        [self.hud hide:YES];
         
-        CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
-        NSArray *convertedPlayers = [currentCorePlayer.subscribedPlayers allObjects];
-        self.subscribedUsers = [NSMutableArray arrayWithArray: convertedPlayers];
-        
-        self.subscribedPlayersLabel.text = [NSString stringWithFormat:@"%@'s", self.curUser.username];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No internet access!" message:@"Cannot load your subscribed users!!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
     }
-    
-    [self.hud hide:YES];
-    
+    else{
+        if (self.curUser) {
+            NSFetchRequest * req = [NSFetchRequest fetchRequestWithEntityName:@"CorePlayer"];
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"name LIKE[c] %@", self.curUser.username];
+            [req setPredicate:pred];
+            
+            CorePlayer *currentCorePlayer = [[self.appDelegate.managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
+            NSArray *convertedPlayers = [currentCorePlayer.subscribedPlayers allObjects];
+            self.subscribedUsers = [NSMutableArray arrayWithArray: convertedPlayers];
+            
+            self.subscribedPlayersLabel.text = [NSString stringWithFormat:@"%@'s", self.curUser.username];
+        }
+        
+        [self.hud hide:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

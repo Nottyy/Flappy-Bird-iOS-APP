@@ -150,11 +150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/ViewControllers/FlappyBirdGameFieldController.m"
-            timestampString = "437252699.709951"
+            timestampString = "437297725.963859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "-tunnelMoving"
             landmarkType = "5">
          </BreakpointContent>
@@ -262,11 +262,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird Pro iOS APP/AppDelegate.m"
-            timestampString = "437250941.283642"
+            timestampString = "437297034.704281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "backgroundTask"
             landmarkType = "19">
          </BreakpointContent>

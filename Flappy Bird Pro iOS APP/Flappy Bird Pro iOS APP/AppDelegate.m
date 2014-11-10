@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "FlappyAngryUser.h"
 #import "CorePlayer.h"
+#import "Reachability.h"
 #import "SubscribedPlayer.h"
 
 
@@ -31,17 +32,25 @@
 }
 
 -(void)applicationDidEnterBackground:(UIApplication *)application{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    
+    if (netStatus == NotReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No internet access" message:@"Please connecto your device to the internet!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else{
+        [self.managedObjectContext save:nil];
+        backgroundTask = [application beginBackgroundTaskWithExpirationHandler:^{
+            [application endBackgroundTask:backgroundTask];
+            
+            backgroundTask = UIBackgroundTaskInvalid;
+        }];
+        
+        checkingSubscribedPlayersScores = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(chekingSubscribedPlayersHighScores) userInfo:nil repeats:YES];
+    }
     
     NSLog(@"GONE IN BACKGROUND");
-    
-    [self.managedObjectContext save:nil];
-    backgroundTask = [application beginBackgroundTaskWithExpirationHandler:^{
-        [application endBackgroundTask:backgroundTask];
-        
-        backgroundTask = UIBackgroundTaskInvalid;
-    }];
-    
-    checkingSubscribedPlayersScores = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(chekingSubscribedPlayersHighScores) userInfo:nil repeats:YES];
 }
 
 -(void)chekingSubscribedPlayersHighScores{
@@ -76,8 +85,6 @@
                         NSLog(@"SUCCESSSSSSSSSSSSS");
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ beats your highscore", subcribedPlayer.name] message:[NSString stringWithFormat:@"Hold on...%@ points.. Can you beat that?", subcribedPlayer.highscore] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                         [alert show];
-                        
-                        [self.managedObjectContext save:nil];
                     }
                 }
                 else{

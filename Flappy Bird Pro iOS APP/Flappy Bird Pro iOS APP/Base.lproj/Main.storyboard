@@ -107,6 +107,9 @@
                                     <segue destination="IEP-ba-9Iq" kind="show" id="h4I-rV-FSz"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-view-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nqg-CJ-Mtl">
+                                <rect key="frame" x="-6" y="-7" width="606" height="607"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -115,9 +118,11 @@
                             <constraint firstItem="2hW-bU-hLV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ch-A2-0V1"/>
                             <constraint firstItem="khX-nV-CZL" firstAttribute="trailing" secondItem="2hW-bU-hLV" secondAttribute="trailing" id="63L-ug-1ZN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ko-xQ-RXW" secondAttribute="bottom" constant="74" id="9rQ-SP-ynB"/>
+                            <constraint firstItem="nqg-CJ-Mtl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-22" id="D2u-KR-ZDm"/>
                             <constraint firstItem="dav-ml-2kn" firstAttribute="trailing" secondItem="2hW-bU-hLV" secondAttribute="trailing" id="DLM-v7-ORz"/>
                             <constraint firstItem="yro-IY-Ajd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hnc-eS-B1C"/>
                             <constraint firstItem="ajF-eF-KKO" firstAttribute="trailing" secondItem="dav-ml-2kn" secondAttribute="trailing" id="Hu6-ny-3J4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nqg-CJ-Mtl" secondAttribute="trailing" constant="-16" id="Hz9-X7-y8c"/>
                             <constraint firstItem="dav-ml-2kn" firstAttribute="leading" secondItem="2hW-bU-hLV" secondAttribute="leading" id="PLm-zo-aPc"/>
                             <constraint firstItem="ajF-eF-KKO" firstAttribute="trailing" secondItem="0Ko-xQ-RXW" secondAttribute="trailing" id="QHP-OF-fxZ"/>
                             <constraint firstItem="2hW-bU-hLV" firstAttribute="leading" secondItem="khX-nV-CZL" secondAttribute="leading" id="QaP-ss-sXf"/>
@@ -127,6 +132,8 @@
                             <constraint firstItem="ajF-eF-KKO" firstAttribute="leading" secondItem="dav-ml-2kn" secondAttribute="leading" id="aJM-HB-1fY"/>
                             <constraint firstItem="ajF-eF-KKO" firstAttribute="top" secondItem="dav-ml-2kn" secondAttribute="bottom" constant="8" symbolic="YES" id="c8u-38-6L3"/>
                             <constraint firstItem="KDp-CC-E8N" firstAttribute="top" secondItem="yro-IY-Ajd" secondAttribute="bottom" constant="8" symbolic="YES" id="fFd-SS-J7F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nqg-CJ-Mtl" secondAttribute="bottom" id="q4h-fV-Prj"/>
+                            <constraint firstItem="nqg-CJ-Mtl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-7" id="qXv-zl-Ncm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KDp-CC-E8N" secondAttribute="bottom" constant="492" id="rkH-H8-zIJ"/>
                             <constraint firstItem="khX-nV-CZL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="174" id="syo-Xr-BFq"/>
                             <constraint firstItem="0Ko-xQ-RXW" firstAttribute="leading" secondItem="ajF-eF-KKO" secondAttribute="leading" id="tuW-kD-1QK"/>
@@ -620,21 +627,11 @@ In Leaderboards you can subscribe to a player by </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7K-Lh-1bG">
-                                <rect key="frame" x="399" y="188" width="10" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="cUG-JS-vdW"/>
-                                    <constraint firstAttribute="width" constant="10" id="z85-2T-HSg"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-password.png" translatesAutoresizingMaskIntoConstraints="NO" id="fy2-sG-FmU">
-                                <rect key="frame" x="399" y="224" width="10" height="12"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHX-MK-MSA">
                                 <rect key="frame" x="165" y="294" width="270" height="30"/>
                                 <color key="backgroundColor" red="0.28798690230000001" green="0.2180203308" blue="0.42692550509999999" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="byg-iK-ZAK"/>
+                                    <constraint firstAttribute="height" constant="30" id="jwM-Oe-Cx3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Login">
@@ -649,7 +646,7 @@ In Leaderboards you can subscribe to a player by </string>
                                 <rect key="frame" x="165" y="341" width="270" height="30"/>
                                 <color key="backgroundColor" red="0.28798690230000001" green="0.2180203308" blue="0.42692550509999999" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8ty-Di-UaI"/>
+                                    <constraint firstAttribute="height" constant="30" id="WcI-wF-g0Z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Don't have an account?">
@@ -663,8 +660,8 @@ In Leaderboards you can subscribe to a player by </string>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" © 2014 Antonio Marinov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-i1-C2C">
                                 <rect key="frame" x="138" y="510" width="325" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="325" id="JuI-IJ-PzR"/>
-                                    <constraint firstAttribute="height" constant="21" id="Vab-HU-Kx7"/>
+                                    <constraint firstAttribute="height" constant="21" id="6HP-Mc-ufi"/>
+                                    <constraint firstAttribute="width" constant="325" id="ekw-qb-EQN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.6588235294" green="0.72549019609999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -673,11 +670,12 @@ In Leaderboards you can subscribe to a player by </string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgp-0l-Nhs">
                                 <rect key="frame" x="0.0" y="0.0" width="69" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="KE3-vf-dsP"/>
-                                    <constraint firstAttribute="height" constant="41" id="OK3-IG-rEZ"/>
+                                    <constraint firstAttribute="height" constant="41" id="7GP-DM-noR"/>
+                                    <constraint firstAttribute="width" constant="69" id="gVv-ZO-NUz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -687,8 +685,8 @@ In Leaderboards you can subscribe to a player by </string>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2B-i5-dcd">
                                 <rect key="frame" x="172" y="83" width="257" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Ej1-g1-yAL"/>
-                                    <constraint firstAttribute="width" constant="257" id="LGD-oY-I9f"/>
+                                    <constraint firstAttribute="height" constant="45" id="873-qY-In5"/>
+                                    <constraint firstAttribute="width" constant="257" id="Nnq-xU-eUn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -696,16 +694,19 @@ In Leaderboards you can subscribe to a player by </string>
                                 <color key="shadowColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-1e-grW" userLabel="flappy-bird-logo.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry-birds-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-1e-grW" userLabel="flappy-bird-logo.png">
                                 <rect key="frame" x="180" y="21" width="240" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="R01-WT-xhF"/>
-                                    <constraint firstAttribute="height" constant="54" id="XYm-hA-Gxg"/>
+                                    <constraint firstAttribute="width" constant="240" id="YTH-0Q-ea0"/>
+                                    <constraint firstAttribute="height" constant="54" id="jg7-J1-o9z"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-RT-QgX" customClass="TKUITextField">
                                 <rect key="frame" x="165" y="216" width="270" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fMb-ll-dxX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -713,42 +714,52 @@ In Leaderboards you can subscribe to a player by </string>
                                 <rect key="frame" x="165" y="167" width="270" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="Aa4-YM-25f"/>
+                                    <constraint firstAttribute="width" constant="270" id="TMX-uy-IL4"/>
+                                    <constraint firstAttribute="height" constant="45" id="ikf-ru-ApP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="login-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-8i-sWP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2rO-RT-QgX" firstAttribute="leading" secondItem="rut-ix-co2" secondAttribute="leading" id="3kE-h5-Eza"/>
-                            <constraint firstItem="FZW-IU-G2R" firstAttribute="top" secondItem="NHX-MK-MSA" secondAttribute="bottom" constant="17" id="6ow-eA-txh"/>
-                            <constraint firstItem="FZW-IU-G2R" firstAttribute="centerX" secondItem="0Ts-i1-C2C" secondAttribute="centerX" id="6z8-7O-gxS"/>
-                            <constraint firstItem="FZW-IU-G2R" firstAttribute="trailing" secondItem="NHX-MK-MSA" secondAttribute="trailing" id="7GK-cu-HIg"/>
-                            <constraint firstItem="a7K-Lh-1bG" firstAttribute="top" secondItem="W2B-i5-dcd" secondAttribute="bottom" constant="60" id="Cyl-qD-xIu"/>
-                            <constraint firstItem="FZW-IU-G2R" firstAttribute="leading" secondItem="NHX-MK-MSA" secondAttribute="leading" id="D0X-m1-b13"/>
-                            <constraint firstItem="tgp-0l-Nhs" firstAttribute="top" secondItem="XCS-ee-Bhl" secondAttribute="top" id="EOy-Ym-Hy8"/>
-                            <constraint firstItem="2rO-RT-QgX" firstAttribute="leading" secondItem="NHX-MK-MSA" secondAttribute="leading" id="ErO-3D-v6f"/>
-                            <constraint firstItem="NHX-MK-MSA" firstAttribute="trailing" secondItem="2rO-RT-QgX" secondAttribute="trailing" id="G8n-xO-IIf"/>
-                            <constraint firstItem="rut-ix-co2" firstAttribute="top" secondItem="W2B-i5-dcd" secondAttribute="bottom" constant="39" id="HFd-hk-h9b"/>
-                            <constraint firstItem="W2B-i5-dcd" firstAttribute="top" secondItem="CM4-1e-grW" secondAttribute="bottom" constant="8" symbolic="YES" id="HMc-v9-mtN"/>
-                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="0Ts-i1-C2C" secondAttribute="bottom" constant="69" id="HVf-bp-dM0"/>
-                            <constraint firstItem="rut-ix-co2" firstAttribute="trailing" secondItem="2rO-RT-QgX" secondAttribute="trailing" id="M7h-N5-JsT"/>
-                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="tgp-0l-Nhs" secondAttribute="bottom" constant="559" id="QGz-cg-q9J"/>
-                            <constraint firstItem="2rO-RT-QgX" firstAttribute="top" secondItem="a7K-Lh-1bG" secondAttribute="bottom" constant="16" id="X0b-gU-Xkz"/>
-                            <constraint firstItem="CM4-1e-grW" firstAttribute="top" secondItem="P8n-do-yhE" secondAttribute="bottom" constant="1" id="XDp-hk-eok"/>
-                            <constraint firstItem="a7K-Lh-1bG" firstAttribute="leading" secondItem="fy2-sG-FmU" secondAttribute="leading" id="a6g-qK-Jb9"/>
-                            <constraint firstItem="a7K-Lh-1bG" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leading" constant="399" id="bQj-yw-sdN"/>
-                            <constraint firstAttribute="trailing" secondItem="0Ts-i1-C2C" secondAttribute="trailing" constant="137" id="hJA-2k-Jzb"/>
-                            <constraint firstItem="NHX-MK-MSA" firstAttribute="top" secondItem="fy2-sG-FmU" secondAttribute="bottom" constant="58" id="haN-3N-6ic"/>
-                            <constraint firstItem="2rO-RT-QgX" firstAttribute="top" secondItem="rut-ix-co2" secondAttribute="bottom" constant="4" id="kKT-1c-RGn"/>
-                            <constraint firstItem="fy2-sG-FmU" firstAttribute="top" secondItem="rut-ix-co2" secondAttribute="bottom" constant="12" id="mKR-Ud-rCR"/>
-                            <constraint firstItem="W2B-i5-dcd" firstAttribute="centerX" secondItem="rut-ix-co2" secondAttribute="centerX" id="rUs-jv-UjH"/>
-                            <constraint firstItem="tgp-0l-Nhs" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leading" id="sKN-5M-G8j"/>
-                            <constraint firstItem="CM4-1e-grW" firstAttribute="centerX" secondItem="W2B-i5-dcd" secondAttribute="centerX" id="sNi-0L-vyC"/>
-                            <constraint firstItem="FZW-IU-G2R" firstAttribute="centerX" secondItem="XCS-ee-Bhl" secondAttribute="centerX" id="wmt-No-NHf"/>
-                            <constraint firstItem="NHX-MK-MSA" firstAttribute="top" secondItem="2rO-RT-QgX" secondAttribute="bottom" constant="33" id="wyz-C1-jT8"/>
+                            <constraint firstItem="NHX-MK-MSA" firstAttribute="trailing" secondItem="FZW-IU-G2R" secondAttribute="trailing" id="0ev-ok-QVr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KDg-8i-sWP" secondAttribute="trailing" constant="-12" id="2Ae-SQ-6ha"/>
+                            <constraint firstItem="W2B-i5-dcd" firstAttribute="centerX" secondItem="CM4-1e-grW" secondAttribute="centerX" id="2FC-qh-81A"/>
+                            <constraint firstItem="CM4-1e-grW" firstAttribute="top" secondItem="P8n-do-yhE" secondAttribute="bottom" constant="1" id="3YH-Cx-a5C"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leadingMargin" constant="-8" id="3gD-Za-Hc3"/>
+                            <constraint firstItem="rut-ix-co2" firstAttribute="trailing" secondItem="2rO-RT-QgX" secondAttribute="trailing" id="4Bf-SO-Jcf"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="top" secondItem="XCS-ee-Bhl" secondAttribute="topMargin" constant="-8" id="7Sy-89-9Y0"/>
+                            <constraint firstItem="rut-ix-co2" firstAttribute="top" secondItem="W2B-i5-dcd" secondAttribute="bottom" constant="39" id="8AI-jm-zR0"/>
+                            <constraint firstItem="FZW-IU-G2R" firstAttribute="leading" secondItem="NHX-MK-MSA" secondAttribute="leading" id="ADY-Dv-OEm"/>
+                            <constraint firstItem="W2B-i5-dcd" firstAttribute="centerX" secondItem="rut-ix-co2" secondAttribute="centerX" id="ALz-hI-NtL"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leadingMargin" constant="-12" id="CnU-7o-pUO"/>
+                            <constraint firstItem="W2B-i5-dcd" firstAttribute="centerX" secondItem="XCS-ee-Bhl" secondAttribute="centerX" id="PRQ-qz-JGO"/>
+                            <constraint firstItem="FZW-IU-G2R" firstAttribute="centerX" secondItem="0Ts-i1-C2C" secondAttribute="centerX" id="RYn-jh-N17"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="top" secondItem="XCS-ee-Bhl" secondAttribute="topMargin" constant="8" id="U4A-MJ-9wC"/>
+                            <constraint firstItem="NHX-MK-MSA" firstAttribute="leading" secondItem="2rO-RT-QgX" secondAttribute="leading" id="Vjv-fJ-Jwn"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="bottom" secondItem="i2X-ML-btG" secondAttribute="top" id="WEf-hZ-yc5"/>
+                            <constraint firstItem="tgp-0l-Nhs" firstAttribute="top" secondItem="XCS-ee-Bhl" secondAttribute="top" id="Wx3-fy-DZ8"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leadingMargin" constant="-4" id="Xcr-M1-aUB"/>
+                            <constraint firstItem="2rO-RT-QgX" firstAttribute="top" secondItem="rut-ix-co2" secondAttribute="bottom" constant="4" id="YyK-Wp-1dd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KDg-8i-sWP" secondAttribute="trailing" constant="-4" id="aFO-Ac-3vL"/>
+                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="KDg-8i-sWP" secondAttribute="bottom" id="c0Y-LQ-IXY"/>
+                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="0Ts-i1-C2C" secondAttribute="bottom" constant="69" id="dwT-Yf-kdF"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="centerX" secondItem="0Ts-i1-C2C" secondAttribute="centerX" id="eda-CH-bXT"/>
+                            <constraint firstItem="FZW-IU-G2R" firstAttribute="top" secondItem="NHX-MK-MSA" secondAttribute="bottom" constant="17" id="fqE-DX-mAY"/>
+                            <constraint firstItem="tgp-0l-Nhs" firstAttribute="leading" secondItem="XCS-ee-Bhl" secondAttribute="leading" id="iBT-Sa-PdA"/>
+                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="KDg-8i-sWP" secondAttribute="bottom" id="kwp-DT-bXd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KDg-8i-sWP" secondAttribute="trailing" constant="-8" id="mLG-EM-KBs"/>
+                            <constraint firstItem="NHX-MK-MSA" firstAttribute="top" secondItem="2rO-RT-QgX" secondAttribute="bottom" constant="33" id="plA-YF-qJm"/>
+                            <constraint firstItem="KDg-8i-sWP" firstAttribute="top" secondItem="XCS-ee-Bhl" secondAttribute="topMargin" id="qxC-Kr-nWN"/>
+                            <constraint firstItem="W2B-i5-dcd" firstAttribute="top" secondItem="CM4-1e-grW" secondAttribute="bottom" constant="8" symbolic="YES" id="uqt-aE-JTC"/>
+                            <constraint firstItem="i2X-ML-btG" firstAttribute="top" secondItem="tgp-0l-Nhs" secondAttribute="bottom" constant="559" id="v12-3F-Ux1"/>
+                            <constraint firstItem="rut-ix-co2" firstAttribute="leading" secondItem="2rO-RT-QgX" secondAttribute="leading" id="vzr-pB-bOL"/>
+                            <constraint firstItem="2rO-RT-QgX" firstAttribute="trailing" secondItem="NHX-MK-MSA" secondAttribute="trailing" id="yka-2s-KTM"/>
                         </constraints>
                     </scrollView>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -796,24 +807,18 @@ In Leaderboards you can subscribe to a player by </string>
                                     <action selector="signUp:" destination="pDS-r7-5QI" eventType="touchUpInside" id="Plv-NJ-T61"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-v8-hkh" userLabel="flappy-bird-logo.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="angry-birds-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-v8-hkh" userLabel="flappy-bird-logo.png">
                                 <rect key="frame" x="180" y="28" width="240" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="1Rv-cu-ZL6"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-rI-YWU" customClass="TKUITextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-rI-YWU" customClass="TKUITextField">
                                 <rect key="frame" x="165" y="229" width="270" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-password.png" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-sa-zC6">
-                                <rect key="frame" x="410" y="246" width="10" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="lma-Ol-bfy"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email (Optional)" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZ8-4v-hUW" customClass="TKUITextField">
                                 <rect key="frame" x="165" y="277" width="270" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -823,7 +828,7 @@ In Leaderboards you can subscribe to a player by </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-YS-wQ7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="icon-username.png" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-YS-wQ7">
                                 <rect key="frame" x="410" y="193" width="10" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="UbA-aG-tLe"/>
@@ -847,13 +852,13 @@ In Leaderboards you can subscribe to a player by </string>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Bgs-T8-JiX" kind="unwind" unwindAction="returnToLogin:" id="MFB-9O-YFB"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-MP-KjE" customClass="TKUITextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-MP-KjE" customClass="TKUITextField">
                                 <rect key="frame" x="165" y="176" width="270" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -897,7 +902,7 @@ In Leaderboards you can subscribe to a player by </string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-N6-6H6">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Flappy Bird Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-N6-6H6">
                                 <rect key="frame" x="172" y="90" width="257" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="257" id="4Tu-qr-lwu"/>
@@ -909,6 +914,9 @@ In Leaderboards you can subscribe to a player by </string>
                                 <color key="shadowColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cVx-cl-Xeh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -919,11 +927,9 @@ In Leaderboards you can subscribe to a player by </string>
                             <constraint firstItem="5Gs-v8-hkh" firstAttribute="trailing" secondItem="mJp-YS-wQ7" secondAttribute="trailing" id="6br-fd-DU4"/>
                             <constraint firstItem="Z86-CQ-g4N" firstAttribute="top" secondItem="kZ8-4v-hUW" secondAttribute="bottom" constant="8" symbolic="YES" id="75Z-iR-AJQ"/>
                             <constraint firstItem="9D9-rI-YWU" firstAttribute="top" secondItem="0FF-MP-KjE" secondAttribute="bottom" constant="8" symbolic="YES" id="8nc-ST-AzM"/>
-                            <constraint firstItem="mJp-YS-wQ7" firstAttribute="leading" secondItem="PsL-sa-zC6" secondAttribute="leading" id="Em5-0d-RwL"/>
                             <constraint firstItem="kak-es-osK" firstAttribute="top" secondItem="pxa-WZ-qQp" secondAttribute="bottom" constant="26" id="G6H-WQ-1Ib"/>
                             <constraint firstItem="VXH-hx-gjb" firstAttribute="leading" secondItem="Z86-CQ-g4N" secondAttribute="leading" id="GBa-Od-qEb"/>
                             <constraint firstItem="Z86-CQ-g4N" firstAttribute="trailing" secondItem="G2o-7h-Gvy" secondAttribute="trailing" id="GK7-JN-LuZ"/>
-                            <constraint firstItem="kZ8-4v-hUW" firstAttribute="top" secondItem="PsL-sa-zC6" secondAttribute="bottom" constant="19" id="Il4-5l-SCf"/>
                             <constraint firstItem="9k6-N6-6H6" firstAttribute="centerX" secondItem="xCU-gb-NKP" secondAttribute="centerX" id="LPV-1p-6dK"/>
                             <constraint firstItem="mJp-YS-wQ7" firstAttribute="top" secondItem="9k6-N6-6H6" secondAttribute="bottom" constant="58" id="Mxq-Ld-B8O"/>
                             <constraint firstItem="VXH-hx-gjb" firstAttribute="baseline" secondItem="G2o-7h-Gvy" secondAttribute="firstBaseline" id="P0c-UL-L4w"/>
@@ -932,19 +938,22 @@ In Leaderboards you can subscribe to a player by </string>
                             <constraint firstItem="G2o-7h-Gvy" firstAttribute="trailing" secondItem="uL1-o5-3S8" secondAttribute="trailing" id="S4L-EH-Asl"/>
                             <constraint firstItem="5Gs-v8-hkh" firstAttribute="centerX" secondItem="9k6-N6-6H6" secondAttribute="centerX" id="T6I-H1-Wqc"/>
                             <constraint firstItem="9D9-rI-YWU" firstAttribute="leading" secondItem="kZ8-4v-hUW" secondAttribute="leading" id="TNR-L6-nqx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cVx-cl-Xeh" secondAttribute="trailing" constant="-16" id="XFS-dq-cRi"/>
                             <constraint firstItem="VXH-hx-gjb" firstAttribute="top" secondItem="Z86-CQ-g4N" secondAttribute="bottom" constant="4" id="YcL-T9-V2n"/>
                             <constraint firstItem="9k6-N6-6H6" firstAttribute="top" secondItem="5Gs-v8-hkh" secondAttribute="bottom" constant="8" symbolic="YES" id="ZGS-wy-IRo"/>
                             <constraint firstItem="uL1-o5-3S8" firstAttribute="centerX" secondItem="pxa-WZ-qQp" secondAttribute="centerX" id="aoq-oa-6ck"/>
                             <constraint firstItem="09c-rJ-39e" firstAttribute="leading" secondItem="xCU-gb-NKP" secondAttribute="leading" id="bg8-m0-PlH"/>
                             <constraint firstItem="5Gs-v8-hkh" firstAttribute="top" secondItem="BDI-us-hPF" secondAttribute="bottom" constant="8" symbolic="YES" id="fQR-hv-Ic0"/>
                             <constraint firstItem="kZ8-4v-hUW" firstAttribute="trailing" secondItem="Z86-CQ-g4N" secondAttribute="trailing" id="gZ3-y1-vO6"/>
-                            <constraint firstItem="PsL-sa-zC6" firstAttribute="top" secondItem="0FF-MP-KjE" secondAttribute="bottom" constant="25" id="hFw-UL-a4p"/>
+                            <constraint firstItem="cVx-cl-Xeh" firstAttribute="leading" secondItem="xCU-gb-NKP" secondAttribute="leadingMargin" constant="-16" id="hFV-2f-Wl5"/>
                             <constraint firstItem="0FF-MP-KjE" firstAttribute="top" secondItem="9k6-N6-6H6" secondAttribute="bottom" constant="41" id="inm-lw-qoF"/>
                             <constraint firstItem="G2o-7h-Gvy" firstAttribute="leading" secondItem="VXH-hx-gjb" secondAttribute="trailing" constant="38" id="ipk-fM-CXm"/>
+                            <constraint firstItem="cVx-cl-Xeh" firstAttribute="top" secondItem="xCU-gb-NKP" secondAttribute="topMargin" id="oEi-jB-NtF"/>
                             <constraint firstItem="kak-es-osK" firstAttribute="top" secondItem="09c-rJ-39e" secondAttribute="bottom" constant="526" id="oPN-MZ-dgN"/>
                             <constraint firstItem="9k6-N6-6H6" firstAttribute="centerX" secondItem="0FF-MP-KjE" secondAttribute="centerX" id="pwH-nm-9za"/>
                             <constraint firstItem="G2o-7h-Gvy" firstAttribute="baseline" secondItem="VXH-hx-gjb" secondAttribute="firstBaseline" id="r72-mL-xFe"/>
                             <constraint firstItem="0FF-MP-KjE" firstAttribute="trailing" secondItem="9D9-rI-YWU" secondAttribute="trailing" id="u8i-xM-xUt"/>
+                            <constraint firstItem="cVx-cl-Xeh" firstAttribute="bottom" secondItem="xCU-gb-NKP" secondAttribute="bottomMargin" id="uyw-LR-gja"/>
                             <constraint firstItem="Z86-CQ-g4N" firstAttribute="leading" secondItem="kZ8-4v-hUW" secondAttribute="leading" id="vYE-5p-KfN"/>
                             <constraint firstItem="09c-rJ-39e" firstAttribute="top" secondItem="xCU-gb-NKP" secondAttribute="top" id="viZ-Q1-hrw"/>
                             <constraint firstItem="uL1-o5-3S8" firstAttribute="leading" secondItem="VXH-hx-gjb" secondAttribute="leading" id="vjL-fd-q87"/>
@@ -969,15 +978,16 @@ In Leaderboards you can subscribe to a player by </string>
     </scenes>
     <resources>
         <image name="BirdUp.png" width="40" height="40"/>
-        <image name="GameBackground.png" width="320" height="480"/>
+        <image name="angry-birds-logo.png" width="754" height="510"/>
         <image name="begin-game.jpg" width="1200" height="956"/>
         <image name="border-tunnels.jpg" width="1024" height="768"/>
         <image name="emptyAvatar.jpeg" width="204" height="204"/>
         <image name="flappy-bird-background.jpg" width="1024" height="640"/>
-        <image name="icon-password.png" width="10" height="12"/>
+        <image name="home-view-background.jpg" width="1920" height="1200"/>
         <image name="icon-username.png" width="12" height="13"/>
         <image name="login-background.jpg" width="5000" height="3750"/>
         <image name="normal-tunnels.jpg" width="683" height="1024"/>
+        <image name="signup-background.jpg" width="2400" height="1800"/>
         <image name="subsPlayers-background.jpg" width="1920" height="1040"/>
     </resources>
 </document>

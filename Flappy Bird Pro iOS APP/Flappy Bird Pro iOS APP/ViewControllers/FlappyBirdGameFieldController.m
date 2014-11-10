@@ -93,14 +93,11 @@
         [audioPlayerForShrinkig play];
         cutBird -= 1;
         usedCutBird = YES;
-        NSLog(@"Swiped");
         self.objectBird.frame = CGRectMake(self.objectBird.center.x - 20, self.objectBird.center.y - 20, self.objectBird.frame.size.width - 20, self.objectBird.frame.size.height - 20);
     }
 }
 
-- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
-    NSLog(@"Pinched");
-    // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
+- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {    // the user can use the option to pass the tunnels easily as he push the tunnels with the pinch gesture
     if (gameBegan == YES && pushTunnels > 0 && usedPush == NO) {
         [audioPlayerForPushingTunnels play];
         pushTunnels -= 1;
@@ -318,6 +315,7 @@
     self.exitButton.hidden = NO;
     self.objectBird.image = [UIImage imageNamed:@"BirdUp.png"];
     self.buttonStartGame.hidden = NO;
+    self.scoreLabel.text = @"0";
     [self setLogoTimer];
 }
 
