@@ -1,21 +1,14 @@
-Flappy-Bird-iOS-APP
-===================
+Flappy bird pro is a simple arcade game. Your goal is to control the bird and go through as many obstacles as possible.
 
-TO-DO LIST:
+- Tap screen to Flap wings and go up.
+- Pinch to resize the space between pipes
+- Swipe to make the bird smaller
+- In Leaderboards you can subscribe to a player by Long press
+- In subscribed players field, you can view the players you have subscribed to
 
-- Gameplay collisions {Antonio to implement; Tsvetan to further test and tweak}
-- SignUp(Register) User Logic (without Picture) {Antonio}
-- Login User Logic {Antonio}
-- Singup User with Photo (Camera API and Gallery API) {Antonio}
-
-- Leaderboard to pull real users from Telerik BackEnd (HTTP request to pull from Database){Tsvetan}
-- Subscribe to "friend" user from Backend -> Save to Core data -> Run Background service to Notify you when "friend" user achieves higher score than you {Tsvetan}
-
-- Import media sounds into the Flappy Bird game field. Simple song during the game. Sound for touching on the screen(press the bird), for game over. {Tsvetan}
-
--Import connection API to check whether you have internet access or not to save your score to the DB. {Antonio}
-
-
-//If There is time:
-- Instructions View
-- Instructions Controller
+Technologies used:
+- From the hardware APIs: camera, accelerometer
+- From the device APIs: media, connection
+- Remote data: Used the Parse cloud, for storing the users
+- Core data: Used for storing the players, current player has subsribed to
+- Gestures: pinch, swipe, long press, touch
